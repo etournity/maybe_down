@@ -1,4 +1,4 @@
-name: Publish gmtk_23 to Itch.io
+name: Publish maybe_down to Itch.io
 
 on:
  push:
@@ -12,7 +12,7 @@ env:
  DISCORD_WEBHOOK: ${{secrets.DISCORD_WEBHOOK}} # Needs to be added through github
  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
  IS_MAIN: ${{ contains(github.ref, 'main') }}
- PROJECT_NAME: "gmtk_23"
+ PROJECT_NAME: "maybe_down"
 
 jobs:
  CleanArtifacts:

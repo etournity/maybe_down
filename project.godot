@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="gmtk_23"
-run/main_scene="res://test.tscn"
+config/name="maybe_down"
+run/main_scene="res://scenes/test.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
