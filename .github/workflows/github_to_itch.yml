@@ -50,8 +50,8 @@ jobs:
   
   - name: Export Web
     run: |
-     mkdir -p ./.
-     ./godot --headless --path ./ --export-release "Web" ././gmtk_23.html
+     mkdir -p ./builds/web
+     ./godot --headless --path ./ --export-release "Web" ./builds/web/index.html
     
   - name: Export Linux/X11
     run: |
@@ -137,6 +137,12 @@ jobs:
     
     - name: Login To Butler
       run: ./butler login
+    
+    - name: Push Web to Itch
+      run: ./butler push ./builds/web flowstreetgames/gmtk-23:web --userversion-file ./VERSION/VERSION.txt
+    
+    - name: Push Linux/X11 to Itch
+      run: ./butler push ./. flowstreetgames/gmtk-23:linux --userversion-file ./VERSION/VERSION.txt
     
 
  Cleanup:
