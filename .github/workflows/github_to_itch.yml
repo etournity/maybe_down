@@ -58,6 +58,11 @@ jobs:
      mkdir -p ./exports/linux
      ./godot --headless --path ./ --export-release "Linux/X11" ./exports/linux/gmtk_23.x86_64
     
+  - name: Export Windows Desktop
+    run: |
+     mkdir -p ./exports/windows
+     ./godot --headless --path ./ --export-release "Windows Desktop" ./exports/windows/gmtk_23.x86_64.exe
+    
 
   - uses: actions/upload-artifact@v2
     with:
@@ -143,6 +148,9 @@ jobs:
     
     - name: Push Linux/X11 to Itch
       run: ./butler push ./exports/linux flowstreetgames/gmtk-23:linux --userversion-file ./VERSION/VERSION.txt
+    
+    - name: Push Windows Desktop to Itch
+      run: ./butler push ./exports/windows flowstreetgames/gmtk-23:win --userversion-file ./VERSION/VERSION.txt
     
 
  Cleanup:
