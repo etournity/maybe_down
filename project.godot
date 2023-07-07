@@ -13,3 +13,12 @@ config_version=5
 config/name="gmtk_23"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/github_to_itch/plugin.cfg")
+
+[github_to_itch]
+
+config/itch_username="FlowStreetGames"
+config/itch_project_name="gmtk-23"
