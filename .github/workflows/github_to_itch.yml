@@ -50,13 +50,13 @@ jobs:
   
   - name: Export Web
     run: |
-     mkdir -p ./builds/web
-     ./godot --headless --path ./ --export-release "Web" ./builds/web/index.html
+     mkdir -p ./exports/web
+     ./godot --headless --path ./ --export-release "Web" ./exports/web/index.html
     
   - name: Export Linux/X11
     run: |
-     mkdir -p ./.
-     ./godot --headless --path ./ --export-release "Linux/X11" ././gmtk_23.x86_64
+     mkdir -p ./exports/linux
+     ./godot --headless --path ./ --export-release "Linux/X11" ./exports/linux/gmtk_23.x86_64
     
 
   - uses: actions/upload-artifact@v2
@@ -139,10 +139,10 @@ jobs:
       run: ./butler login
     
     - name: Push Web to Itch
-      run: ./butler push ./builds/web flowstreetgames/gmtk-23:web --userversion-file ./VERSION/VERSION.txt
+      run: ./butler push ./exports/web flowstreetgames/gmtk-23:web --userversion-file ./VERSION/VERSION.txt
     
     - name: Push Linux/X11 to Itch
-      run: ./butler push ./. flowstreetgames/gmtk-23:linux --userversion-file ./VERSION/VERSION.txt
+      run: ./butler push ./exports/linux flowstreetgames/gmtk-23:linux --userversion-file ./VERSION/VERSION.txt
     
 
  Cleanup:
