@@ -53,6 +53,11 @@ jobs:
      mkdir -p ./.
      ./godot --headless --path ./ --export-release "Web" ././gmtk_23.html
     
+  - name: Export Linux/X11
+    run: |
+     mkdir -p ./.
+     ./godot --headless --path ./ --export-release "Linux/X11" ././gmtk_23.x86_64
+    
 
   - uses: actions/upload-artifact@v2
     with:

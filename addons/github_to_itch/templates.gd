@@ -7,7 +7,7 @@ const workflow_template_path:String = "res://addons/github_to_itch/tempaltes/wor
 const export_template_path:String = "res://addons/github_to_itch/tempaltes/export.yml"
 
 const ITCH_CHANNEL_MAP = {
-	"HTML5": "web",
+	"Web": "web",
 	"Windows Desktop": "win",
 	"Android": "android",
 	"iOS": "ios", # not an official channel of itch
