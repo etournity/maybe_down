@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://7tw7q0wgsivv"]
+
+[sub_resource type="Environment" id="Environment_tnlyh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_scbub"]
+size = Vector3(3, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lk2ei"]
+size = Vector3(3, 1, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cmrmf"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6v83a"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33366, 5.40408)
+current = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tnlyh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57334, 0.0149045, -0.00504446)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_scbub")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+mesh = SubResource("BoxMesh_lk2ei")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90034, 1.77124, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("CapsuleShape3D_cmrmf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D/CollisionShape3D2"]
+mesh = SubResource("CapsuleMesh_6v83a")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.977995, 0.0591246, 0.200075, -0.208629, 0.27716, 0.9379, -4.44089e-16, -0.959003, 0.283396, 0, 0.372378, 0)
