@@ -1,8 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://7tw7q0wgsivv"]
+[gd_scene load_steps=8 format=3 uid="uid://7tw7q0wgsivv"]
 
 [ext_resource type="Script" path="res://scenes/World.gd" id="1_k8dhs"]
 
 [sub_resource type="Environment" id="Environment_tnlyh"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nyp13"]
+friction = 0.58
+bounce = 0.3
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cmrmf"]
 
@@ -15,6 +19,7 @@ size = Vector3(3, 1, 1)
 size = Vector3(3, 1, 1)
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_k8dhs")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tnlyh")
@@ -23,6 +28,11 @@ environment = SubResource("Environment_tnlyh")
 
 [node name="NPC" type="RigidBody3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90034, 1.77124, 0)
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+physics_material_override = SubResource("PhysicsMaterial_nyp13")
+continuous_cd = true
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Node3D/NPC"]
 shape = SubResource("CapsuleShape3D_cmrmf")
@@ -31,14 +41,13 @@ shape = SubResource("CapsuleShape3D_cmrmf")
 mesh = SubResource("CapsuleMesh_6v83a")
 
 [node name="Camera3D" type="Camera3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33366, 5.40408)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33366, 14.3209)
 current = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.977995, 0.0591246, 0.200075, -0.208629, 0.27716, 0.9379, -4.44089e-16, -0.959003, 0.283396, 0, 0.372378, 0)
 
 [node name="World" type="Node3D" parent="."]
-script = ExtResource("1_k8dhs")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="World"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57334, 0.0149045, -0.00504446)
@@ -58,11 +67,11 @@ shape = SubResource("BoxShape3D_scbub")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="World/StaticBody3D2/CollisionShape3D"]
 mesh = SubResource("BoxMesh_lk2ei")
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="World/StaticBody3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.23307, -4.11416, -0.00504446)
+[node name="StaticBody3D3" type="StaticBody3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.532, -8.22832, -0.0100889)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World/StaticBody3D2/StaticBody3D2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/StaticBody3D3"]
 shape = SubResource("BoxShape3D_scbub")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="World/StaticBody3D2/StaticBody3D2/CollisionShape3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World/StaticBody3D3/CollisionShape3D"]
 mesh = SubResource("BoxMesh_lk2ei")
