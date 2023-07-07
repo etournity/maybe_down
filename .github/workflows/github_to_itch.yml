@@ -48,6 +48,11 @@ jobs:
      mkdir -p ~/.local/share/godot/export_templates/4.1.stable
      mv ./templates/* ~/.local/share/godot/export_templates/4.1.stable
   
+  - name: Export Web
+    run: |
+     mkdir -p ./.
+     ./godot --headless --path ./ --export-release "Web" ././gmtk_23.html
+    
 
   - uses: actions/upload-artifact@v2
     with:
