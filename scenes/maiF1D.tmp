@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://7tw7q0wgsivv"]
+[gd_scene load_steps=11 format=3 uid="uid://7tw7q0wgsivv"]
 
 [ext_resource type="Script" path="res://scenes/World.gd" id="1_k8dhs"]
 
@@ -8,9 +8,9 @@
 friction = 0.58
 bounce = 0.3
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_h0xe1"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cmrmf"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_3fhbj"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6v83a"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_di7hj"]
 size = Vector3(15, 1, 1)
@@ -18,13 +18,10 @@ size = Vector3(15, 1, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_423ux"]
 size = Vector3(15, 1, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_hvell"]
-size = Vector3(15.515, 1, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_pd1l6"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_scbub"]
 size = Vector3(3, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pd1l6"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_lk2ei"]
 size = Vector3(3, 1, 1)
@@ -47,17 +44,13 @@ continuous_cd = true
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Node3D/NPC"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.00494, 0)
-shape = SubResource("SphereShape3D_h0xe1")
+shape = SubResource("CapsuleShape3D_cmrmf")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/NPC/CollisionShape3D2"]
-mesh = SubResource("SphereMesh_3fhbj")
+mesh = SubResource("CapsuleMesh_6v83a")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.977995, 0.0591246, 0.200076, -0.208629, 0.27716, 0.9379, -4.44089e-16, -0.959003, 0.283396, 0, 4.37732, 0)
-
-[node name="Camera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33366, 14.3209)
-current = true
 
 [node name="World" type="Node3D" parent="."]
 
@@ -83,7 +76,7 @@ mesh = SubResource("BoxMesh_423ux")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.27971, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/StaticBody3D4"]
-shape = SubResource("BoxShape3D_hvell")
+shape = SubResource("BoxShape3D_scbub")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="World/StaticBody3D4/CollisionShape3D"]
 transform = Transform3D(15.51, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
@@ -127,3 +120,7 @@ shape = SubResource("BoxShape3D_scbub")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="World/StaticBody3D3/CollisionShape3D"]
 mesh = SubResource("BoxMesh_lk2ei")
+
+[node name="Camera3D" type="Camera3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33366, 14.3209)
+current = true
