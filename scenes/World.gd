@@ -4,6 +4,7 @@ var npc : RigidBody3D
 var world: Node3D
 var camera: Camera3D
 var click_sound: AudioStreamPlayer
+@onready var music: AudioStreamPlayer = $Music
 var target_rot: float = 0.0
 @export_range(1, 10) var snappiness: float = 1.0
 @export_range(2, 20) var rotation_speed: float = 10
@@ -14,7 +15,7 @@ func _ready():
 	world = $World
 	camera = $Camera
 	click_sound = $World/Click
-
+	music.play()
 func _process(delta):
 	if(!$pause_menu.isOpen):
 		get_rotated(delta)

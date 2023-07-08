@@ -5,7 +5,7 @@ var mainScene = "res://scenes/main.tscn"
 var loadingStatus
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	ResourceLoader.load_threaded_request(mainScene, "PackedScene", true)
+	ResourceLoader.load_threaded_request(mainScene, "PackedScene", false)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -14,6 +14,6 @@ func _process(delta):
 	print(progress)
 	$ColorRect/CenterContainer/VBoxContainer/ProgressBar.value = progress[0]*100
 	
-	if(loadingStatus == 3):
+	if(progress[0] == 1):
 		get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(mainScene))
 	
