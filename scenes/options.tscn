@@ -39,7 +39,7 @@ custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 min_value = -50.0
 max_value = 0.0
-tick_count = 5
+tick_count = 7
 ticks_on_borders = true
 
 [node name="MusicVolume" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]

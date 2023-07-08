@@ -3,15 +3,17 @@ extends Node3D
 var npc : RigidBody3D 
 var world: Node3D
 var camera: Camera3D
+var click_sound: AudioStreamPlayer
 var target_rot: float = 0.0
 @export_range(1, 10) var snappiness: float = 1.0
 @export_range(2, 20) var rotation_speed: float = 10
-@export var click_sound: AudioStreamPlayer
+
 
 func _ready():
-	npc = get_node("Node3D/NPC")
-	world = get_node("World")
-	camera = get_node("Camera")
+	npc = $NPC
+	world = $World
+	camera = $Camera
+	click_sound = $World/Click
 
 func _process(delta):
 	if(!$pause_menu.isOpen):

@@ -1,7 +1,7 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bxhr00agm0ett"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://wwwdqjtvax0k"]
 
-[ext_resource type="StyleBox" path="res://assets/base_button.tres" id="1_ov371"]
-[ext_resource type="StyleBox" path="res://assets/button_disabled.tres" id="1_y6jyq"]
+[ext_resource type="StyleBox" uid="uid://c3hplao1np3bw" path="res://assets/base_button.tres" id="1_ov371"]
+[ext_resource type="StyleBox" uid="uid://bjo7kb32rmvbf" path="res://assets/button_disabled.tres" id="1_y6jyq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_njpcq"]
 bg_color = Color(0.8, 0.803922, 0.756863, 1)

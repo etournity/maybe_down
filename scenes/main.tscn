@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/World.gd" id="1_k8dhs"]
 [ext_resource type="PackedScene" uid="uid://bfs3ewieb5wyj" path="res://assets/objects/realistic/Sink.tscn" id="2_3it8b"]
 [ext_resource type="Script" path="res://scenes/Camera.gd" id="2_342py"]
-[ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="3_p022i"]
+[ext_resource type="PackedScene" uid="uid://6pg8sfpakjl1" path="res://scenes/pause_menu.tscn" id="3_p022i"]
 [ext_resource type="AudioStream" uid="uid://xrnjeomj6vnd" path="res://audio/click.wav" id="4_em1xl"]
 [ext_resource type="AudioStream" uid="uid://dcvohfpqmms56" path="res://audio/main_theme_loop.ogg" id="5_3n2do"]
 
@@ -34,11 +34,10 @@ size = Vector3(3, 1, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_lk2ei"]
 size = Vector3(3, 1, 1)
 
-[node name="Main" type="Node3D" node_paths=PackedStringArray("click_sound")]
+[node name="Main" type="Node3D"]
 script = ExtResource("1_k8dhs")
 snappiness = 8.0
 rotation_speed = 15.0
-click_sound = NodePath("World/Click")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tnlyh")
