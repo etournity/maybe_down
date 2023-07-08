@@ -22,7 +22,7 @@ enabled=PackedStringArray("res://addons/github_to_itch/plugin.cfg")
 [github_to_itch]
 
 config/itch_username="FlowStreetGames"
-config/itch_project_name="gmtk-23"
+config/itch_project_name="maybe-down"
 
 [input]
 
