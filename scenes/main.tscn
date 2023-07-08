@@ -30,8 +30,10 @@ size = Vector3(3, 1, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_lk2ei"]
 size = Vector3(3, 1, 1)
 
-[node name="Node3D" type="Node3D"]
+[node name="Main" type="Node3D"]
 script = ExtResource("1_k8dhs")
+snappiness = 4.0
+rotation_speed = 20.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tnlyh")
