@@ -1,6 +1,5 @@
 extends Control
 
-@onready var mainScene = preload("res://scenes/main.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -12,7 +11,7 @@ func _process(delta):
 
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file(mainScene)
+	get_tree().change_scene_to_file("res://scenes/loading.tscn")
 
 func _on_options_pressed():
 	$Container.hide()
