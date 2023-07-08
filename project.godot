@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 buses/default_bus_layout="res://audio/mixer.tres"
 buses/channel_disable_threshold_db=-50.0
 
+[autoload]
+
+Global="*res://global.gd"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/github_to_itch/plugin.cfg")
