@@ -12,7 +12,29 @@ func _ready():
 	world = get_node("World")
 	camera = get_node("Camera")
 
+
 func _process(delta):
+	if(!$pause_menu.isOpen):
+		get_rotated(delta)
+	
+	if(Input.is_action_just_pressed("quit")):
+		get_tree().quit()
+	
+	if(Input.is_action_just_pressed("pause")):
+		if($pause_menu.isOpen):
+			$pause_menu.close()
+		else:
+			$pause_menu.open()
+		toggle_time($pause_menu.isOpen)
+		
+	
+func toggle_time(isPaused: bool):
+	if(isPaused):
+		Engine.time_scale = 0
+	else:
+		Engine.time_scale = 1
+
+func get_rotated(delta):
 	if(Input.is_action_just_pressed("left")):
 		target_rot += rotation_speed
 	if(Input.is_action_just_pressed("right")):
@@ -24,5 +46,6 @@ func _process(delta):
 	
 	PhysicsServer3D.area_set_param(get_world_3d().space, PhysicsServer3D.AREA_PARAM_GRAVITY_VECTOR, -camera.basis.y * 1.7)
 
-	if(Input.is_action_just_pressed("quit")):
-		get_tree().quit()
+func _on_pause_menu_resume():
+	$pause_menu.close()
+	toggle_time(false)
