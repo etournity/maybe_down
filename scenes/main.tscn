@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://7tw7q0wgsivv"]
+[gd_scene load_steps=17 format=3 uid="uid://7tw7q0wgsivv"]
 
 [ext_resource type="Script" path="res://scenes/World.gd" id="1_k8dhs"]
 [ext_resource type="PackedScene" uid="uid://bfs3ewieb5wyj" path="res://assets/objects/realistic/Sink.tscn" id="2_3it8b"]
 [ext_resource type="Script" path="res://scenes/Camera.gd" id="2_342py"]
-[ext_resource type="PackedScene" uid="uid://6pg8sfpakjl1" path="res://scenes/pause_menu.tscn" id="3_p022i"]
+[ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="3_p022i"]
+[ext_resource type="AudioStream" uid="uid://xrnjeomj6vnd" path="res://audio/click.wav" id="4_em1xl"]
 [ext_resource type="AudioStream" uid="uid://dcvohfpqmms56" path="res://audio/main_theme_loop.ogg" id="5_3n2do"]
 
 [sub_resource type="Environment" id="Environment_tnlyh"]
@@ -33,10 +34,11 @@ size = Vector3(3, 1, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_lk2ei"]
 size = Vector3(3, 1, 1)
 
-[node name="Main" type="Node3D"]
+[node name="Main" type="Node3D" node_paths=PackedStringArray("click_sound")]
 script = ExtResource("1_k8dhs")
-snappiness = 6.0
-rotation_speed = 20.0
+snappiness = 8.0
+rotation_speed = 15.0
+click_sound = NodePath("World/Click")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tnlyh")
@@ -136,6 +138,11 @@ mesh = SubResource("BoxMesh_lk2ei")
 
 [node name="silestoneSink" parent="World" instance=ExtResource("2_3it8b")]
 transform = Transform3D(0.929796, -0.368076, 0, 0.368076, 0.929796, 0, 0, 0, 1, 4.51148, 3.00169, -0.0913229)
+
+[node name="Click" type="AudioStreamPlayer" parent="World"]
+stream = ExtResource("4_em1xl")
+volume_db = -10.651
+bus = &"Effects"
 
 [node name="pause_menu" parent="." instance=ExtResource("3_p022i")]
 

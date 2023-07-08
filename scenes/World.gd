@@ -6,12 +6,12 @@ var camera: Camera3D
 var target_rot: float = 0.0
 @export_range(1, 10) var snappiness: float = 1.0
 @export_range(2, 20) var rotation_speed: float = 10
+@export var click_sound: AudioStreamPlayer
 
 func _ready():
 	npc = get_node("Node3D/NPC")
 	world = get_node("World")
 	camera = get_node("Camera")
-
 
 func _process(delta):
 	if(!$pause_menu.isOpen):
@@ -36,8 +36,10 @@ func toggle_time(isPaused: bool):
 
 func get_rotated(delta):
 	if(Input.is_action_just_pressed("left")):
+		click_sound.play()
 		target_rot += rotation_speed
 	if(Input.is_action_just_pressed("right")):
+		click_sound.play()
 		target_rot -= rotation_speed
 	
 	var current_rot = camera.rotation_degrees.z
