@@ -5,7 +5,8 @@ resource_name = "Gold"
 cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.839701, 0.701966, 0.369501, 1)
-roughness = 0.5
+metallic = 0.88
+roughness = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lw153"]
 resource_name = "Ruby"

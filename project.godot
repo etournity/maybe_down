@@ -54,8 +54,8 @@ pause={
 
 [layer_names]
 
-3d_physics/layer_1="NPC"
-3d_physics/layer_2="Static"
+3d_physics/layer_1="Static"
+3d_physics/layer_2="NPC"
 3d_physics/layer_3="Bed"
 
 [physics]
