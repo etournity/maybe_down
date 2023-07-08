@@ -1,0 +1,31 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010/2011 TIG
+# Made for 'Ironing Board.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+d 1.000000
+
+newmtl Color_008
+Ka 0.000000 0.000000 0.000000
+Kd 0.117647 0.117647 0.117647
+Ks 0.000000 0.000000 0.000000
+d 1.000000
+
+newmtl Metal_Rough
+Ka 0.000000 0.000000 0.000000
+Kd 0.600000 0.615686 0.627451
+Ks 0.000000 0.000000 0.000000
+d 1.000000
+map_Kd Ironing Board_Textures/Metal_Rough.jpg
+
+newmtl Carpet_Pattern_Squares_Multi
+Ka 0.000000 0.000000 0.000000
+Kd 0.541176 0.505882 0.396078
+Ks 0.000000 0.000000 0.000000
+d 1.000000
+map_Kd Ironing Board_Textures/Carpet_Pattern_Squares_Multi.jpg
+
+#EOF
