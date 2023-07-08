@@ -47,6 +47,16 @@ rotation_speed = 15.0
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tnlyh")
 
+[node name="ReflectionProbe" type="ReflectionProbe" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.52695, 0)
+max_distance = 53.3
+box_projection = true
+
+[node name="ReflectionProbe2" type="ReflectionProbe" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.54346, 0)
+max_distance = 53.3
+box_projection = true
+
 [node name="NPC" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4259, 5.75807, 0)
 collision_mask = 6
