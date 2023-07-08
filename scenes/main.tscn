@@ -52,12 +52,12 @@ shape = SubResource("SphereShape3D_h0xe1")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/NPC/CollisionShape3D2"]
 mesh = SubResource("SphereMesh_3fhbj")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.977995, 0.0591246, 0.200076, -0.208629, 0.27716, 0.9379, -4.44089e-16, -0.959003, 0.283396, 0, 4.37732, 0)
-
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33366, 14.3209)
 current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera"]
+transform = Transform3D(0.977995, 0.0591246, 0.200076, -0.208629, 0.27716, 0.9379, -4.44089e-16, -0.959003, 0.283396, 0, 3.04366, -14.3209)
 
 [node name="World" type="Node3D" parent="."]
 
