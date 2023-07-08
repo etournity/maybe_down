@@ -9,7 +9,7 @@ func _ready():
 	npc = get_node("Node3D/NPC")
 	world = get_node("World")
 	camera = get_node("Camera")
-
+	
 func _process(_delta):
 	if(Input.is_action_just_pressed("left")):
 		camera.rotate_z(0.1)
@@ -20,3 +20,22 @@ func _process(_delta):
 
 	if(Input.is_action_just_pressed("quit")):
 		get_tree().quit()
+	
+	if(Input.is_action_just_pressed("pause")):
+		if($pause_menu.isOpen):
+			$pause_menu.close()
+		else:
+			$pause_menu.open()
+		toggle_time($pause_menu.isOpen)
+		
+	
+func toggle_time(isPaused: bool):
+	if(isPaused):
+		Engine.time_scale = 0
+	else:
+		Engine.time_scale = 1
+
+
+func _on_pause_menu_resume():
+	$pause_menu.close()
+	toggle_time(false)

@@ -1,0 +1,90 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvmrqbvh3wu0j"]
+
+[ext_resource type="Script" path="res://options.gd" id="1_003dg"]
+
+[node name="options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_003dg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="MasterVolume" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/MasterVolume"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/MasterVolume/VBoxContainer"]
+layout_mode = 2
+text = "Master"
+
+[node name="MasterSlider" type="HSlider" parent="VBoxContainer/VBoxContainer/MasterVolume/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+min_value = -50.0
+max_value = 0.0
+tick_count = 5
+ticks_on_borders = true
+
+[node name="MusicVolume" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/MusicVolume/VBoxContainer"]
+layout_mode = 2
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="VBoxContainer/VBoxContainer/MusicVolume/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+min_value = -50.0
+max_value = 0.0
+tick_count = 5
+ticks_on_borders = true
+
+[node name="EffectsVolume" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/EffectsVolume"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/EffectsVolume/VBoxContainer"]
+layout_mode = 2
+text = "Effects
+"
+
+[node name="EffectsSlider" type="HSlider" parent="VBoxContainer/VBoxContainer/EffectsVolume/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+min_value = -50.0
+max_value = 0.0
+tick_count = 5
+ticks_on_borders = true
+
+[node name="CenterContainer4" type="CenterContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/CenterContainer4"]
+layout_mode = 2
+text = "Back
+"
+
+[connection signal="pressed" from="VBoxContainer/CenterContainer4/Button" to="." method="_on_button_pressed"]
