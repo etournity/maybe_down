@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd345fllcbhqu"
-path.s3tc="res://.godot/imported/Rock2_T_Rock_02_D.png-8a5b91405d75c93b5b1dc0bed67dc8da.s3tc.ctex"
+uid="uid://kpq518nrs0ke"
+path.s3tc="res://.godot/imported/PacmanArcade_machine.png-3d7bf1e1cd3d1ec1ee054860eeea066e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/objects/realistic/Rock2_T_Rock_02_D.png"
-dest_files=["res://.godot/imported/Rock2_T_Rock_02_D.png-8a5b91405d75c93b5b1dc0bed67dc8da.s3tc.ctex"]
+source_file="res://assets/objects/realistic/textures/PacmanArcade_machine.png"
+dest_files=["res://.godot/imported/PacmanArcade_machine.png-3d7bf1e1cd3d1ec1ee054860eeea066e.s3tc.ctex"]
 
 [params]
 

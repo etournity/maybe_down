@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uaap7widnjxt"
-path.s3tc="res://.godot/imported/WritingDesk_Writing_DeskDiffuseMap.png-737d282ab66c47f2fd5a98ebb118b983.s3tc.ctex"
+uid="uid://cn7hshaxq1hr1"
+path.s3tc="res://.godot/imported/metal_scrap_gear_small_1.png-4aca6b79a4389a330ed51aae5fad8ee2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/objects/realistic/WritingDesk_Writing_DeskDiffuseMap.png"
-dest_files=["res://.godot/imported/WritingDesk_Writing_DeskDiffuseMap.png-737d282ab66c47f2fd5a98ebb118b983.s3tc.ctex"]
+source_file="res://assets/objects/realistic/textures/metal_scrap_gear_small_1.png"
+dest_files=["res://.godot/imported/metal_scrap_gear_small_1.png-4aca6b79a4389a330ed51aae5fad8ee2.s3tc.ctex"]
 
 [params]
 

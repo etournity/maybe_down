@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfhh4hmaql45f"
-path.s3tc="res://.godot/imported/HourGlass_Sand.png-64793bdb2a859920e9f7706c5f6738f4.s3tc.ctex"
+uid="uid://qnkoode3wasr"
+path.s3tc="res://.godot/imported/Rock3_T_Rock_03_D.png-22b8389b4d6aeae8d55750deca97ced7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/objects/realistic/HourGlass_Sand.png"
-dest_files=["res://.godot/imported/HourGlass_Sand.png-64793bdb2a859920e9f7706c5f6738f4.s3tc.ctex"]
+source_file="res://assets/objects/realistic/textures/Rock3_T_Rock_03_D.png"
+dest_files=["res://.godot/imported/Rock3_T_Rock_03_D.png-22b8389b4d6aeae8d55750deca97ced7.s3tc.ctex"]
 
 [params]
 

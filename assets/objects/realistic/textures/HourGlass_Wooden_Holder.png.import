@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxn4ivw480ch5"
-path.s3tc="res://.godot/imported/silestoneSink_texture.png-6a7923cb9813e06357486f5f4f847dcd.s3tc.ctex"
+uid="uid://brm3lxro56o74"
+path.s3tc="res://.godot/imported/HourGlass_Wooden_Holder.png-961c93fb0ca7a2bda71899f0481487ae.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/objects/realistic/silestoneSink_texture.png"
-dest_files=["res://.godot/imported/silestoneSink_texture.png-6a7923cb9813e06357486f5f4f847dcd.s3tc.ctex"]
+source_file="res://assets/objects/realistic/textures/HourGlass_Wooden_Holder.png"
+dest_files=["res://.godot/imported/HourGlass_Wooden_Holder.png-961c93fb0ca7a2bda71899f0481487ae.s3tc.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2aimvb0cobc1"
-path.s3tc="res://.godot/imported/Rock2_T_Rock_02_N.png-bc2a6dff3cfa0b6bb259966670c75930.s3tc.ctex"
+uid="uid://up6mt4qre2wp"
+path.s3tc="res://.godot/imported/Rock4_T_Rock_04_N.png-ca6e76e7b1ecc76279e3dc4b1b464d4e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/objects/realistic/Rock2_T_Rock_02_N.png"
-dest_files=["res://.godot/imported/Rock2_T_Rock_02_N.png-bc2a6dff3cfa0b6bb259966670c75930.s3tc.ctex"]
+source_file="res://assets/objects/realistic/textures/Rock4_T_Rock_04_N.png"
+dest_files=["res://.godot/imported/Rock4_T_Rock_04_N.png-ca6e76e7b1ecc76279e3dc4b1b464d4e.s3tc.ctex"]
 
 [params]
 
@@ -26,7 +26,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://assets/objects/realistic/Rock2_T_Rock_02_N.png"
+roughness/src_normal="res://assets/objects/realistic/Rock4_T_Rock_04_N.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
