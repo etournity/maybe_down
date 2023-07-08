@@ -15,6 +15,10 @@ run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="res://audio/mixer.tres"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/github_to_itch/plugin.cfg")

@@ -15,6 +15,26 @@ func open():
 
 func close():
 	hide()
+	
+func handle_volume_change(bus_idx,volume):
+	#Change this if you have changed the slider "Min Value"
+	if(volume == -50):
+		AudioServer.set_bus_mute(bus_idx,true)
+	else: AudioServer.set_bus_mute(bus_idx,false)
+	AudioServer.set_bus_volume_db(bus_idx,volume)
+
 
 func _on_button_pressed():
 	back.emit()
+
+
+func _on_master_slider_value_changed(value):
+		handle_volume_change(AudioServer.get_bus_index("Master"),value)
+
+
+func _on_music_slider_value_changed(value):
+		handle_volume_change(AudioServer.get_bus_index("Music"),value)
+
+
+func _on_effects_slider_value_changed(value):
+		handle_volume_change(AudioServer.get_bus_index("Effects"),value)
