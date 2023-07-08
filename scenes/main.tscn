@@ -1,12 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://7tw7q0wgsivv"]
+[gd_scene load_steps=14 format=3 uid="uid://7tw7q0wgsivv"]
 
 [ext_resource type="Script" path="res://scenes/World.gd" id="1_k8dhs"]
 [ext_resource type="PackedScene" uid="uid://bfs3ewieb5wyj" path="res://assets/objects/realistic/Sink.tscn" id="2_3it8b"]
+[ext_resource type="Script" path="res://scenes/Camera.gd" id="2_342py"]
 
 [sub_resource type="Environment" id="Environment_tnlyh"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nyp13"]
-friction = 0.47
+friction = 0.5
 bounce = 0.3
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_h0xe1"]
@@ -32,16 +33,14 @@ size = Vector3(3, 1, 1)
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_k8dhs")
-snappiness = 4.0
+snappiness = 6.0
 rotation_speed = 20.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tnlyh")
 
-[node name="Node3D" type="Node3D" parent="."]
-
-[node name="NPC" type="RigidBody3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90034, 1.77124, 0)
+[node name="NPC" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4259, 5.75807, 0)
 axis_lock_linear_z = true
 axis_lock_angular_x = true
 axis_lock_angular_y = true
@@ -49,16 +48,17 @@ physics_material_override = SubResource("PhysicsMaterial_nyp13")
 continuous_cd = true
 can_sleep = false
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Node3D/NPC"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.00494, 0)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC"]
 shape = SubResource("SphereShape3D_h0xe1")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/NPC/CollisionShape3D2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NPC/CollisionShape3D2"]
 mesh = SubResource("SphereMesh_3fhbj")
 
-[node name="Camera" type="Camera3D" parent="."]
+[node name="Camera" type="Camera3D" parent="." node_paths=PackedStringArray("npc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33366, 14.3209)
 current = true
+script = ExtResource("2_342py")
+npc = NodePath("../NPC")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera"]
 transform = Transform3D(0.977995, 0.0591246, 0.200076, -0.208629, 0.27716, 0.9379, -4.44089e-16, -0.959003, 0.283396, 0, 3.04366, -14.3209)
@@ -66,7 +66,7 @@ transform = Transform3D(0.977995, 0.0591246, 0.200076, -0.208629, 0.27716, 0.937
 [node name="World" type="Node3D" parent="."]
 
 [node name="StaticBody3D7" type="StaticBody3D" parent="World"]
-transform = Transform3D(1.31134e-07, -1, 0, 1, 1.31134e-07, 0, 0, 0, 1, 7.35467, 0.488893, 0)
+transform = Transform3D(1.31134e-07, -1, 0, 1, 1.31134e-07, 0, 0, 0, 1, 7.37652, 0.488893, -0.00591469)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/StaticBody3D7"]
 shape = SubResource("BoxShape3D_di7hj")

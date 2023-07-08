@@ -22,7 +22,7 @@ func _process(delta):
 	var smooth_rot = current_rot + (target_rot - current_rot) * delta * snappiness
 	camera.rotation_degrees.z = smooth_rot
 	
-	PhysicsServer3D.area_set_param(get_world_3d().space, PhysicsServer3D.AREA_PARAM_GRAVITY_VECTOR, -camera.basis.y)
+	PhysicsServer3D.area_set_param(get_world_3d().space, PhysicsServer3D.AREA_PARAM_GRAVITY_VECTOR, -camera.basis.y * 1.7)
 
 	if(Input.is_action_just_pressed("quit")):
 		get_tree().quit()
