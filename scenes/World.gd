@@ -12,13 +12,11 @@ func _ready():
 
 func _process(_delta):
 	if(Input.is_action_just_pressed("left")):
-		gravity += Vector3(0.1,0,0)
-		camera.rotate_z(0.01)
+		camera.rotate_z(0.1)
 	if(Input.is_action_just_pressed("right")):
-		gravity += Vector3(-0.1,0,0)
-		camera.rotate_z(-0.01)
-	PhysicsServer3D.area_set_param(get_world_3d().space, PhysicsServer3D.AREA_PARAM_GRAVITY_VECTOR, gravity)
-
+		camera.rotate_z(-0.1)
+	
+	PhysicsServer3D.area_set_param(get_world_3d().space, PhysicsServer3D.AREA_PARAM_GRAVITY_VECTOR, -camera.basis.y)
 
 	if(Input.is_action_just_pressed("quit")):
 		get_tree().quit()
