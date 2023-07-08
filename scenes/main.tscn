@@ -1,9 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://7tw7q0wgsivv"]
+[gd_scene load_steps=15 format=3 uid="uid://7tw7q0wgsivv"]
 
 [ext_resource type="Script" path="res://scenes/World.gd" id="1_k8dhs"]
 [ext_resource type="PackedScene" uid="uid://bfs3ewieb5wyj" path="res://assets/objects/realistic/Sink.tscn" id="2_3it8b"]
-[ext_resource type="PackedScene" uid="uid://6pg8sfpakjl1" path="res://scenes/pause_menu.tscn" id="3_p022i"]
 [ext_resource type="Script" path="res://scenes/Camera.gd" id="2_342py"]
+[ext_resource type="PackedScene" uid="uid://6pg8sfpakjl1" path="res://scenes/pause_menu.tscn" id="3_p022i"]
 
 [sub_resource type="Environment" id="Environment_tnlyh"]
 

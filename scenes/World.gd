@@ -14,18 +14,9 @@ func _ready():
 
 
 func _process(delta):
-
-	if(Input.is_action_just_pressed("left")):
-		target_rot += rotation_speed
-	if(Input.is_action_just_pressed("right")):
-		target_rot -= rotation_speed
+	if(!$pause_menu.isOpen):
+		get_rotated(delta)
 	
-	var current_rot = camera.rotation_degrees.z
-	var smooth_rot = current_rot + (target_rot - current_rot) * delta * snappiness
-	camera.rotation_degrees.z = smooth_rot
-	
-	PhysicsServer3D.area_set_param(get_world_3d().space, PhysicsServer3D.AREA_PARAM_GRAVITY_VECTOR, -camera.basis.y * 1.7)
-
 	if(Input.is_action_just_pressed("quit")):
 		get_tree().quit()
 	
@@ -43,6 +34,17 @@ func toggle_time(isPaused: bool):
 	else:
 		Engine.time_scale = 1
 
+func get_rotated(delta):
+	if(Input.is_action_just_pressed("left")):
+		target_rot += rotation_speed
+	if(Input.is_action_just_pressed("right")):
+		target_rot -= rotation_speed
+	
+	var current_rot = camera.rotation_degrees.z
+	var smooth_rot = current_rot + (target_rot - current_rot) * delta * snappiness
+	camera.rotation_degrees.z = smooth_rot
+	
+	PhysicsServer3D.area_set_param(get_world_3d().space, PhysicsServer3D.AREA_PARAM_GRAVITY_VECTOR, -camera.basis.y * 1.7)
 
 func _on_pause_menu_resume():
 	$pause_menu.close()
