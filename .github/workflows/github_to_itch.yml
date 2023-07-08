@@ -144,13 +144,13 @@ jobs:
       run: ./butler login
     
     - name: Push Web to Itch
-      run: ./butler push ./exports/web flowstreetgames/maybe-down:web --userversion-file ./VERSION/VERSION.txt
+      run: ./butler push ./exports/web flowstreetgames/gmtk-23:web --userversion-file ./VERSION/VERSION.txt
     
     - name: Push Linux/X11 to Itch
-      run: ./butler push ./exports/linux flowstreetgames/maybe-down:linux --userversion-file ./VERSION/VERSION.txt
+      run: ./butler push ./exports/linux flowstreetgames/gmtk-23:linux --userversion-file ./VERSION/VERSION.txt
     
     - name: Push Windows Desktop to Itch
-      run: ./butler push ./exports/windows flowstreetgames/maybe-down:win --userversion-file ./VERSION/VERSION.txt
+      run: ./butler push ./exports/windows flowstreetgames/gmtk-23:win --userversion-file ./VERSION/VERSION.txt
     
 
  Cleanup:

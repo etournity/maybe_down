@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://7tw7q0wgsivv"]
+[gd_scene load_steps=13 format=3 uid="uid://7tw7q0wgsivv"]
 
 [ext_resource type="Script" path="res://scenes/World.gd" id="1_k8dhs"]
+[ext_resource type="PackedScene" uid="uid://bfs3ewieb5wyj" path="res://assets/objects/realistic/Sink.tscn" id="2_3it8b"]
 
 [sub_resource type="Environment" id="Environment_tnlyh"]
 
@@ -128,3 +129,6 @@ shape = SubResource("BoxShape3D_scbub")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="World/StaticBody3D3/CollisionShape3D"]
 mesh = SubResource("BoxMesh_lk2ei")
+
+[node name="silestoneSink" parent="World" instance=ExtResource("2_3it8b")]
+transform = Transform3D(0.929796, -0.368076, 0, 0.368076, 0.929796, 0, 0, 0, 1, 4.51148, 3.00169, -0.0913229)
