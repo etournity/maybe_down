@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://2q6a038raj7"
+path="res://.godot/imported/Orchestral Pipe Organ.obj-eb0c22f47e61889c9d577e8662d92158.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Orchestral Pipe Organ.obj-eb0c22f47e61889c9d577e8662d92158.mesh"]
+
+source_file="res://assets/objects/realistic/PipeOrgan/Orchestral Pipe Organ.obj"
+dest_files=["res://.godot/imported/Orchestral Pipe Organ.obj-eb0c22f47e61889c9d577e8662d92158.mesh", "res://.godot/imported/Orchestral Pipe Organ.obj-eb0c22f47e61889c9d577e8662d92158.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

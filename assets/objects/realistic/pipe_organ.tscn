@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccdym7b05614w"]
+
+[ext_resource type="ArrayMesh" uid="uid://2q6a038raj7" path="res://assets/objects/realistic/PipeOrgan/Orchestral Pipe Organ.obj" id="1_xk8wt"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_eo21d"]
+points = PackedVector3Array(7.84084, 228.675, -45.5365, -103.747, -1.75311, -27.5252, 105.079, -1.75311, -27.5252, 40.2603, 27.073, 26.4684, 101.461, 185.436, -56.3417, -100.129, 185.458, -45.5365, -92.6551, 6.78956, -53.2717, -38.9282, 27.0504, 26.4684, 93.9872, 6.78956, -53.2717, -100.129, 185.458, -56.3417, -51.9534, 1.1607, 21.9053, 101.461, 185.436, -45.5365, 53.3054, 1.1607, 21.9053, -6.5292, 228.675, -52.7346, -103.747, 52.2676, -27.5252, 105.079, 52.2676, -27.5252, -6.5292, 228.675, -45.5365, 51.0736, 27.073, 22.8613, -49.7211, 27.0504, 22.8613, -100.22, 5.62567, -47.9804, 101.239, 9.43643, -47.8778, -103.747, 52.2676, -34.7232, 7.84084, 228.675, -52.7346, 105.079, 52.2676, -34.7232)
+
+[node name="PipeOrgan" type="StaticBody3D"]
+
+[node name="OrchestralPipeOrgan" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0.374287, -1.19209e-07, 1.41881)
+mesh = ExtResource("1_xk8wt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0.374287, -1.19209e-07, 1.41881)
+shape = SubResource("ConvexPolygonShape3D_eo21d")
