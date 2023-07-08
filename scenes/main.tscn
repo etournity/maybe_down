@@ -156,7 +156,6 @@ collision_layer = 2
 [node name="Click" type="AudioStreamPlayer" parent="World"]
 stream = ExtResource("4_em1xl")
 volume_db = -10.651
-bus = &"Effects"
 
 [node name="pause_menu" parent="." instance=ExtResource("3_p022i")]
 
