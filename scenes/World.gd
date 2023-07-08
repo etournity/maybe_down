@@ -28,7 +28,6 @@ func _process(delta):
 		else:
 			$pause_menu.open()
 		toggle_time($pause_menu.isOpen)
-		
 	
 func toggle_time(isPaused: bool):
 	if(isPaused):

@@ -1,9 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://7tw7q0wgsivv"]
+[gd_scene load_steps=18 format=3 uid="uid://7tw7q0wgsivv"]
 
 [ext_resource type="Script" path="res://scenes/World.gd" id="1_k8dhs"]
 [ext_resource type="PackedScene" uid="uid://bfs3ewieb5wyj" path="res://assets/objects/realistic/Sink.tscn" id="2_3it8b"]
 [ext_resource type="Script" path="res://scenes/Camera.gd" id="2_342py"]
-[ext_resource type="PackedScene" uid="uid://6pg8sfpakjl1" path="res://scenes/pause_menu.tscn" id="3_p022i"]
+[ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="3_p022i"]
 [ext_resource type="AudioStream" uid="uid://xrnjeomj6vnd" path="res://audio/click.wav" id="4_em1xl"]
 [ext_resource type="AudioStream" uid="uid://dcvohfpqmms56" path="res://audio/main_theme_loop.ogg" id="5_3n2do"]
 
@@ -16,6 +16,11 @@ bounce = 0.3
 [sub_resource type="SphereShape3D" id="SphereShape3D_h0xe1"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_3fhbj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w1qxk"]
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.4
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_di7hj"]
 size = Vector3(15, 1, 1)
@@ -56,6 +61,7 @@ shape = SubResource("SphereShape3D_h0xe1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NPC/CollisionShape3D2"]
 mesh = SubResource("SphereMesh_3fhbj")
+surface_material_override/0 = SubResource("StandardMaterial3D_w1qxk")
 
 [node name="Camera" type="Camera3D" parent="." node_paths=PackedStringArray("npc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33366, 14.3209)
