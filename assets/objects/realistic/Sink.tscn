@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bfs3ewieb5wyj"]
 
-[ext_resource type="Texture2D" uid="uid://bxn4ivw480ch5" path="res://assets/objects/realistic/silestoneSink_texture.png" id="1_rrlce"]
+[ext_resource type="Texture2D" uid="uid://bxn4ivw480ch5" path="res://assets/objects/realistic/textures/silestoneSink_texture.png" id="1_rrlce"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gbro3"]
 resource_name = "Material.001"
