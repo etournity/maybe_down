@@ -1,41 +1,34 @@
 extends Node3D
 
-var npc : RigidBody3D 
-var world: Node3D
-var camera: Camera3D
-var click_sound: AudioStreamPlayer
+@onready var npc : RigidBody3D = $NPC
+@onready var world: Node3D = $World
+@onready var camera: Camera3D = $Camera
+@onready var click_sound: AudioStreamPlayer = $World/Click
 @onready var music: AudioStreamPlayer = $Music
+@onready var pauseMenu: Control = $pause_menu
+@onready var timer: RichTextLabel = $UI/Timer
 var target_rot: float = 0.0
 @export_range(1, 10) var snappiness: float = 1.0
 @export_range(2, 20) var rotation_speed: float = 10
 
 
 func _ready():
-	npc = $NPC
-	world = $World
-	camera = $Camera
-	click_sound = $World/Click
-	
-	
+	pass
+
 func _process(delta):
-	if(!$pause_menu.isOpen && Global.isStarted):
+	if(!Global.gameState == Global.GameStates.RUNNING):
+		return
+		
+	if(!pauseMenu.isOpen):
 		get_rotated(delta)
 	
-	if(Input.is_action_just_pressed("quit")):
-		get_tree().quit()
 	
-	if(Input.is_action_just_pressed("pause")):
-		if($pause_menu.isOpen):
-			$pause_menu.close()
-		else:
-			$pause_menu.open()
-		toggle_time($pause_menu.isOpen)
 	
-func toggle_time(isPaused: bool):
+func toggle_pause(isPaused: bool):
 	if(isPaused):
-		Engine.time_scale = 0
+		get_tree().paused = true
 	else:
-		Engine.time_scale = 1
+		get_tree().paused = false
 
 func get_rotated(delta):
 	if(Input.is_action_just_pressed("left")):
@@ -54,6 +47,12 @@ func get_rotated(delta):
 func start_music():
 	music.play()
 
+func stop_music():
+	music.stop()
+
+func set_timer_time(time: String):
+	timer.text = time
+	
 func _on_pause_menu_resume():
-	$pause_menu.close()
-	toggle_time(false)
+	pauseMenu.close()
+	toggle_pause(false)
