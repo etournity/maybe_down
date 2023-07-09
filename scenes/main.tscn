@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://7tw7q0wgsivv"]
+[gd_scene load_steps=95 format=3 uid="uid://7tw7q0wgsivv"]
 
 [ext_resource type="Script" path="res://scenes/World.gd" id="1_k8dhs"]
 [ext_resource type="PackedScene" uid="uid://bfs3ewieb5wyj" path="res://assets/objects/realistic/Sink.tscn" id="2_3it8b"]
@@ -51,10 +51,15 @@
 [ext_resource type="AudioStream" uid="uid://0fn3dnwresib" path="res://audio/Collision sounds/sfx_grass_06.wav" id="23_6d7cr"]
 [ext_resource type="PackedScene" uid="uid://dc3tdt7ft5qyf" path="res://assets/objects/boulders/boulder_2.tscn" id="23_irxli"]
 [ext_resource type="PackedScene" uid="uid://bbmciong8gery" path="res://assets/objects/boulders/boulder_6.tscn" id="24_aikcd"]
+[ext_resource type="AudioStream" uid="uid://d21aquxvoccmc" path="res://audio/Collision sounds/sfx_fruit_05.wav" id="25_8k5m7"]
 [ext_resource type="PackedScene" uid="uid://xkasosdw5xcb" path="res://assets/objects/boulders/boulder_7.tscn" id="25_44kft"]
 [ext_resource type="PackedScene" uid="uid://cjyxryrv8811j" path="res://assets/objects/boulders/boulder_5.tscn" id="26_6c2l7"]
+[ext_resource type="AudioStream" uid="uid://deauoopog2fou" path="res://audio/Collision sounds/sfx_fruit_03.wav" id="26_41r3v"]
+[ext_resource type="AudioStream" uid="uid://cb1bfa7575fsc" path="res://audio/Collision sounds/sfx_fruit_02.wav" id="27_rbqqu"]
 [ext_resource type="PackedScene" uid="uid://cjlo4oawb8au7" path="res://assets/objects/boulders/boulder_3.tscn" id="27_rmlly"]
+[ext_resource type="AudioStream" uid="uid://cjpowqu2i6r4c" path="res://audio/Collision sounds/sfx_fruit_01.wav" id="28_4w4g6"]
 [ext_resource type="PackedScene" uid="uid://dfk5arorrxj2k" path="res://assets/objects/boulders/boulder_4.tscn" id="28_vfl2f"]
+[ext_resource type="AudioStream" uid="uid://bf4ugwgyvg8bk" path="res://audio/Collision sounds/sfx_fruit_04.wav" id="29_hn6uh"]
 [ext_resource type="PackedScene" uid="uid://cyre3vxlwribb" path="res://assets/objects/realistic/wheel_barrow.tscn" id="30_n88tt"]
 [ext_resource type="PackedScene" uid="uid://5l8yckek6yr0" path="res://assets/objects/realistic/grand_piano.tscn" id="31_brw8f"]
 [ext_resource type="PackedScene" uid="uid://cwbng6fuyvfkc" path="res://assets/objects/realistic/writing_desk.tscn" id="32_r2yj0"]
@@ -68,7 +73,17 @@
 [ext_resource type="PackedScene" uid="uid://dqjurl2rh3kdw" path="res://assets/objects/fruits/peach.tscn" id="45_6r75k"]
 [ext_resource type="PackedScene" uid="uid://bgf312ujl8gji" path="res://assets/objects/realistic/pacman_arcade.tscn" id="46_jb0f8"]
 [ext_resource type="PackedScene" uid="uid://c7wliquri1em8" path="res://assets/objects/fruits/red_pear.tscn" id="47_a03ni"]
+[ext_resource type="AudioStream" uid="uid://blswjprox0a8d" path="res://audio/Collision sounds/sfx_wood_05.wav" id="52_c32eo"]
+[ext_resource type="AudioStream" uid="uid://bu6bv55urqgfl" path="res://audio/Collision sounds/sfx_wood_04.wav" id="53_35jvt"]
+[ext_resource type="AudioStream" uid="uid://bc0muyn6np81x" path="res://audio/Collision sounds/sfx_wood_01.wav" id="54_7svil"]
+[ext_resource type="AudioStream" uid="uid://l6qjx0djscur" path="res://audio/Collision sounds/sfx_plastic_04.wav" id="57_uusrm"]
+[ext_resource type="AudioStream" uid="uid://c6jpaflst5slj" path="res://audio/Collision sounds/sfx_plastic_02.wav" id="58_4oxs1"]
 [ext_resource type="PackedScene" uid="uid://fxr41nenuept" path="res://scenes/ufo_beam.tscn" id="58_bdtko"]
+[ext_resource type="AudioStream" uid="uid://csyhs6uaerwvc" path="res://audio/Collision sounds/sfx_plastic_01.wav" id="59_0n2ei"]
+[ext_resource type="AudioStream" uid="uid://dyxvwoirarx5" path="res://audio/Collision sounds/sfx_piano_05.wav" id="61_81aes"]
+[ext_resource type="AudioStream" uid="uid://d3xjyds7k4ve" path="res://audio/Collision sounds/sfx_piano_02.wav" id="62_w205i"]
+[ext_resource type="AudioStream" uid="uid://t2eobx8poi4v" path="res://audio/Collision sounds/sfx_piano_01.wav" id="63_85hnr"]
+[ext_resource type="AudioStream" uid="uid://cnfisk8xs2muo" path="res://audio/Collision sounds/sfx_piano_04.wav" id="64_cd0ai"]
 
 [sub_resource type="Environment" id="Environment_tnlyh"]
 
@@ -208,24 +223,34 @@ transform = Transform3D(1.29871, 0.582896, 4.79308, 0.333187, 4.94078, -0.691137
 
 [node name="Banana" parent="World/Obstacles/Food" instance=ExtResource("22_k2v7h")]
 transform = Transform3D(1.43056, 2.63695, 0, -2.63695, 1.43056, 0, 0, 0, 3, 13.2153, 189.065, 0)
+script = ExtResource("17_5wx3i")
+sounds = Array[AudioStream]([ExtResource("25_8k5m7"), ExtResource("26_41r3v"), ExtResource("27_rbqqu"), ExtResource("28_4w4g6"), ExtResource("29_hn6uh")])
 
 [node name="Fork" parent="World/Obstacles/Food" instance=ExtResource("15_0u4tu")]
 transform = Transform3D(0.306127, 0.951991, 0, -0.951991, 0.306127, 0, 0, 0, 1, -12.4672, 198.288, 0.105831)
 
 [node name="Melon" parent="World/Obstacles/Food" instance=ExtResource("14_bbsai")]
 transform = Transform3D(1.69382, -1.06348, 0, 1.06348, 1.69382, 0, 0, 0, 2, -17.1428, 191.111, 0)
+script = ExtResource("17_5wx3i")
+sounds = Array[AudioStream]([ExtResource("28_4w4g6"), ExtResource("27_rbqqu"), ExtResource("26_41r3v"), ExtResource("29_hn6uh"), ExtResource("25_8k5m7")])
 
 [node name="Pomegranate" parent="World/Obstacles/Food" instance=ExtResource("15_08ohu")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2.94618, 184.815, 0)
+script = ExtResource("17_5wx3i")
+sounds = Array[AudioStream]([ExtResource("25_8k5m7"), ExtResource("29_hn6uh"), ExtResource("26_41r3v"), ExtResource("27_rbqqu"), ExtResource("28_4w4g6")])
 
 [node name="Apple" parent="World/Obstacles/Food" instance=ExtResource("16_41d65")]
 transform = Transform3D(0.790155, -0.612907, 0, 0.612907, 0.790155, 0, 0, 0, 1, -9.415, 186.166, 0)
+script = ExtResource("17_5wx3i")
+sounds = Array[AudioStream]([ExtResource("25_8k5m7"), ExtResource("29_hn6uh"), ExtResource("26_41r3v"), ExtResource("27_rbqqu"), ExtResource("28_4w4g6")])
 
 [node name="Blender" parent="World/Obstacles/Food" instance=ExtResource("17_vgc72")]
 transform = Transform3D(6.6248, -3.06628, 0, 3.06628, 6.6248, 0, 0, 0, 7.3, 0.0554752, 171.573, 0)
 
 [node name="Banana2" parent="World/Obstacles/Food" instance=ExtResource("22_k2v7h")]
 transform = Transform3D(-1.55566, 3.6851, 0, -3.6851, -1.55566, 0, 0, 0, 4, -15.9981, 182.04, 0)
+script = ExtResource("17_5wx3i")
+sounds = Array[AudioStream]([ExtResource("25_8k5m7"), ExtResource("29_hn6uh"), ExtResource("26_41r3v"), ExtResource("27_rbqqu"), ExtResource("28_4w4g6")])
 
 [node name="Mountain" type="Node3D" parent="World/Obstacles"]
 
@@ -365,15 +390,21 @@ transform = Transform3D(-4.66442, -1.00235, -1.49616, -1.43976, -0.419725, 4.769
 
 [node name="wooden_barrel" parent="World/Obstacles/Furniture" instance=ExtResource("34_lknms")]
 transform = Transform3D(2.08164, -2.16027, 0, 2.16027, 2.08164, 0, 0, 0, 3, 6.11897, 91.5307, 0)
+script = ExtResource("17_5wx3i")
+sounds = Array[AudioStream]([ExtResource("52_c32eo"), ExtResource("53_35jvt"), ExtResource("54_7svil"), ExtResource("54_7svil"), ExtResource("53_35jvt")])
 
 [node name="HourGlass" parent="World/Obstacles/Furniture" instance=ExtResource("8_631qw")]
 transform = Transform3D(2.34459, 2.4731, -0.79792, -2.36526, 2.47606, 0.724345, 1.07631, 0.0539996, 3.32996, 5.81923, 42.6763, 0)
 
 [node name="IroningBoard" parent="World/Obstacles/Furniture" instance=ExtResource("36_ghra3")]
 transform = Transform3D(10, -2.17697e-07, 7.45058e-08, 2.17697e-07, 10, 9.31323e-08, -7.45058e-08, -9.31323e-08, 10, 17.4062, 73.8092, 0)
+script = ExtResource("17_5wx3i")
+sounds = Array[AudioStream]([ExtResource("57_uusrm"), ExtResource("58_4oxs1"), ExtResource("59_0n2ei")])
 
 [node name="PipeOrgan" parent="World/Obstacles/Furniture" instance=ExtResource("37_co23h")]
 transform = Transform3D(2.81546, 2.77185, 0.624531, -1.37012, 2.09468, -3.12011, -2.48917, 1.98222, 2.42381, -33.7648, 67.5869, -7.09181)
+script = ExtResource("17_5wx3i")
+sounds = Array[AudioStream]([ExtResource("61_81aes"), ExtResource("62_w205i"), ExtResource("63_85hnr"), ExtResource("64_cd0ai")])
 
 [node name="Gear" parent="World/Obstacles/Furniture" instance=ExtResource("9_k5jx7")]
 transform = Transform3D(4.30661, 3.3371, -2.51333, -3.46957, 4.86763, 0.517914, 2.32705, 1.08162, 5.42356, -46.5614, 108.21, 0)
@@ -407,9 +438,13 @@ velocity = 5000.0
 
 [node name="Mandarin" parent="World/Obstacles/Goal" instance=ExtResource("44_wfwwb")]
 transform = Transform3D(1.5, 0, 0, 0, 1.1843, -0.92056, 0, 0.92056, 1.1843, -16, 34, 0)
+script = ExtResource("17_5wx3i")
+sounds = Array[AudioStream]([ExtResource("26_41r3v"), ExtResource("27_rbqqu"), ExtResource("28_4w4g6")])
 
 [node name="Banana" parent="World/Obstacles/Goal" instance=ExtResource("22_k2v7h")]
 transform = Transform3D(0.891301, 1.7851, 0.137819, -1.78975, 0.892532, 0.0140939, -0.0489244, -0.129612, 1.9952, -1.04262, 38.0548, 0)
+script = ExtResource("17_5wx3i")
+sounds = Array[AudioStream]([ExtResource("28_4w4g6"), ExtResource("25_8k5m7")])
 
 [node name="wheel_barrow" parent="World/Obstacles/Goal" instance=ExtResource("30_n88tt")]
 transform = Transform3D(-0.053032, -1.1428, 1.64049, -0.112796, 1.64016, 1.13892, -1.99611, -0.0623202, -0.107942, -6.53495, 27.7068, 0)
@@ -419,6 +454,8 @@ transform = Transform3D(1.73861, 0.988551, 0, -0.988551, 1.73861, 0, 0, 0, 2, -2
 
 [node name="Peach" parent="World/Obstacles/Goal" instance=ExtResource("45_6r75k")]
 transform = Transform3D(-0.329003, -0.937666, 0.111977, -0.224516, -0.0375095, -0.973748, 0.917251, -0.345506, -0.198181, 2.18662, 31.3783, 0)
+script = ExtResource("17_5wx3i")
+sounds = Array[AudioStream]([ExtResource("25_8k5m7"), ExtResource("27_rbqqu")])
 
 [node name="WritingDesk" parent="World/Obstacles/Goal" instance=ExtResource("32_r2yj0")]
 transform = Transform3D(1.94926, 0.447657, 0, -0.447657, 1.94926, 0, 0, 0, 2, -2.49533, 22.6061, 0)
@@ -431,6 +468,8 @@ transform = Transform3D(1.18642, -0.53143, 0, 0.505777, 1.12915, -0.399024, 0.16
 
 [node name="PacmanArcade" parent="World/Obstacles/Goal" instance=ExtResource("46_jb0f8")]
 transform = Transform3D(0.874329, -1.57197, 0.874329, 1.11155, 1.23649, 1.11155, -1.41421, -1.20416e-07, 1.41421, -5.25454, 15.3474, 0)
+script = ExtResource("17_5wx3i")
+sounds = Array[AudioStream]([ExtResource("57_uusrm"), ExtResource("58_4oxs1"), ExtResource("59_0n2ei")])
 
 [node name="Rock4" parent="World/Obstacles/Goal" instance=ExtResource("19_6ixti")]
 transform = Transform3D(0.849987, -0.312462, 0.424134, 0.467106, 0.819291, -0.332527, -0.243587, 0.480759, 0.84234, -19.4239, 11.2977, 0)
@@ -443,6 +482,8 @@ transform = Transform3D(0.119999, -0.122254, -0.103219, 0.0607414, 0.154172, -0.
 
 [node name="RedPear" parent="World/Obstacles/Goal" instance=ExtResource("47_a03ni")]
 transform = Transform3D(1.01339, -1.10592, 0, 1.10592, 1.01339, 0, 0, 0, 1.5, -14.9193, 14.5494, 0)
+script = ExtResource("17_5wx3i")
+sounds = Array[AudioStream]([ExtResource("29_hn6uh"), ExtResource("26_41r3v"), ExtResource("28_4w4g6")])
 
 [node name="ufo_beam2" parent="World/Obstacles" instance=ExtResource("58_bdtko")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432682, 207.957, 0.0991111)
