@@ -15,9 +15,10 @@ func _ready():
 	world = $World
 	camera = $Camera
 	click_sound = $World/Click
-	music.play()
+	
+	
 func _process(delta):
-	if(!$pause_menu.isOpen):
+	if(!$pause_menu.isOpen && Global.isStarted):
 		get_rotated(delta)
 	
 	if(Input.is_action_just_pressed("quit")):
@@ -49,6 +50,9 @@ func get_rotated(delta):
 	camera.rotation_degrees.z = smooth_rot
 	
 	PhysicsServer3D.area_set_param(get_world_3d().space, PhysicsServer3D.AREA_PARAM_GRAVITY_VECTOR, -camera.basis.y * 1.7)
+
+func start_music():
+	music.play()
 
 func _on_pause_menu_resume():
 	$pause_menu.close()

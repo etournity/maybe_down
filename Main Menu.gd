@@ -11,7 +11,8 @@ func _process(delta):
 
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://scenes/loading.tscn")
+	hide()
+	Global.start_game()
 
 func _on_options_pressed():
 	$Container.hide()

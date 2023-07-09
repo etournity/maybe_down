@@ -1,19 +1,13 @@
 extends Control
 
 var progress = []
-var mainScene = "res://scenes/main.tscn"
+@onready var mainScene = preload("res://scenes/main.tscn")
 var loadingStatus
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	ResourceLoader.load_threaded_request(mainScene, "PackedScene", false)
+		get_tree().change_scene_to_packed(mainScene)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	loadingStatus = ResourceLoader.load_threaded_get_status(mainScene, progress)
-	print(progress)
-	$ColorRect/CenterContainer/VBoxContainer/ProgressBar.value = progress[0]*100
-	
-	if(progress[0] == 1):
-		get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(mainScene))
-	
+func _process(_delta):
+	pass

@@ -3,11 +3,10 @@
 [ext_resource type="Script" path="res://scenes/World.gd" id="1_k8dhs"]
 [ext_resource type="PackedScene" uid="uid://bfs3ewieb5wyj" path="res://assets/objects/realistic/Sink.tscn" id="2_3it8b"]
 [ext_resource type="Script" path="res://scenes/Camera.gd" id="2_342py"]
-[ext_resource type="Script" path="res://scenes/NPC.gd" id="2_lfwca"]
 [ext_resource type="PackedScene" uid="uid://6pg8sfpakjl1" path="res://scenes/pause_menu.tscn" id="3_p022i"]
 [ext_resource type="AudioStream" uid="uid://xrnjeomj6vnd" path="res://audio/click.wav" id="4_em1xl"]
 [ext_resource type="AudioStream" uid="uid://dcvohfpqmms56" path="res://audio/main_theme_loop.ogg" id="5_3n2do"]
-[ext_resource type="PackedScene" uid="uid://byb4hk8l12noc" path="res://assets/objects/realistic/Bed.tscn" id="7_6ga6s"]
+[ext_resource type="PackedScene" path="res://assets/objects/realistic/Bed.tscn" id="7_6ga6s"]
 [ext_resource type="PackedScene" path="res://assets/objects/realistic/Hourglass.tscn" id="8_631qw"]
 [ext_resource type="PackedScene" uid="uid://c650eanb1t60p" path="res://assets/objects/realistic/Gear.tscn" id="9_k5jx7"]
 [ext_resource type="PackedScene" uid="uid://jqgaqar5h5k0" path="res://assets/objects/realistic/GoldRing.tscn" id="10_pjyk1"]
@@ -28,6 +27,9 @@ metallic_specular = 1.0
 roughness = 0.4
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_1svup"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pqktr"]
+size = Vector2(30, 10)
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_k8dhs")
@@ -51,21 +53,18 @@ box_projection = true
 [node name="NPC" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.754133, 2.63933, 0)
 collision_layer = 2
-collision_mask = 13
+collision_mask = 5
 axis_lock_linear_z = true
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 physics_material_override = SubResource("PhysicsMaterial_nyp13")
 continuous_cd = true
-max_contacts_reported = 2
-contact_monitor = true
 can_sleep = false
-script = ExtResource("2_lfwca")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NPC"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC"]
 shape = SubResource("SphereShape3D_h0xe1")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="NPC/CollisionShape3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NPC/CollisionShape3D2"]
 mesh = SubResource("SphereMesh_3fhbj")
 surface_material_override/0 = SubResource("StandardMaterial3D_w1qxk")
 
@@ -92,11 +91,10 @@ bus = &"Effects"
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_3n2do")
-volume_db = -10.0
-autoplay = true
+volume_db = -8.108
 bus = &"Music"
 
-[node name="Bed" parent="." groups=["bed"] instance=ExtResource("7_6ga6s")]
+[node name="Bed" parent="." instance=ExtResource("7_6ga6s")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3.51933, -4.30926, -0.674926)
 
 [node name="HourGlass" parent="." instance=ExtResource("8_631qw")]
@@ -110,35 +108,17 @@ transform = Transform3D(0.507538, 0, -0.861629, 0, 1, 0, 0.861629, 0, 0.507538, 
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.37635, 0)
-collision_layer = 8
-collision_mask = 8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("WorldBoundaryShape3D_1svup")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("PlaneMesh_pqktr")
+
 [node name="StaticBody3D2" type="StaticBody3D" parent="."]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 77.5956, 0)
-collision_layer = 8
-collision_mask = 8
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 13.259, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
 shape = SubResource("WorldBoundaryShape3D_1svup")
 
-[node name="StaticBody3D3" type="StaticBody3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 9.99343, -5.37635, 0)
-collision_layer = 8
-collision_mask = 8
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
-shape = SubResource("WorldBoundaryShape3D_1svup")
-
-[node name="StaticBody3D4" type="StaticBody3D" parent="."]
-transform = Transform3D(1.19209e-07, 1, 0, -1, 1.19209e-07, 0, 0, 0, 1, -10.4177, -5.37635, 0)
-collision_layer = 8
-collision_mask = 8
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
-shape = SubResource("WorldBoundaryShape3D_1svup")
-
-[connection signal="body_entered" from="NPC" to="NPC" method="_on_body_entered"]
 [connection signal="resume" from="pause_menu" to="." method="_on_pause_menu_resume"]
