@@ -9,7 +9,7 @@ enum GameStates {
 var gameState:GameStates = 0
 
 var time = 0
-var formattedTime = "00:00:000"
+var formattedTime = "Time: 00:00:000"
 
 @onready var mainTheme: AudioStreamOggVorbis = load("res://audio/main_theme_loop.ogg")
 @onready var menuTheme: AudioStreamOggVorbis = load("res://audio/menu_music_loop.ogg")
