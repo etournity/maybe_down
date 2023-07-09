@@ -1,9 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://b84qar3kdrdeh"]
+[gd_scene load_steps=5 format=3 uid="uid://b84qar3kdrdeh"]
 
 [ext_resource type="Script" path="res://goal.gd" id="1_4y1vh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6vnle"]
-size = Vector3(2, 0.5, 2)
+size = Vector3(2, 1, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dy6di"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(1, 0, 0, 0.792157)
+
+[sub_resource type="BoxMesh" id="BoxMesh_eymo1"]
+material = SubResource("StandardMaterial3D_dy6di")
+size = Vector3(2, 1, 2)
 
 [node name="goal" type="Node3D"]
 script = ExtResource("1_4y1vh")
@@ -13,8 +22,12 @@ collision_layer = 16
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.498466, 0)
 shape = SubResource("BoxShape3D_6vnle")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.504427, 0)
+mesh = SubResource("BoxMesh_eymo1")
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

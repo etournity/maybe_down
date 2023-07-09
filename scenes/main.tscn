@@ -11,7 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://dfcbldifwfqy7" path="res://audio/Collision sounds/sfx_collision-004.wav" id="4_j8wot"]
 [ext_resource type="AudioStream" uid="uid://dcvohfpqmms56" path="res://audio/main_theme_loop.ogg" id="5_3n2do"]
 [ext_resource type="AudioStream" uid="uid://bbakhdxf5kvg1" path="res://audio/Collision sounds/sfx_random_01.wav" id="6_exftb"]
-[ext_resource type="PackedScene" uid="uid://7fbbtmdihu33" path="res://assets/objects/realistic/Bed.tscn" id="7_6ga6s"]
+[ext_resource type="PackedScene" uid="uid://byb4hk8l12noc" path="res://assets/objects/realistic/Bed.tscn" id="7_6ga6s"]
 [ext_resource type="AudioStream" uid="uid://dpme1ekigrjux" path="res://audio/Collision sounds/sfx_random_02.wav" id="7_pgumy"]
 [ext_resource type="PackedScene" uid="uid://dyyyf8a84slbg" path="res://assets/objects/cartoon/Grapes.tscn" id="8_6svsk"]
 [ext_resource type="AudioStream" uid="uid://svisq3x2w533" path="res://audio/Collision sounds/sfx_random_03.wav" id="8_46bg5"]
@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://ckspgvw2lh580" path="res://assets/objects/cartoon/Cheese.tscn" id="10_gcnkk"]
 [ext_resource type="PackedScene" uid="uid://jqgaqar5h5k0" path="res://assets/objects/realistic/GoldRing.tscn" id="10_pjyk1"]
 [ext_resource type="AudioStream" uid="uid://d3japko0vopor" path="res://audio/Collision sounds/sfx_stone_01.wav" id="10_sxmil"]
-[ext_resource type="PackedScene" uid="uid://7h8lo6udj060" path="res://assets/objects/realistic/spoon.tscn" id="11_1vr5n"]
+[ext_resource type="PackedScene" uid="uid://ck6aqce5f0fej" path="res://assets/objects/realistic/spoon.tscn" id="11_1vr5n"]
 [ext_resource type="AudioStream" uid="uid://h88kwvq41fxy" path="res://audio/Collision sounds/sfx_stone_02.wav" id="11_56hmm"]
 [ext_resource type="AudioStream" uid="uid://bd23mkfj4t6k2" path="res://audio/Collision sounds/sfx_stone_03.wav" id="12_7kejf"]
 [ext_resource type="AudioStream" uid="uid://djynoyygwrjhb" path="res://audio/Collision sounds/sfx_stone_04.wav" id="13_ow4dn"]
@@ -61,7 +61,7 @@
 [ext_resource type="PackedScene" path="res://assets/objects/realistic/WoodenBarrel.tscn" id="34_lknms"]
 [ext_resource type="PackedScene" uid="uid://dwisumk7ft2ss" path="res://assets/objects/realistic/IroningBoard.tscn" id="36_ghra3"]
 [ext_resource type="PackedScene" uid="uid://bngjwsdds4buc" path="res://assets/objects/realistic/pipe_organ.tscn" id="37_co23h"]
-[ext_resource type="PackedScene" uid="uid://jm63qd7qs3f" path="res://assets/objects/realistic/TooriGate.tscn" id="40_7s35u"]
+[ext_resource type="PackedScene" path="res://assets/objects/realistic/TooriGate.tscn" id="40_7s35u"]
 [ext_resource type="PackedScene" uid="uid://b84qar3kdrdeh" path="res://scenes/goal.tscn" id="41_nh3p5"]
 [ext_resource type="PackedScene" uid="uid://cy17o4h6mm7k6" path="res://assets/objects/realistic/SilverRing.tscn" id="43_7vxta"]
 [ext_resource type="PackedScene" uid="uid://1t7kidujc3pg" path="res://assets/objects/fruits/mandarin.tscn" id="44_wfwwb"]
@@ -168,9 +168,11 @@ bus = &"Effects"
 
 [node name="Bed" parent="World/Interactables" instance=ExtResource("7_6ga6s")]
 transform = Transform3D(-3, 0, 4.52987e-07, 0, 3, 0, -4.52987e-07, 0, -3, -26.5, -1.534, -0.675)
+velocity = 5000.0
 
 [node name="Bed2" parent="World/Interactables" instance=ExtResource("7_6ga6s")]
 transform = Transform3D(-3, 0, 4.52987e-07, 0, 3, 0, -4.52987e-07, 0, -3, 26.5, -1.8565, 0)
+velocity = 5000.0
 
 [node name="Bed3" parent="World/Interactables" instance=ExtResource("7_6ga6s")]
 transform = Transform3D(-2, 0, 3.01992e-07, 0, 2, 0, -3.01992e-07, 0, -2, 67.4671, 147.486, 0)
@@ -183,6 +185,7 @@ transform = Transform3D(-0.62071, -0.0570413, 0.781963, -0.0354638, 0.998372, 0.
 
 [node name="Bed6" parent="World/Interactables" instance=ExtResource("7_6ga6s")]
 transform = Transform3D(-0.857068, 0.212341, -0.46941, 0.201603, 0.976689, 0.073717, 0.474121, -0.0314542, -0.879898, 44.3657, 102.744, 0)
+velocity = 5000.0
 
 [node name="Bed7" parent="World/Interactables" instance=ExtResource("7_6ga6s")]
 transform = Transform3D(0.157925, 0.0209721, -0.783977, -0.0448732, 0.798645, 0.0123251, 0.782973, 0.0415414, 0.158834, 37.6578, 149.378, 0.446615)
@@ -390,7 +393,7 @@ transform = Transform3D(0.258819, 2.18557e-08, -0.965926, 0.836516, 0.5, 0.22414
 transform = Transform3D(0.946147, 0, -1.76205, 0, 2, 0, 1.76205, 0, 0.946147, 7.21788, 2.93466, 0)
 
 [node name="goal" parent="World/Obstacles/Goal" instance=ExtResource("41_nh3p5")]
-transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 1, 10.9491, -4.79947, 0)
+transform = Transform3D(4, 0, 0, 0, 3.5, 0, 0, 0, 4, 14.1719, -5.30685, 0)
 
 [node name="GoldRing" parent="World/Obstacles/Goal" instance=ExtResource("10_pjyk1")]
 transform = Transform3D(0.0130491, 1.35906, -1.46723, -1.87996, 0.508928, 0.454688, 0.682333, 1.3762, 1.28081, 16.1226, -3.95259, -0.593172)
@@ -400,6 +403,7 @@ transform = Transform3D(0.326283, -0.67881, 1.85277, 1.96272, 0.304969, -0.23391
 
 [node name="Bed" parent="World/Obstacles/Goal" instance=ExtResource("7_6ga6s")]
 transform = Transform3D(-0.222781, -0.286547, 3.9835, -0.0160004, 3.98972, 0.2861, -3.99376, -4.02181e-09, -0.223355, 20.0422, 12.7198, 0)
+velocity = 5000.0
 
 [node name="Mandarin" parent="World/Obstacles/Goal" instance=ExtResource("44_wfwwb")]
 transform = Transform3D(1.5, 0, 0, 0, 1.1843, -0.92056, 0, 0.92056, 1.1843, -16, 34, 0)
