@@ -1,7 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://davjaqenu4lqw"]
+[gd_scene load_steps=11 format=3 uid="uid://cxvj3c620xqem"]
 
-[ext_resource type="Texture2D" uid="uid://x7lh7afdpeul" path="res://assets/objects/realistic/Rock1_T_Rock_01_D.png" id="1_m7dq3"]
-[ext_resource type="Texture2D" uid="uid://bp7plub1qd1qi" path="res://assets/objects/realistic/Rock1_T_Rock_01_N.png" id="2_mn6ig"]
+[ext_resource type="Texture2D" uid="uid://x7lh7afdpeul" path="res://assets/objects/realistic/textures/Rock1_T_Rock_01_D.png" id="1_m7dq3"]
+[ext_resource type="Texture2D" uid="uid://bp7plub1qd1qi" path="res://assets/objects/realistic/textures/Rock1_T_Rock_01_N.png" id="2_mn6ig"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_i25f6"]
 points = PackedVector3Array(-0.0770863, -10.0631, -202.022, -0.0593217, 6.8944, -202.441, -285.542, 6.73868, 70.8802, -128.428, 190.619, -71.8478, 8.59555, -147.931, 78.9336, 263.381, 32.8897, -94.7716, 120.562, 52.2162, 195.619, -253.63, 41.5884, -112.136, 141.357, 147.595, -104.067, -172.484, -105.452, 18.8845, 268.302, -53.8153, -24.2504, -269.65, 137.187, -33.1175, -33.8017, -94.328, -99.7187, 149.202, -72.2832, 168.246, -190.655, 6.71975, 123.089, 79.165, -2.15046, -208.787, -84.008, 174.898, 1.49281, 194.352, 33.7922, 131.033, -289.268, -46.0147, 19.2376, 148.879, -115.84, 132.919, 146.847, 93.038, -153.769, -120.145, -18.9661, -152.911, 109.678, -77.5298, -82.8799, -246.175, 59.3466, -121.512, 78.5327, 15.3683, 201.942, -251.823, 57.2793, 60.2359, 237.567, 76.8693, -68.5553, 252.614, -45.545, 45.1846, 51.6523, -148.029, 87.6078, 176.143, 50.5, -174.142, 276.293, 6.49556, -69.3839, 147.848, 145.685, -93.9255)
@@ -112,7 +112,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jbb5e")
 
-[node name="Rock1" type="StaticBody3D"]
+[node name="Rock1" type="StaticBody3D" groups=["rock_1"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0.0852655, -0.165907, 0.0142112)

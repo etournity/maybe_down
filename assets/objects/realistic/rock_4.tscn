@@ -1,7 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://ljx1xvjerc0o"]
+[gd_scene load_steps=11 format=3 uid="uid://ce0ewkhocti2o"]
 
-[ext_resource type="Texture2D" uid="uid://82pmgpl6p08l" path="res://assets/objects/realistic/Rock4_T_Rock_04_D.png" id="1_iib23"]
-[ext_resource type="Texture2D" uid="uid://up6mt4qre2wp" path="res://assets/objects/realistic/Rock4_T_Rock_04_N.png" id="2_x33o0"]
+[ext_resource type="Texture2D" uid="uid://82pmgpl6p08l" path="res://assets/objects/realistic/textures/Rock4_T_Rock_04_D.png" id="1_iib23"]
+[ext_resource type="Texture2D" uid="uid://up6mt4qre2wp" path="res://assets/objects/realistic/textures/Rock4_T_Rock_04_N.png" id="2_x33o0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2bl1x"]
 resource_name = "M_Rock_04.001"
@@ -112,7 +112,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_nmcme")
 
-[node name="Rock4" type="StaticBody3D"]
+[node name="Rock4" type="StaticBody3D" groups=["rock_4"]]
 
 [node name="Rock_04_LOD0" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0.153228, -0.0851298, -0.0411757)

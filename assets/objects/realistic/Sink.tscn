@@ -45,7 +45,7 @@ shadow_mesh = SubResource("ArrayMesh_5pnmg")
 [sub_resource type="BoxShape3D" id="BoxShape3D_w8i4f"]
 size = Vector3(1.68116, 1.90097, 4.24423)
 
-[node name="silestoneSink" type="StaticBody3D"]
+[node name="silestoneSink" type="StaticBody3D" groups=["sink"]]
 
 [node name="Cylinder" type="MeshInstance3D" parent="."]
 transform = Transform3D(-3.30012e-15, -4.37114e-08, -1, -1, 7.54979e-08, 0, 7.54979e-08, 1, -4.37114e-08, 0, 1.59174, 0)

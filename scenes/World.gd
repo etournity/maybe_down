@@ -22,8 +22,6 @@ func _process(delta):
 	if(!pauseMenu.isOpen):
 		get_rotated(delta)
 	
-	
-	
 func toggle_pause(isPaused: bool):
 	if(isPaused):
 		get_tree().paused = true

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1hkbwlnc58rc"]
+[gd_scene load_steps=6 format=3 uid="uid://2hll8qviwrr8"]
 
-[ext_resource type="Texture2D" uid="uid://qnkoode3wasr" path="res://assets/objects/realistic/Rock3_T_Rock_03_D.png" id="1_5mlvf"]
+[ext_resource type="Texture2D" uid="uid://qnkoode3wasr" path="res://assets/objects/realistic/textures/Rock3_T_Rock_03_D.png" id="1_5mlvf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xdhm"]
 resource_name = "M_Rock_03"
@@ -45,7 +45,7 @@ shadow_mesh = SubResource("ArrayMesh_122v6")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hapu2"]
 points = PackedVector3Array(-74.4992, -141.368, 74.494, -6.31033, 172.123, -40.5317, -6.31739, 172.235, -50.9909, 171.682, -115.027, 53.4646, 4.10315, -119.067, -107.723, -165.44, 58.299, 128.251, 145.174, 109.852, 22.0289, -53.4652, 130.937, -119.209, 139.11, 31.3012, -66.3492, -53.4479, 125.642, 126.685, -58.3187, -124.697, 115.611, -113.303, 0.332314, -9.00114, 94.0525, -153.407, -57.0644, -133.617, 143.061, 69.9688, 76.5852, 57.1351, 99.5418, 40.2708, 10.5324, -122.873, -42.6414, -139.987, -50.7613, 56.6507, -157.568, 58.9362, -42.3518, 10.5602, -122.671, -127.372, -73.5298, 101.061, -105.45, 141.015, -40.5843, 128.382, 119.331, 47.7541, 56.079, 140.508, -61.1958, 77.5496, -115.288, -98.5647, 98.5141, 57.7834, -93.2927, 163.141, 47.7419, 43.4792, -22.3048, -158.414, -14.7141, 50.6127, 36.3896, 109.715, -158.202, 0.136144, 132.039, 149.185, 51.987, -50.6271, 108.751, 141.396, 6.36669, -103.975, -92.3765, 26.9117)
 
-[node name="Rock3" type="StaticBody3D"]
+[node name="Rock3" type="StaticBody3D" groups=["rock_3"]]
 
 [node name="Rock_03_LOD0" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0.0410317, 0.0864352, 0.0478957)

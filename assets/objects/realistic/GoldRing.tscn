@@ -73,7 +73,7 @@ shadow_mesh = SubResource("ArrayMesh_0c4q8")
 height = 0.566643
 radius = 0.988716
 
-[node name="GoldRing" type="StaticBody3D"]
+[node name="GoldRing" type="StaticBody3D" groups=["gold_ring"]]
 
 [node name="RubyRing" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.632941, 0, 0, 0, 0.632941, 0, 0, 0, 0.632941, 0, 1, 0)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://bgf312ujl8gji"]
 
-[ext_resource type="Texture2D" uid="uid://kpq518nrs0ke" path="res://assets/objects/realistic/PacmanArcade_machine.png" id="1_yjink"]
+[ext_resource type="Texture2D" uid="uid://kpq518nrs0ke" path="res://assets/objects/realistic/textures/PacmanArcade_machine.png" id="1_yjink"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vayxw"]
 resource_name = "black"
@@ -347,7 +347,7 @@ shadow_mesh = SubResource("ArrayMesh_6428e")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_e0glh"]
 points = PackedVector3Array(-0.0940118, 0.440056, -0.449635, -0.1006, 0.0656066, -0.739086, -0.1006, 0.0895352, -0.750994, 0.2106, 0.0651495, -0.739914, -0.0983238, 0.068408, -0.0155205, 0.2106, 0.424669, -0.008929, 0.209518, 0.364, -0.773286, 0.207952, 0.068408, -0.0155205, -0.1006, 0.424236, -0.00991819, -0.0999198, 0.364, -0.773286, 0.203611, 0.440056, -0.449635, 0.2106, 0.20898, -0.775949, 0.2106, 0.101109, -0.00900406, -0.1006, 0.209103, -0.77496, -0.0945883, 0.440766, -0.381027, 0.204188, 0.440766, -0.381027, 0.2106, 0.137046, -0.763935, -0.1006, 0.137355, -0.762977, 0.2106, 0.0891353, -0.751851, -0.0966014, 0.431569, -0.171239)
 
-[node name="PacmanArcade" type="StaticBody3D"]
+[node name="PacmanArcade" type="StaticBody3D" groups=["arcade"]]
 
 [node name="arcade" type="MeshInstance3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, -2.18557e-07, -5, 0, 5, -2.18557e-07, 0, 0, 0)

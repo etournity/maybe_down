@@ -1,5 +1,7 @@
 extends RigidBody3D
 
+@export var sounds: Array[NoiseResource] = []
+
 func _process(delta):
 	if (get_collision_mask_value(1) == false && linear_velocity.y < 0):
 		set_collision_mask_value(1, true)
