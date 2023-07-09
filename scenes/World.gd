@@ -10,6 +10,7 @@ extends Node3D
 var target_rot: float = 0.0
 @export_range(1, 10) var snappiness: float = 1.0
 @export_range(2, 20) var rotation_speed: float = 10
+var can_rotate = true
 
 
 func _ready():
@@ -20,7 +21,8 @@ func _process(delta):
 		return
 		
 	if(!pauseMenu.isOpen):
-		get_rotated(delta)
+		if (can_rotate):
+			get_rotated(delta)
 	
 func toggle_pause(isPaused: bool):
 	if(isPaused):

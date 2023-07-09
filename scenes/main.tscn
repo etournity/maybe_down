@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://7tw7q0wgsivv"]
+[gd_scene load_steps=54 format=3 uid="uid://7tw7q0wgsivv"]
 
 [ext_resource type="Script" path="res://scenes/World.gd" id="1_k8dhs"]
 [ext_resource type="PackedScene" uid="uid://bfs3ewieb5wyj" path="res://assets/objects/realistic/Sink.tscn" id="2_3it8b"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cklnsqw3g4bbk" path="res://audio/Collision sounds/sfx_collision-005.wav" id="3_dmchm"]
 [ext_resource type="PackedScene" uid="uid://6pg8sfpakjl1" path="res://scenes/pause_menu.tscn" id="3_p022i"]
 [ext_resource type="AudioStream" uid="uid://xrnjeomj6vnd" path="res://audio/click.wav" id="4_em1xl"]
+[ext_resource type="AudioStream" uid="uid://b3vr0vl3e3d78" path="res://audio/Collision sounds/sfx_collision-008.wav" id="4_huoal"]
 [ext_resource type="AudioStream" uid="uid://dcvohfpqmms56" path="res://audio/main_theme_loop.ogg" id="5_3n2do"]
 [ext_resource type="PackedScene" uid="uid://7fbbtmdihu33" path="res://assets/objects/realistic/Bed.tscn" id="7_6ga6s"]
 [ext_resource type="PackedScene" uid="uid://dyyyf8a84slbg" path="res://assets/objects/cartoon/Grapes.tscn" id="8_6svsk"]
@@ -18,7 +19,10 @@
 [ext_resource type="PackedScene" uid="uid://jqgaqar5h5k0" path="res://assets/objects/realistic/GoldRing.tscn" id="10_pjyk1"]
 [ext_resource type="PackedScene" uid="uid://7h8lo6udj060" path="res://assets/objects/realistic/spoon.tscn" id="11_1vr5n"]
 [ext_resource type="PackedScene" uid="uid://ciht70n2pgqxw" path="res://assets/objects/cartoon/fork.tscn" id="15_0u4tu"]
+[ext_resource type="PackedScene" uid="uid://ctpw2v1yhn3c5" path="res://assets/objects/fruits/pomegranate.tscn" id="15_08ohu"]
+[ext_resource type="PackedScene" uid="uid://d34wrxyiiuiwf" path="res://assets/objects/fruits/melon.tscn" id="14_bbsai"]
 [ext_resource type="Texture2D" uid="uid://cqvvwf6juvqu" path="res://assets/backgrounds/grass_field.png" id="16_7tqon"]
+[ext_resource type="PackedScene" uid="uid://bo8hchfxmyqpm" path="res://assets/objects/fruits/apple.tscn" id="16_41d65"]
 [ext_resource type="Texture2D" uid="uid://dp81jea15x7np" path="res://assets/backgrounds/fresh-cover-background-beautiful-stadium-grass.jpg" id="16_e70jd"]
 [ext_resource type="Script" path="res://Obstacle.gd" id="17_5wx3i"]
 [ext_resource type="AudioStream" uid="uid://cshawmtau8p2" path="res://audio/Collision sounds/sfx_grass_01.wav" id="18_6lipt"]
@@ -27,6 +31,26 @@
 [ext_resource type="AudioStream" uid="uid://rol6wo3l7xjn" path="res://audio/Collision sounds/sfx_grass_04.wav" id="21_cofdw"]
 [ext_resource type="AudioStream" uid="uid://cj600mhrvt3cq" path="res://audio/Collision sounds/sfx_grass_05.wav" id="22_aro0a"]
 [ext_resource type="AudioStream" uid="uid://0fn3dnwresib" path="res://audio/Collision sounds/sfx_grass_06.wav" id="23_6d7cr"]
+[ext_resource type="PackedScene" uid="uid://cxvj3c620xqem" path="res://assets/objects/realistic/rock_1.tscn" id="16_vm52l"]
+[ext_resource type="PackedScene" uid="uid://b1yjkxqve5kq7" path="res://assets/objects/realistic/rock_2.tscn" id="17_1ubhh"]
+[ext_resource type="PackedScene" uid="uid://br6iqrxhn4nwg" path="res://assets/objects/realistic/Blender.tscn" id="17_vgc72"]
+[ext_resource type="PackedScene" uid="uid://2hll8qviwrr8" path="res://assets/objects/realistic/rock_3.tscn" id="18_hdxul"]
+[ext_resource type="PackedScene" uid="uid://ce0ewkhocti2o" path="res://assets/objects/realistic/rock_4.tscn" id="19_6ixti"]
+[ext_resource type="PackedScene" uid="uid://dxmv5r18n28n2" path="res://assets/objects/realistic/Cathedral.tscn" id="20_fbn8i"]
+[ext_resource type="PackedScene" uid="uid://cmjtt15h7cy6u" path="res://assets/objects/boulders/boulder_1.tscn" id="22_hp0vh"]
+[ext_resource type="PackedScene" uid="uid://dtdwfc37s51my" path="res://assets/objects/fruits/banana.tscn" id="22_k2v7h"]
+[ext_resource type="PackedScene" uid="uid://dc3tdt7ft5qyf" path="res://assets/objects/boulders/boulder_2.tscn" id="23_irxli"]
+[ext_resource type="PackedScene" uid="uid://bbmciong8gery" path="res://assets/objects/boulders/boulder_6.tscn" id="24_aikcd"]
+[ext_resource type="PackedScene" uid="uid://xkasosdw5xcb" path="res://assets/objects/boulders/boulder_7.tscn" id="25_44kft"]
+[ext_resource type="PackedScene" uid="uid://cjyxryrv8811j" path="res://assets/objects/boulders/boulder_5.tscn" id="26_6c2l7"]
+[ext_resource type="PackedScene" uid="uid://cjlo4oawb8au7" path="res://assets/objects/boulders/boulder_3.tscn" id="27_rmlly"]
+[ext_resource type="PackedScene" uid="uid://dfk5arorrxj2k" path="res://assets/objects/boulders/boulder_4.tscn" id="28_vfl2f"]
+[ext_resource type="PackedScene" uid="uid://c112xlw7l0ab" path="res://assets/objects/realistic/wheel_barrow.tscn" id="30_n88tt"]
+[ext_resource type="PackedScene" uid="uid://5l8yckek6yr0" path="res://assets/objects/realistic/grand_piano.tscn" id="31_brw8f"]
+[ext_resource type="PackedScene" uid="uid://cwbng6fuyvfkc" path="res://assets/objects/realistic/writing_desk.tscn" id="32_r2yj0"]
+[ext_resource type="PackedScene" path="res://assets/objects/realistic/WoodenBarrel.tscn" id="34_lknms"]
+[ext_resource type="PackedScene" uid="uid://dwisumk7ft2ss" path="res://assets/objects/realistic/IroningBoard.tscn" id="36_ghra3"]
+[ext_resource type="PackedScene" uid="uid://bngjwsdds4buc" path="res://assets/objects/realistic/pipe_organ.tscn" id="37_co23h"]
 
 [sub_resource type="Environment" id="Environment_tnlyh"]
 
@@ -83,7 +107,7 @@ max_distance = 53.3
 box_projection = true
 
 [node name="NPC" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 205.97, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 206.183, 0)
 collision_layer = 2
 collision_mask = 13
 axis_lock_linear_z = true
@@ -96,6 +120,8 @@ contact_monitor = true
 can_sleep = false
 script = ExtResource("2_lfwca")
 sounds = Array[AudioStream]([ExtResource("3_dmchm")])
+default_sounds = Array[AudioStream]([ExtResource("4_huoal")])
+main = NodePath("..")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC"]
 shape = SubResource("SphereShape3D_h0xe1")
@@ -105,7 +131,7 @@ mesh = SubResource("SphereMesh_3fhbj")
 surface_material_override/0 = SubResource("StandardMaterial3D_w1qxk")
 
 [node name="Camera" type="Camera3D" parent="." node_paths=PackedStringArray("npc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33366, 14.3209)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 220, 14.321)
 current = true
 script = ExtResource("2_342py")
 npc = NodePath("../NPC")
@@ -128,37 +154,223 @@ transform = Transform3D(-3, 0, 4.52987e-07, 0, 3, 0, -4.52987e-07, 0, -3, -26.5,
 [node name="Bed2" parent="World/Interactables" instance=ExtResource("7_6ga6s")]
 transform = Transform3D(-3, 0, 4.52987e-07, 0, 3, 0, -4.52987e-07, 0, -3, 26.5, -1.8565, 0)
 
+[node name="Bed3" parent="World/Interactables" instance=ExtResource("7_6ga6s")]
+transform = Transform3D(-2, 0, 3.01992e-07, 0, 2, 0, -3.01992e-07, 0, -2, 67.4671, 147.486, 0)
+
+[node name="Bed4" parent="World/Interactables" instance=ExtResource("7_6ga6s")]
+transform = Transform3D(-2, 0, 3.01992e-07, 0, 2, 0, -3.01992e-07, 0, -2, 72.8717, 147.265, 0)
+
+[node name="Bed5" parent="World/Interactables" instance=ExtResource("7_6ga6s")]
+transform = Transform3D(-0.62071, -0.0570413, 0.781963, -0.0354638, 0.998372, 0.0446769, -0.783238, 0, -0.621722, -69.3793, 141.322, 0)
+
+[node name="Bed6" parent="World/Interactables" instance=ExtResource("7_6ga6s")]
+transform = Transform3D(-0.857068, 0.212341, -0.46941, 0.201603, 0.976689, 0.073717, 0.474121, -0.0314542, -0.879898, 44.3657, 102.744, 0)
+
+[node name="Bed7" parent="World/Interactables" instance=ExtResource("7_6ga6s")]
+transform = Transform3D(0.157925, 0.0209721, -0.783977, -0.0448732, 0.798645, 0.0123251, 0.782973, 0.0415414, 0.158834, 37.6578, 149.378, 0.446615)
+
 [node name="Obstacles" type="Node3D" parent="World"]
 
 [node name="UFO" parent="World/Obstacles" instance=ExtResource("10_0dy8h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 207.97, 0)
 
-[node name="Spoon" parent="World/Obstacles" instance=ExtResource("11_1vr5n")]
+[node name="Food" type="Node3D" parent="World/Obstacles"]
+
+[node name="Spoon" parent="World/Obstacles/Food" instance=ExtResource("11_1vr5n")]
 transform = Transform3D(1.96519, -0.371505, 0, 0.371505, 1.96519, 0, 0, 0, 2, -2.6932, 197.97, 0)
 
-[node name="Grapes" parent="World/Obstacles" instance=ExtResource("8_6svsk")]
+[node name="Grapes" parent="World/Obstacles/Food" instance=ExtResource("8_6svsk")]
 transform = Transform3D(3.91259, -0.831647, 0, 0.831647, 3.91259, 0, 0, 0, 4, 4.78649, 192.26, 0)
 
-[node name="Orange" parent="World/Obstacles" instance=ExtResource("9_fsrdi")]
+[node name="Orange" parent="World/Obstacles/Food" instance=ExtResource("9_fsrdi")]
 transform = Transform3D(1.97317, 0.32648, 0, -0.32648, 1.97317, 0, 0, 0, 2, -4.39624, 190.538, 0)
 
-[node name="Cheese" parent="World/Obstacles" instance=ExtResource("10_gcnkk")]
+[node name="Cheese" parent="World/Obstacles/Food" instance=ExtResource("10_gcnkk")]
 transform = Transform3D(1.29871, 0.582896, 4.79308, 0.333187, 4.94078, -0.691137, -4.81688, 0.498915, 1.24448, -11.0017, 194.489, -0.503242)
+
+[node name="Banana" parent="World/Obstacles/Food" instance=ExtResource("22_k2v7h")]
+transform = Transform3D(1.43056, 2.63695, 0, -2.63695, 1.43056, 0, 0, 0, 3, 13.2153, 189.065, 0)
+
+[node name="Fork" parent="World/Obstacles/Food" instance=ExtResource("15_0u4tu")]
+transform = Transform3D(0.306127, 0.951991, 0, -0.951991, 0.306127, 0, 0, 0, 1, -12.4672, 198.288, 0.105831)
+
+[node name="Melon" parent="World/Obstacles/Food" instance=ExtResource("14_bbsai")]
+transform = Transform3D(1.69382, -1.06348, 0, 1.06348, 1.69382, 0, 0, 0, 2, -17.1428, 191.111, 0)
+
+[node name="Pomegranate" parent="World/Obstacles/Food" instance=ExtResource("15_08ohu")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2.94618, 184.815, 0)
+
+[node name="Apple" parent="World/Obstacles/Food" instance=ExtResource("16_41d65")]
+transform = Transform3D(0.790155, -0.612907, 0, 0.612907, 0.790155, 0, 0, 0, 1, -9.415, 186.166, 0)
+
+[node name="Blender" parent="World/Obstacles/Food" instance=ExtResource("17_vgc72")]
+transform = Transform3D(6.35254, -2.94027, 0, 2.94027, 6.35254, 0, 0, 0, 7, 0.0554752, 171.573, 0)
+
+[node name="Banana2" parent="World/Obstacles/Food" instance=ExtResource("22_k2v7h")]
+transform = Transform3D(-1.55566, 3.6851, 0, -3.6851, -1.55566, 0, 0, 0, 4, -15.9981, 182.04, 0)
+
+[node name="Mountain" type="Node3D" parent="World/Obstacles"]
+
+[node name="Rock1" parent="World/Obstacles/Mountain" instance=ExtResource("16_vm52l")]
+transform = Transform3D(-0.546556, 0.156364, 1.3881, -1.38182, 0.157746, -0.561853, -0.204547, -1.48346, 0.0865671, -6.39188, 166.725, 2.23139)
+
+[node name="Rock2" parent="World/Obstacles/Mountain" instance=ExtResource("17_1ubhh")]
+transform = Transform3D(1.94209, 0.330468, 0.345062, -0.335499, 1.97166, 0, -0.340172, -0.057884, 1.97001, -0.984946, 163.998, 0.10847)
+
+[node name="Rock3" parent="World/Obstacles/Mountain" instance=ExtResource("18_hdxul")]
+transform = Transform3D(-0.516091, -2.81115, 0.911636, -2.50887, -0.0723056, -1.64327, 1.5618, -1.04508, -2.3385, 18.098, 146.897, 0.346458)
+
+[node name="Rock4" parent="World/Obstacles/Mountain" instance=ExtResource("19_6ixti")]
+transform = Transform3D(1.3898, -0.329718, 0.45799, 0.313153, 1.46331, 0.103196, -0.469472, -1.11759e-08, 1.42464, 2.29776, 162.216, 0)
+
+[node name="Rock5" parent="World/Obstacles/Mountain" instance=ExtResource("16_vm52l")]
+transform = Transform3D(1.69605, 0.0551387, 0.10187, -0.0299065, -1.23592, 1.16688, 0.111908, -1.16596, -1.23208, -11.2055, 166.231, 0)
+
+[node name="Rock6" parent="World/Obstacles/Mountain" instance=ExtResource("16_vm52l")]
+transform = Transform3D(2.07892, 0.244733, -2.149, -2.16289, 0.235233, -2.06557, 6.70552e-08, 2.98073, 0.339454, 7.92916, 154.767, 0)
+
+[node name="Rock7" parent="World/Obstacles/Mountain" instance=ExtResource("19_6ixti")]
+transform = Transform3D(3.74591, 0.420979, 1.33827, 1.40292, -1.12405, -3.57328, 0, 3.81566, -1.20029, 19.2197, 169.924, 2.00959)
+
+[node name="Rock8" parent="World/Obstacles/Mountain" instance=ExtResource("18_hdxul")]
+transform = Transform3D(3.35141, -0.103505, -1.00366, 1.00898, 0.343802, 3.33373, 0, -3.48154, 0.359045, 28.1223, 144.448, 0)
+
+[node name="Rock9" parent="World/Obstacles/Mountain" instance=ExtResource("18_hdxul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 160, 0)
+
+[node name="Cathedral" parent="World/Obstacles/Mountain" instance=ExtResource("20_fbn8i")]
+transform = Transform3D(-1.5299e-07, 0, -3.5, 0, 3.5, 0, 3.5, 0, -1.5299e-07, 25.9704, 148.441, 0)
+
+[node name="Rock10" parent="World/Obstacles/Mountain" instance=ExtResource("18_hdxul")]
+transform = Transform3D(0.756741, -1.05704, 0, 1.05704, 0.756741, 0, 0, 0, 1.3, 14.1722, 157.17, 0)
+
+[node name="Rock11" parent="World/Obstacles/Mountain" instance=ExtResource("19_6ixti")]
+transform = Transform3D(-0.430457, -2.86348, 0.784349, 2.73143, -0.071331, 1.23862, -1.1636, 0.891857, 2.61737, 42.1015, 162.008, 0.908846)
+
+[node name="Rock12" parent="World/Obstacles/Mountain" instance=ExtResource("18_hdxul")]
+transform = Transform3D(0.631601, -1.36054, 0, -1.18093, -0.548219, -0.744893, 0.67564, 0.31365, -1.30197, 37.3919, 157.02, -0.222688)
+
+[node name="Rock13" parent="World/Obstacles/Mountain" instance=ExtResource("16_vm52l")]
+transform = Transform3D(1.9294, 0.469658, 0.238405, 0.526702, -1.72044, -0.873318, 0, 0.905274, -1.78339, 36.1009, 145.629, 0)
+
+[node name="Rock14" parent="World/Obstacles/Mountain" instance=ExtResource("17_1ubhh")]
+transform = Transform3D(0.997435, -1.12032, 0, 1.12032, 0.997435, 0, 0, 0, 1.5, 32.8501, 174.309, 0)
+
+[node name="Rock15" parent="World/Obstacles/Mountain" instance=ExtResource("18_hdxul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.0182, 175.448, 0)
+
+[node name="Rock16" parent="World/Obstacles/Mountain" instance=ExtResource("19_6ixti")]
+transform = Transform3D(0.55067, 0.834723, 0, -0.832595, 0.549266, -0.0713582, -0.0595643, 0.0392948, 0.997451, 38.8854, 173.436, -0.0994396)
+
+[node name="Fork" parent="World/Obstacles/Mountain" instance=ExtResource("15_0u4tu")]
+transform = Transform3D(0.160099, 0.629975, 0, -0.629975, 0.160099, 0, 0, 0, 0.65, 34.3967, 173.23, 0)
+
+[node name="Spoon" parent="World/Obstacles/Mountain" instance=ExtResource("11_1vr5n")]
+transform = Transform3D(-0.38088, -0.917769, -0.112385, -0.919085, 0.362506, 0.154505, -0.10106, 0.162139, -0.981579, 37.2953, 172.752, 0)
+
+[node name="Boulder1" parent="World/Obstacles/Mountain" instance=ExtResource("22_hp0vh")]
+transform = Transform3D(-0.102441, 0.641496, 0.760256, 0.471807, -0.641506, 0.60487, 0.875731, 0.420658, -0.236945, 40.872, 192.974, 0)
+
+[node name="Boulder2" parent="World/Obstacles/Mountain" instance=ExtResource("23_irxli")]
+transform = Transform3D(-0.0974788, -0.352887, 0.930574, -0.0367642, 0.935666, 0.350967, -0.994558, 0, -0.104181, -5.59388, 156.027, 0)
+
+[node name="Boulder6" parent="World/Obstacles/Mountain" instance=ExtResource("24_aikcd")]
+transform = Transform3D(0.491573, 0, 0.870837, -0.665416, -0.645084, 0.375616, 0.561763, -0.764111, -0.317106, -14.4918, 168.592, -3.13474)
+
+[node name="Boulder7" parent="World/Obstacles/Mountain" instance=ExtResource("25_44kft")]
+transform = Transform3D(-0.00428223, -0.946452, -0.322816, -0.0125538, 0.322844, -0.946369, 0.999912, -4.11116e-10, -0.0132641, 28.2671, 176.493, -0.736053)
+
+[node name="Boulder5" parent="World/Obstacles/Mountain" instance=ExtResource("26_6c2l7")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 40.158, 182.254, 0)
+
+[node name="Boulder3" parent="World/Obstacles/Mountain" instance=ExtResource("22_hp0vh")]
+transform = Transform3D(0.884736, 0.0203226, 0.46565, 0.466093, -0.0385762, -0.883894, -1.43761e-09, 0.999049, -0.0436019, 48.6301, 187.233, 1.84149)
+
+[node name="Boulder8" parent="World/Obstacles/Mountain" instance=ExtResource("24_aikcd")]
+transform = Transform3D(0.961319, 0.0195156, 0.274744, 0.275436, -0.0681127, -0.958903, 0, 0.997487, -0.0708533, -4.56955, 140.359, 0)
+
+[node name="Rock17" parent="World/Obstacles/Mountain" instance=ExtResource("19_6ixti")]
+transform = Transform3D(4.1648, 2.76667, 0, -2.76667, 4.1648, 0, 0, 0, 5, -39.2951, 174.306, 0)
+
+[node name="Rock18" parent="World/Obstacles/Mountain" instance=ExtResource("16_vm52l")]
+transform = Transform3D(0.245303, -1.33937, -3.76111, 3.90997, -0.681489, 0.497697, -0.807438, -3.70697, 1.26743, 58.6395, 183.541, 5.83555)
+
+[node name="Boulder9" parent="World/Obstacles/Mountain" instance=ExtResource("24_aikcd")]
+transform = Transform3D(0.548016, -0.821497, -0.157547, -0.0309223, 0.168323, -0.985247, 0.835896, 0.544803, 0.0668411, 59.2417, 159.966, 1.58772)
+
+[node name="Rock19" parent="World/Obstacles/Mountain" instance=ExtResource("18_hdxul")]
+transform = Transform3D(1.36546, 3.75972, 0, -3.34207, 1.21377, -1.8323, -1.72224, 0.625482, 3.55565, 56.9381, 155.859, 0)
+
+[node name="Boulder4" parent="World/Obstacles/Mountain" instance=ExtResource("27_rmlly")]
+transform = Transform3D(0.267292, -0.0782217, -0.111517, -0.136216, -0.153492, -0.218827, 0, 0.245604, -0.172274, 50.244, 170.393, 0)
+
+[node name="Boulder10" parent="World/Obstacles/Mountain" instance=ExtResource("25_44kft")]
+transform = Transform3D(0.828188, 0.0137908, -0.560281, 0.560451, -0.0203789, 0.827937, -4.51795e-10, -0.999697, -0.0246066, 51.8879, 151.689, 0)
+
+[node name="Boulder11" parent="World/Obstacles/Mountain" instance=ExtResource("22_hp0vh")]
+transform = Transform3D(-0.0544762, -0.419214, 0.906251, -0.0251542, 0.907887, 0.418459, -0.998198, 0, -0.0600033, 54.7965, 142.792, 0)
+
+[node name="Rock20" parent="World/Obstacles/Mountain" instance=ExtResource("19_6ixti")]
+transform = Transform3D(5, 0, 0, 0, -0.9207, -4.9145, 0, 4.9145, -0.9207, 24.2192, 127.921, 0)
+
+[node name="Boulder12" parent="World/Obstacles/Mountain" instance=ExtResource("23_irxli")]
+transform = Transform3D(0.0579999, -0.161134, -1.18772, 0.331499, 1.14488, -0.139134, 1.15184, -0.321382, 0.0998488, -8.68896, 131.591, -2.36212)
+
+[node name="Boulder13" parent="World/Obstacles/Mountain" instance=ExtResource("26_6c2l7")]
+transform = Transform3D(2.5, 0, 0, 0, -0.0606878, -2.49926, 0, 2.49926, -0.0606878, 70.2923, 127.65, -4.83695)
+
+[node name="Boulder14" parent="World/Obstacles/Mountain" instance=ExtResource("24_aikcd")]
+transform = Transform3D(-0.0180803, 0.917866, -0.39648, 0.0418132, 0.396892, 0.916913, 0.998962, 0, -0.0455548, -46.8368, 166.297, 0)
+
+[node name="Rock21" parent="World/Obstacles/Mountain" instance=ExtResource("16_vm52l")]
+transform = Transform3D(-2.27753, -0.0866015, 1.95073, -1.94854, 0.295251, -2.26186, -0.126691, -2.98418, -0.280396, -34.0759, 143.555, 0)
+
+[node name="Boulder16" parent="World/Obstacles/Mountain" instance=ExtResource("28_vfl2f")]
+transform = Transform3D(-0.0190318, 0.984826, 0.172498, 0.108001, 0.173545, -0.978886, -0.993969, 1.22768e-09, -0.109665, -49.3345, 139.485, 0)
+
+[node name="Rock22" parent="World/Obstacles/Mountain" instance=ExtResource("19_6ixti")]
+transform = Transform3D(3.90036, -0.886425, 0.0382956, 0.0149853, 0.238437, 3.99286, -0.887125, -3.89325, 0.235819, -72.0794, 134.923, 0)
+
+[node name="Furniture" type="Node3D" parent="World/Obstacles"]
+
+[node name="wheel_barrow" parent="World/Obstacles/Furniture" instance=ExtResource("30_n88tt")]
+transform = Transform3D(-0.214611, -1.39977, -3.20072, -0.0936455, 3.2079, -1.39663, 3.49216, 4.17641e-08, -0.234153, 57.1181, 114.077, 0)
+
+[node name="grandPiano" parent="World/Obstacles/Furniture" instance=ExtResource("31_brw8f")]
+transform = Transform3D(0.562634, 0.403331, 1.87637, -0.201611, 1.95694, -0.360196, -1.90861, -0.087819, 0.591178, 29.8634, 104.106, 0.414028)
+
+[node name="WritingDesk" parent="World/Obstacles/Furniture" instance=ExtResource("32_r2yj0")]
+transform = Transform3D(7.86517, 1.46255, 0, -1.46255, 7.86517, 0, 0, 0, 8, 29.4166, 85.9024, -2.12185)
+
+[node name="silestoneSink" parent="World/Obstacles/Furniture" instance=ExtResource("2_3it8b")]
+transform = Transform3D(-4.66442, -1.00235, -1.49616, -1.43976, -0.419725, 4.76979, -1.0818, 4.88048, 0.102925, -3.04847, 105.599, -3.39369)
+
+[node name="wooden_barrel" parent="World/Obstacles/Furniture" instance=ExtResource("34_lknms")]
+transform = Transform3D(2.08164, -2.16027, 0, 2.16027, 2.08164, 0, 0, 0, 3, 6.11897, 91.5307, 0)
+
+[node name="HourGlass" parent="World/Obstacles/Furniture" instance=ExtResource("8_631qw")]
+transform = Transform3D(2.34459, 2.4731, -0.79792, -2.36526, 2.47606, 0.724345, 1.07631, 0.0539996, 3.32996, 5.81923, 42.6763, 0)
+
+[node name="IroningBoard" parent="World/Obstacles/Furniture" instance=ExtResource("36_ghra3")]
+transform = Transform3D(10, -2.17697e-07, 7.45058e-08, 2.17697e-07, 10, 9.31323e-08, -7.45058e-08, -9.31323e-08, 10, 17.4062, 73.8092, 0)
+
+[node name="PipeOrgan" parent="World/Obstacles/Furniture" instance=ExtResource("37_co23h")]
+transform = Transform3D(2.81546, 2.77185, 0.624531, -1.37012, 2.09468, -3.12011, -2.48917, 1.98222, 2.42381, -33.7648, 67.5869, -7.09181)
+
+[node name="Gear" parent="World/Obstacles/Furniture" instance=ExtResource("9_k5jx7")]
+transform = Transform3D(4.30661, 3.3371, -2.51333, -3.46957, 4.86763, 0.517914, 2.32705, 1.08162, 5.42356, -46.5614, 108.21, 0)
+
+[node name="Gear2" parent="World/Obstacles/Furniture" instance=ExtResource("9_k5jx7")]
+transform = Transform3D(3.71759, -1.47633, 0, 1.43053, 3.60227, -0.988537, 0.364851, 0.918743, 3.87592, 49.6703, 69.1411, 0)
 
 [node name="HourGlass" parent="World/Obstacles" instance=ExtResource("8_631qw")]
 transform = Transform3D(0.685874, 0.315597, 0, -0.315597, 0.685874, 0, 0, 0, 0.755, -6.24274, -0.0993426, 0)
-
-[node name="Gear" parent="World/Obstacles" instance=ExtResource("9_k5jx7")]
-transform = Transform3D(14.575, 0, 0, 0, 14.575, 0, 0, 0, 14.575, 0.87293, 0, 0)
 
 [node name="GoldRing" parent="World/Obstacles" instance=ExtResource("10_pjyk1")]
 transform = Transform3D(0.507538, 0, -0.861629, 0, 1, 0, 0.861629, 0, 0.507538, 4.38, -3.736, 0)
 
 [node name="silestoneSink" parent="World/Obstacles" instance=ExtResource("2_3it8b")]
 transform = Transform3D(0.929796, -0.368076, 0, 0.368076, 0.929796, 0, 0, 0, 1, 4.51148, 3.00169, -0.0913229)
-
-[node name="Fork" parent="World/Obstacles" instance=ExtResource("15_0u4tu")]
-transform = Transform3D(0.306127, 0.951991, 0, -0.951991, 0.306127, 0, 0, 0, 1, -12.4672, 198.288, 0.105831)
 
 [node name="Boundaries" type="Node3D" parent="World"]
 
@@ -201,6 +413,7 @@ collision_mask = 2
 shape = SubResource("WorldBoundaryShape3D_1svup")
 
 [node name="Backgrounds" type="Node3D" parent="World"]
+visible = false
 
 [node name="Sprite3D" type="Sprite3D" parent="World/Backgrounds"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 32.1145, -30.7586)
@@ -225,7 +438,7 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = 72.0
 offset_bottom = 48.0
-text = "0:00:000"
+text = "Time: 00:00:000"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0

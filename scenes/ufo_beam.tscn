@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://fxr41nenuept"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/cartoon/ufo.tscn" id="1_wegax"]
+
+[sub_resource type="Gradient" id="Gradient_1wp4c"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dyode"]
+gradient = SubResource("Gradient_1wp4c")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_g0wbf"]
+color = Color(1, 0, 0, 1)
+color_ramp = SubResource("GradientTexture1D_dyode")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5h4i8"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.286275, 1, 1, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_dd8ox"]
+lightmap_size_hint = Vector2i(17, 9)
+material = SubResource("StandardMaterial3D_5h4i8")
+height = 0.05
+rings = 1
+
+[node name="ufo_beam" type="Node3D"]
+
+[node name="UFO" parent="." instance=ExtResource("1_wegax")]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.792626, 0)
+amount = 100
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_g0wbf")
+draw_pass_1 = SubResource("CylinderMesh_dd8ox")
