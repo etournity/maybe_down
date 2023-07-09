@@ -1,6 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfs3ewieb5wyj"]
+[gd_scene load_steps=13 format=3 uid="uid://bfs3ewieb5wyj"]
 
+[ext_resource type="Script" path="res://Obstacle.gd" id="1_atu0o"]
 [ext_resource type="Texture2D" uid="uid://bxn4ivw480ch5" path="res://assets/objects/realistic/textures/silestoneSink_texture.png" id="1_rrlce"]
+[ext_resource type="AudioStream" uid="uid://cyu2w8jdvdgmv" path="res://audio/Collision sounds/sfx_drawer_01.wav" id="2_6nugg"]
+[ext_resource type="AudioStream" uid="uid://cbrmse62uly55" path="res://audio/Collision sounds/sfx_drawer_02.wav" id="3_u6k78"]
+[ext_resource type="AudioStream" uid="uid://l81q8kletoar" path="res://audio/Collision sounds/sfx_drawer_03.wav" id="4_vfs1d"]
+[ext_resource type="AudioStream" uid="uid://dhftj11hqqfmp" path="res://audio/Collision sounds/sfx_drawer_04.wav" id="5_h7dik"]
+[ext_resource type="AudioStream" uid="uid://jvbelb6fvbdf" path="res://audio/Collision sounds/sfx_drawer_05.wav" id="6_bggwl"]
+[ext_resource type="AudioStream" uid="uid://d07ino2y6w0f6" path="res://audio/Collision sounds/sfx_drawer_06.wav" id="7_6dtl4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gbro3"]
 resource_name = "Material.001"
@@ -46,6 +53,8 @@ shadow_mesh = SubResource("ArrayMesh_5pnmg")
 size = Vector3(1.68116, 1.90097, 4.24423)
 
 [node name="silestoneSink" type="StaticBody3D" groups=["sink"]]
+script = ExtResource("1_atu0o")
+sounds = Array[AudioStream]([ExtResource("2_6nugg"), ExtResource("3_u6k78"), ExtResource("4_vfs1d"), ExtResource("5_h7dik"), ExtResource("6_bggwl"), ExtResource("7_6dtl4")])
 
 [node name="Cylinder" type="MeshInstance3D" parent="."]
 transform = Transform3D(-3.30012e-15, -4.37114e-08, -1, -1, 7.54979e-08, 0, 7.54979e-08, 1, -4.37114e-08, 0, 1.59174, 0)

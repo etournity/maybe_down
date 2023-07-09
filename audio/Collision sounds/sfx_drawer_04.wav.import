@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dhftj11hqqfmp"
+path="res://.godot/imported/sfx_drawer_04.wav-660dd338ba90b5b0b7d6a87505e4d7b1.sample"
+
+[deps]
+
+source_file="res://audio/Collision sounds/sfx_drawer_04.wav"
+dest_files=["res://.godot/imported/sfx_drawer_04.wav-660dd338ba90b5b0b7d6a87505e4d7b1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,10 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://c650eanb1t60p"]
+[gd_scene load_steps=18 format=3 uid="uid://c650eanb1t60p"]
 
 [ext_resource type="Texture2D" uid="uid://ddtgvjt3atbbm" path="res://assets/objects/realistic/textures/metal_scrap_gear_small_0.png" id="1_atr2j"]
 [ext_resource type="Script" path="res://Obstacle.gd" id="1_ewrjm"]
-[ext_resource type="AudioStream" uid="uid://b3vr0vl3e3d78" path="res://audio/Collision sounds/sfx_collision-008.wav" id="2_k5mv3"]
 [ext_resource type="Texture2D" uid="uid://cn7hshaxq1hr1" path="res://assets/objects/realistic/textures/metal_scrap_gear_small_1.png" id="2_ptlqh"]
+[ext_resource type="AudioStream" uid="uid://crf2500l1ynct" path="res://audio/Collision sounds/sfx_metallic_01.wav" id="2_uqtog"]
+[ext_resource type="AudioStream" uid="uid://46p4ck4ij6sv" path="res://audio/Collision sounds/sfx_metallic_02.wav" id="3_0t2cn"]
 [ext_resource type="Texture2D" uid="uid://bnwv51y0ivi4q" path="res://assets/objects/realistic/textures/metal_scrap_gear_small_2.png" id="3_73don"]
+[ext_resource type="AudioStream" uid="uid://svlry7hrkcc8" path="res://audio/Collision sounds/sfx_metallic_03.wav" id="4_1jlj7"]
+[ext_resource type="AudioStream" uid="uid://c7rluwayt8nfb" path="res://audio/Collision sounds/sfx_metallic_04.wav" id="5_67ysh"]
+[ext_resource type="AudioStream" uid="uid://b5krc0ut5qdnm" path="res://audio/Collision sounds/sfx_metallic_05.wav" id="6_wxr5x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yvdc2"]
 resource_name = "lambert1"
@@ -121,7 +125,7 @@ radius = 0.0907423
 
 [node name="Gear" type="StaticBody3D" groups=["gear"]]
 script = ExtResource("1_ewrjm")
-sounds = Array[AudioStream]([ExtResource("2_k5mv3")])
+sounds = Array[AudioStream]([ExtResource("2_uqtog"), ExtResource("3_0t2cn"), ExtResource("4_1jlj7"), ExtResource("5_67ysh"), ExtResource("6_wxr5x")])
 
 [node name="Sketchfab_model" type="Node3D" parent="."]
 transform = Transform3D(0.89445, 0, 0, 0, 1.98608e-16, 0.89445, 0, -0.89445, 1.98608e-16, 0, 0, 0)

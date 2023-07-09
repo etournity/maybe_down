@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ckgbvxvlsdvc7"
+path="res://.godot/imported/sfx_wood_03.wav-0c6e0ad8ee71ac25fa788cd4ea68e3cf.sample"
+
+[deps]
+
+source_file="res://audio/Collision sounds/sfx_wood_03.wav"
+dest_files=["res://.godot/imported/sfx_wood_03.wav-0c6e0ad8ee71ac25fa788cd4ea68e3cf.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
