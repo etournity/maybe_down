@@ -24,10 +24,3 @@ func _on_exit_pressed():
 func _on_options_back():
 	$options.close()
 	$Container.show()
-
-
-func _on_check_button_toggled(button_pressed):
-	if button_pressed == true:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-	else:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)

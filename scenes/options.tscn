@@ -90,6 +90,13 @@ max_value = 0.0
 tick_count = 5
 ticks_on_borders = true
 
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer/CenterContainer"]
+layout_mode = 2
+text = "Fullscreen"
+
 [node name="CenterContainer4" type="CenterContainer" parent="VBoxContainer"]
 layout_mode = 2
 
@@ -101,4 +108,5 @@ text = "Back
 [connection signal="value_changed" from="VBoxContainer/VBoxContainer/MasterVolume/VBoxContainer/MasterSlider" to="." method="_on_master_slider_value_changed"]
 [connection signal="value_changed" from="VBoxContainer/VBoxContainer/MusicVolume/VBoxContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
 [connection signal="value_changed" from="VBoxContainer/VBoxContainer/EffectsVolume/VBoxContainer/EffectsSlider" to="." method="_on_effects_slider_value_changed"]
+[connection signal="toggled" from="VBoxContainer/CenterContainer/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="pressed" from="VBoxContainer/CenterContainer4/Button" to="." method="_on_button_pressed"]

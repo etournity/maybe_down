@@ -20,8 +20,10 @@ bounce = 0.3
 [sub_resource type="SphereShape3D" id="SphereShape3D_h0xe1"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_3fhbj"]
+lightmap_size_hint = Vector2i(17, 9)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w1qxk"]
+albedo_color = Color(1, 1, 1, 0.12549)
 metallic = 1.0
 metallic_specular = 1.0
 roughness = 0.4
