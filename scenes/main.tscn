@@ -11,10 +11,9 @@
 [ext_resource type="AudioStream" uid="uid://c4y2n00rimuq7" path="res://audio/Collision sounds/sfx_collision-006.wav" id="4_y58cu"]
 [ext_resource type="AudioStream" uid="uid://dcvohfpqmms56" path="res://audio/main_theme_loop.ogg" id="5_3n2do"]
 [ext_resource type="PackedScene" uid="uid://byb4hk8l12noc" path="res://assets/objects/realistic/Bed.tscn" id="7_6ga6s"]
-[ext_resource type="PackedScene" uid="uid://idiva4h35e08" path="res://assets/objects/realistic/Hourglass.tscn" id="8_631qw"]
+[ext_resource type="PackedScene" path="res://assets/objects/realistic/Hourglass.tscn" id="8_631qw"]
 [ext_resource type="PackedScene" uid="uid://c650eanb1t60p" path="res://assets/objects/realistic/Gear.tscn" id="9_k5jx7"]
 [ext_resource type="PackedScene" uid="uid://jqgaqar5h5k0" path="res://assets/objects/realistic/GoldRing.tscn" id="10_pjyk1"]
-[ext_resource type="AudioStream" uid="uid://bqw3rlay3o1ii" path="res://audio/menu_music_loop.ogg" id="12_jw8ao"]
 
 [sub_resource type="Environment" id="Environment_tnlyh"]
 
@@ -80,7 +79,7 @@ max_contacts_reported = 2
 contact_monitor = true
 can_sleep = false
 script = ExtResource("2_lfwca")
-sounds = Array[ExtResource("3_fcy5d")]([SubResource("Resource_8lfqo"), SubResource("Resource_p60oe")])
+sounds = Array[Resource("res://resources/NoiseResource.gd")]([null])
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC"]
 shape = SubResource("SphereShape3D_h0xe1")
@@ -103,6 +102,7 @@ transform = Transform3D(0.977995, 0.0591246, 0.200076, -0.208629, 0.27716, 0.937
 [node name="Click" type="AudioStreamPlayer" parent="World"]
 stream = ExtResource("4_em1xl")
 volume_db = -10.651
+bus = &"Effects"
 
 [node name="Interactables" type="Node3D" parent="World"]
 
@@ -177,10 +177,6 @@ text = "0:00:000"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
-
-[node name="Menu Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("12_jw8ao")
-bus = &"Music"
 
 [connection signal="body_entered" from="NPC" to="NPC" method="_on_body_entered"]
 [connection signal="resume" from="pause_menu" to="." method="_on_pause_menu_resume"]
