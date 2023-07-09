@@ -124,7 +124,7 @@ update_mode = 1
 max_distance = 53.3
 box_projection = true
 
-[node name="NPC" type="RigidBody3D" parent="."]
+[node name="NPC" type="RigidBody3D" parent="." node_paths=PackedStringArray("main")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0473281, 202.588, 0)
 collision_layer = 2
 collision_mask = 29
@@ -491,7 +491,7 @@ pixel_size = 0.05
 texture = ExtResource("16_7tqon")
 
 [node name="Sprite3D2" type="Sprite3D" parent="World/Backgrounds"]
-transform = Transform3D(11.9161, 0, 0, 0, 1, 0, 0, 0, 1, 0, 121.594, -61.6492)
+transform = Transform3D(11.9161, 0, 0, 0, 2.00043, 0, 0, 0, 1, 0, 121.594, -61.6492)
 pixel_size = 0.1
 texture = SubResource("GradientTexture2D_rwc2s")
 
