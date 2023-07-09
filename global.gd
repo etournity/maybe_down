@@ -33,10 +33,15 @@ func _process(delta):
 	if(Input.is_action_just_pressed("pause")):
 		if(Main.pauseMenu.isOpen):
 			Main.pauseMenu.close()
-			
+			if(Global.gameState == Global.GameStates.FINISHED):
+				Main.gameOver.show()
 		else:
+			if(Global.gameState == Global.GameStates.FINISHED):
+				Main.gameOver.hide()
 			Main.pauseMenu.open()
 		Main.toggle_pause(Main.pauseMenu.isOpen)
+		
+			
 
 func start_game():
 	gameState = GameStates.RUNNING
@@ -46,6 +51,8 @@ func start_game():
 
 func finish_game():
 	gameState = GameStates.FINISHED
+	Main.finalTime.text = formattedTime
+	Main.gameOver.show()
 
 func init_music():
 	musicNode = AudioStreamPlayer.new()

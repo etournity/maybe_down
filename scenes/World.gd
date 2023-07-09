@@ -7,6 +7,8 @@ extends Node3D
 @onready var music: AudioStreamPlayer = $Music
 @onready var pauseMenu: Control = $pause_menu
 @onready var timer: RichTextLabel = $UI/Timer
+@onready var finalTime: Label = $"UI/Game Over/VBoxContainer/Time"
+@onready var gameOver: CenterContainer = $"UI/Game Over"
 var target_rot: float = 0.0
 @export_range(1, 10) var snappiness: float = 1.0
 @export_range(2, 20) var rotation_speed: float = 10
