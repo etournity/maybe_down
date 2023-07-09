@@ -1,7 +1,8 @@
 extends Control
 
 var isOpen: bool
-
+@onready var options: Control = $options
+@onready var rootMenu: VBoxContainer = $RootMenu
 signal resume
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,18 +19,24 @@ func open():
 	show()
 
 func close():
-	isOpen = false
-	hide()
+	if(options.is_visible_in_tree()):
+		options.close()
+		rootMenu.show()
+	else:
+		isOpen = false
+		hide()
+	
+
 
 func _on_options_pressed():
-	$VBoxContainer.hide()
-	$options.open()
+	rootMenu.hide()
+	options.open()
 
 
 
 func _on_options_back():
-	$options.close()
-	$VBoxContainer.show()
+	options.close()
+	rootMenu.show()
 
 
 func _on_resume_pressed():
