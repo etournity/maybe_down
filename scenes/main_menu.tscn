@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bj80057dc046u"]
+[gd_scene load_steps=5 format=3 uid="uid://bj80057dc046u"]
 
-[ext_resource type="Theme" uid="uid://bxhr00agm0ett" path="res://assets/menu_theme.tres" id="1_my66k"]
+[ext_resource type="Theme" uid="uid://wwwdqjtvax0k" path="res://assets/menu_theme.tres" id="1_my66k"]
 [ext_resource type="Script" path="res://Main Menu.gd" id="2_5cuwc"]
 [ext_resource type="PackedScene" uid="uid://cvmrqbvh3wu0j" path="res://scenes/options.tscn" id="3_w63go"]
+[ext_resource type="AudioStream" uid="uid://bqw3rlay3o1ii" path="res://audio/menu_music_loop.ogg" id="4_v6qdh"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -65,6 +66,11 @@ text = "Exit"
 [node name="options" parent="." instance=ExtResource("3_w63go")]
 visible = false
 layout_mode = 1
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_v6qdh")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Container/CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Container/CenterContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]

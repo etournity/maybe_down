@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://7tw7q0wgsivv"]
+[gd_scene load_steps=20 format=3 uid="uid://7tw7q0wgsivv"]
 
 [ext_resource type="Script" path="res://scenes/World.gd" id="1_k8dhs"]
 [ext_resource type="PackedScene" uid="uid://bfs3ewieb5wyj" path="res://assets/objects/realistic/Sink.tscn" id="2_3it8b"]
@@ -7,10 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://6pg8sfpakjl1" path="res://scenes/pause_menu.tscn" id="3_p022i"]
 [ext_resource type="AudioStream" uid="uid://xrnjeomj6vnd" path="res://audio/click.wav" id="4_em1xl"]
 [ext_resource type="AudioStream" uid="uid://dcvohfpqmms56" path="res://audio/main_theme_loop.ogg" id="5_3n2do"]
-[ext_resource type="PackedScene" uid="uid://byb4hk8l12noc" path="res://assets/objects/realistic/Bed.tscn" id="7_6ga6s"]
-[ext_resource type="PackedScene" path="res://assets/objects/realistic/Hourglass.tscn" id="8_631qw"]
+[ext_resource type="PackedScene" path="res://assets/objects/realistic/Bed.tscn" id="7_6ga6s"]
+[ext_resource type="PackedScene" uid="uid://csfr3xr6hu46q" path="res://assets/objects/realistic/Hourglass.tscn" id="8_631qw"]
 [ext_resource type="PackedScene" uid="uid://c650eanb1t60p" path="res://assets/objects/realistic/Gear.tscn" id="9_k5jx7"]
 [ext_resource type="PackedScene" uid="uid://jqgaqar5h5k0" path="res://assets/objects/realistic/GoldRing.tscn" id="10_pjyk1"]
+[ext_resource type="AudioStream" uid="uid://bqw3rlay3o1ii" path="res://audio/menu_music_loop.ogg" id="12_jw8ao"]
 
 [sub_resource type="Environment" id="Environment_tnlyh"]
 
@@ -96,7 +97,6 @@ volume_db = -10.651
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_3n2do")
-volume_db = -8.108
 bus = &"Music"
 
 [node name="Bed" parent="." instance=ExtResource("7_6ga6s")]
@@ -145,6 +145,10 @@ collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
 shape = SubResource("WorldBoundaryShape3D_1svup")
+
+[node name="Menu Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_jw8ao")
+bus = &"Music"
 
 [connection signal="body_entered" from="NPC" to="NPC" method="_on_body_entered"]
 [connection signal="resume" from="pause_menu" to="." method="_on_pause_menu_resume"]
