@@ -8,6 +8,7 @@ extends Node3D
 @onready var pauseMenu: Control = $pause_menu
 @onready var timer: RichTextLabel = $UI/Timer
 @onready var finalTime: Label = $"UI/Game Over/VBoxContainer/Time"
+@onready var height: RichTextLabel = $"UI/Height"
 @onready var gameOver: CenterContainer = $"UI/Game Over"
 var target_rot: float = 0.0
 @export_range(1, 10) var snappiness: float = 1.0
@@ -19,6 +20,7 @@ func _ready():
 	npc.freeze = true
 
 func _process(delta):
+	set_height()
 	if(!Global.gameState == Global.GameStates.RUNNING):
 		return
 		
@@ -49,6 +51,9 @@ func get_rotated(delta):
 
 func set_timer_time(time: String):
 	timer.text = time
+
+func set_height():
+	height.text = "Elevation: %.00f" % (npc.position.y + 5.376)
 	
 func _on_pause_menu_resume():
 	pauseMenu.close()
