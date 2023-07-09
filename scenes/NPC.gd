@@ -12,7 +12,8 @@ func _on_body_entered(body):
 		apply_force(Vector3(0, body.velocity, 0))
 		set_collision_mask_value(1, false)
 		set_transparency(0.2)
-		
+	if (body.get_collision_layer_value(1) && body.has_method('play_random_sound')):
+		body.play_random_sound()
 
 func set_transparency(value):
 	var override = get_child(0).get_child(0).get_surface_override_material(0)
