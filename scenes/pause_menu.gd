@@ -15,7 +15,7 @@ func _process(delta):
 	pass
 
 func open():
-	Global.play_menu_theme()
+	Global.set_music_filter(true)
 	isOpen = true
 	show()
 
@@ -24,7 +24,7 @@ func close():
 		options.close()
 		rootMenu.show()
 	else:
-		Global.play_main_theme()
+		Global.set_music_filter(false)
 		isOpen = false
 		hide()
 	

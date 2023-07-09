@@ -74,3 +74,7 @@ func play_main_theme():
 	musicNode.stream = mainTheme
 	musicNode.volume_db = -10
 	musicNode.play()
+
+func set_music_filter(enable: bool):
+	AudioServer.set_bus_bypass_effects(AudioServer.get_bus_index("Music"),!enable)
+
