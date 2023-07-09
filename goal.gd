@@ -11,5 +11,5 @@ func _process(delta):
 	pass
 
 
-func _on_area_3d_area_entered(area):
+func _on_area_3d_body_entered(body):
 	Global.finish_game()
