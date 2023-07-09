@@ -1,6 +1,5 @@
 extends Control
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -12,7 +11,8 @@ func _process(delta):
 
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	hide()
+	Global.start_game()
 
 func _on_options_pressed():
 	$Container.hide()

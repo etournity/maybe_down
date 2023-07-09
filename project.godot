@@ -20,6 +20,11 @@ config/icon="res://icon.svg"
 buses/default_bus_layout="res://audio/mixer.tres"
 buses/channel_disable_threshold_db=-50.0
 
+[autoload]
+
+Global="*res://global.gd"
+Main="*res://scenes/main.tscn"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/github_to_itch/plugin.cfg")
@@ -54,9 +59,10 @@ pause={
 
 [layer_names]
 
-3d_physics/layer_1="NPC"
-3d_physics/layer_2="Static"
+3d_physics/layer_1="Static"
+3d_physics/layer_2="NPC"
 3d_physics/layer_3="Bed"
+3d_physics/layer_4="Boundaries"
 
 [physics]
 

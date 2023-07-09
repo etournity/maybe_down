@@ -38,3 +38,9 @@ func _on_music_slider_value_changed(value):
 
 func _on_effects_slider_value_changed(value):
 		handle_volume_change(AudioServer.get_bus_index("Effects"),value)
+
+func _on_check_button_toggled(button_pressed):
+	if button_pressed == true:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
