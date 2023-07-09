@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dn0m5hic7bp2n"
+path="res://.godot/imported/sfx_ring_02.wav-bc67f78080b6d25feade9c95fc9aec95.sample"
+
+[deps]
+
+source_file="res://audio/Collision sounds/sfx_ring_02.wav"
+dest_files=["res://.godot/imported/sfx_ring_02.wav-bc67f78080b6d25feade9c95fc9aec95.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

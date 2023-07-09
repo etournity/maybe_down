@@ -1,7 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://ce0ewkhocti2o"]
+[gd_scene load_steps=18 format=3 uid="uid://ce0ewkhocti2o"]
 
+[ext_resource type="Script" path="res://Obstacle.gd" id="1_23vcs"]
 [ext_resource type="Texture2D" uid="uid://82pmgpl6p08l" path="res://assets/objects/realistic/textures/Rock4_T_Rock_04_D.png" id="1_iib23"]
+[ext_resource type="AudioStream" uid="uid://d3japko0vopor" path="res://audio/Collision sounds/sfx_stone_01.wav" id="2_mhhtq"]
 [ext_resource type="Texture2D" uid="uid://up6mt4qre2wp" path="res://assets/objects/realistic/textures/Rock4_T_Rock_04_N.png" id="2_x33o0"]
+[ext_resource type="AudioStream" uid="uid://h88kwvq41fxy" path="res://audio/Collision sounds/sfx_stone_02.wav" id="3_vur58"]
+[ext_resource type="AudioStream" uid="uid://bd23mkfj4t6k2" path="res://audio/Collision sounds/sfx_stone_03.wav" id="4_esa77"]
+[ext_resource type="AudioStream" uid="uid://djynoyygwrjhb" path="res://audio/Collision sounds/sfx_stone_04.wav" id="5_i6e3i"]
+[ext_resource type="AudioStream" uid="uid://1pm6pqooqdux" path="res://audio/Collision sounds/sfx_stone_05.wav" id="6_lcjwt"]
+[ext_resource type="AudioStream" uid="uid://d2m6p0yhapooi" path="res://audio/Collision sounds/sfx_stone_06.wav" id="7_ea4dg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2bl1x"]
 resource_name = "M_Rock_04.001"
@@ -113,6 +120,8 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_nmcme")
 
 [node name="Rock4" type="StaticBody3D" groups=["rock_4"]]
+script = ExtResource("1_23vcs")
+sounds = Array[AudioStream]([ExtResource("2_mhhtq"), ExtResource("3_vur58"), ExtResource("4_esa77"), ExtResource("5_i6e3i"), ExtResource("6_lcjwt"), ExtResource("7_ea4dg")])
 
 [node name="Rock_04_LOD0" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0.153228, -0.0851298, -0.0411757)

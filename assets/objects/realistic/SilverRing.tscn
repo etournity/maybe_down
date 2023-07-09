@@ -1,4 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cy17o4h6mm7k6"]
+[gd_scene load_steps=10 format=3 uid="uid://cy17o4h6mm7k6"]
+
+[ext_resource type="Script" path="res://Obstacle.gd" id="1_ia2fx"]
+[ext_resource type="AudioStream" uid="uid://csovivxudu3tv" path="res://audio/Collision sounds/sfx_ring_01.wav" id="2_is78e"]
+[ext_resource type="AudioStream" uid="uid://dn0m5hic7bp2n" path="res://audio/Collision sounds/sfx_ring_02.wav" id="3_jl8u6"]
+[ext_resource type="AudioStream" uid="uid://borxhb2ma08v1" path="res://audio/Collision sounds/sfx_ring_03.wav" id="4_hgf28"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_1r4d7"]
 height = 0.566643
@@ -71,6 +76,8 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_m0g0m")
 
 [node name="SilverRing" type="StaticBody3D" groups=["silver_ring"]]
+script = ExtResource("1_ia2fx")
+sounds = Array[AudioStream]([ExtResource("2_is78e"), ExtResource("3_jl8u6"), ExtResource("4_hgf28")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)

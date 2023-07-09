@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://csqe8qvleei2o"
+path="res://.godot/imported/sfx_grass_02.wav-65a7e2464b487fbe5352fbd8b47be942.sample"
+
+[deps]
+
+source_file="res://audio/Collision sounds/sfx_grass_02.wav"
+dest_files=["res://.godot/imported/sfx_grass_02.wav-65a7e2464b487fbe5352fbd8b47be942.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

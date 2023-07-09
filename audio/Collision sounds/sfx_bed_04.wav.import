@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://t125m7l7vf6p"
+path="res://.godot/imported/sfx_bed_04.wav-9c5566ef5ce9ce80496c60f272330cfc.sample"
+
+[deps]
+
+source_file="res://audio/Collision sounds/sfx_bed_04.wav"
+dest_files=["res://.godot/imported/sfx_bed_04.wav-9c5566ef5ce9ce80496c60f272330cfc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

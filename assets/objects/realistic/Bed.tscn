@@ -1,11 +1,17 @@
-[gd_scene load_steps=18 format=3 uid="uid://byb4hk8l12noc"]
+[gd_scene load_steps=24 format=3 uid="uid://7fbbtmdihu33"]
 
 [ext_resource type="Script" path="res://assets/objects/realistic/Bed.gd" id="1_8kw5n"]
 [ext_resource type="Texture2D" uid="uid://camol6k0lk2if" path="res://assets/objects/realistic/textures/hospital_bed_0.png" id="1_nj5fw"]
 [ext_resource type="Texture2D" uid="uid://d0tffslm8cmki" path="res://assets/objects/realistic/textures/hospital_bed_1.png" id="2_o7pqs"]
+[ext_resource type="AudioStream" uid="uid://b7k6ta0yj0i77" path="res://audio/Collision sounds/sfx_bed_01.wav" id="2_pqbok"]
+[ext_resource type="AudioStream" uid="uid://buh00euyn4a6p" path="res://audio/Collision sounds/sfx_bed_02.wav" id="3_7yt0o"]
 [ext_resource type="Texture2D" uid="uid://dwys8tx1eakk6" path="res://assets/objects/realistic/textures/hospital_bed_2.png" id="3_plo4v"]
+[ext_resource type="AudioStream" uid="uid://dj0toc3a3ys8g" path="res://audio/Collision sounds/sfx_bed_03.wav" id="4_b7qbo"]
 [ext_resource type="Texture2D" uid="uid://bk4mrlu57nup5" path="res://assets/objects/realistic/textures/hospital_bed_3.png" id="4_yp4jc"]
 [ext_resource type="Texture2D" uid="uid://cnfinbfpdigbs" path="res://assets/objects/realistic/textures/hospital_bed_4.png" id="5_2b1it"]
+[ext_resource type="AudioStream" uid="uid://t125m7l7vf6p" path="res://audio/Collision sounds/sfx_bed_04.wav" id="5_jojcg"]
+[ext_resource type="AudioStream" uid="uid://de5j1tebvr34p" path="res://audio/Collision sounds/sfx_bed_05.wav" id="6_btunj"]
+[ext_resource type="AudioStream" uid="uid://qso0d2kl3522" path="res://audio/Collision sounds/sfx_bed_06.wav" id="7_c8yqv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cgcdn"]
 resource_name = "pillow"
@@ -148,6 +154,7 @@ size = Vector3(2, 2.74, 0.215)
 [node name="Bed" type="StaticBody3D" groups=["bed"]]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
 script = ExtResource("1_8kw5n")
+sounds = Array[AudioStream]([ExtResource("2_pqbok"), ExtResource("3_7yt0o"), ExtResource("4_b7qbo"), ExtResource("5_jojcg"), ExtResource("6_btunj"), ExtResource("7_c8yqv")])
 
 [node name="low_Pillow_1_pillow_0" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0)

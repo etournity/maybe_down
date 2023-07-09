@@ -1,4 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ckspgvw2lh580"]
+[gd_scene load_steps=10 format=3 uid="uid://ckspgvw2lh580"]
+
+[ext_resource type="Script" path="res://Obstacle.gd" id="1_o88w4"]
+[ext_resource type="AudioStream" uid="uid://dsntpwo06ax8u" path="res://audio/Collision sounds/sfx_cheese_01.wav" id="2_uve2h"]
+[ext_resource type="AudioStream" uid="uid://b5541p78ckmpc" path="res://audio/Collision sounds/sfx_cheese_02.wav" id="3_2jdku"]
+[ext_resource type="AudioStream" uid="uid://dc4l32ray4w1g" path="res://audio/Collision sounds/sfx_cheese_03.wav" id="4_w6grw"]
+[ext_resource type="AudioStream" uid="uid://cih3mrpycby06" path="res://audio/Collision sounds/sfx_cheese_04.wav" id="5_54yqr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dnwht"]
 resource_name = "Cheese"
@@ -43,6 +49,8 @@ shadow_mesh = SubResource("ArrayMesh_2042b")
 points = PackedVector3Array(-0.388546, 0.00379322, -0.149778, 0.279182, 0.4537, 0.518126, 0.234882, 0.444284, 0.498687, 0.279182, 0.4537, -0.412026, -0.505634, 0.4537, -0.00494798, 0.283811, 0.0005, 0.523612, 0.283108, 0.000903287, -0.41668, -0.481379, 0.0170817, 0.0258862, -0.0843861, 0.452751, -0.352133, -0.0843861, 0.00410567, -0.352133, -0.27028, 0.449842, -0.246829, -0.508912, 0.00127557, -0.00543241, 0.0607784, 0.453207, -0.396381, -0.481383, 0.439778, 0.0258859, 0.195212, 0.000777998, -0.416938, -0.388546, 0.453064, -0.149778, -0.27028, 0.00701476, -0.246829, 0.234883, 0.0125723, 0.498689, 0.0607784, 0.00365063, -0.396381, 0.191989, 0.4537, -0.412026, -0.17063, 0.00576918, -0.306022, -0.415399, 0.451511, -0.119614, -0.17063, 0.451088, -0.306022, -0.486336, 0.450896, -0.032999, -0.415399, 0.00534611, -0.119614)
 
 [node name="Cheese" type="StaticBody3D"]
+script = ExtResource("1_o88w4")
+sounds = Array[AudioStream]([ExtResource("2_uve2h"), ExtResource("3_2jdku"), ExtResource("4_w6grw"), ExtResource("5_54yqr")])
 
 [node name="Cheese" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)

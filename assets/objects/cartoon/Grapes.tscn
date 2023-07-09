@@ -1,4 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dyyyf8a84slbg"]
+[gd_scene load_steps=12 format=3 uid="uid://dyyyf8a84slbg"]
+
+[ext_resource type="Script" path="res://Obstacle.gd" id="1_vf0o1"]
+[ext_resource type="AudioStream" uid="uid://cb1bfa7575fsc" path="res://audio/Collision sounds/sfx_fruit_02.wav" id="2_v47l5"]
+[ext_resource type="AudioStream" uid="uid://deauoopog2fou" path="res://audio/Collision sounds/sfx_fruit_03.wav" id="3_opcu0"]
+[ext_resource type="AudioStream" uid="uid://cjpowqu2i6r4c" path="res://audio/Collision sounds/sfx_fruit_01.wav" id="4_4et8u"]
+[ext_resource type="AudioStream" uid="uid://bf4ugwgyvg8bk" path="res://audio/Collision sounds/sfx_fruit_04.wav" id="5_yiqvy"]
+[ext_resource type="AudioStream" uid="uid://d21aquxvoccmc" path="res://audio/Collision sounds/sfx_fruit_05.wav" id="6_sm1yt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7kibu"]
 resource_name = "Grapes"
@@ -70,6 +77,8 @@ shadow_mesh = SubResource("ArrayMesh_pr447")
 points = PackedVector3Array(0.297159, 0.310136, -0.420187, -0.845466, 0.310136, 0.0655753, 0.0685627, 0.624502, 0.00843173, 0.382906, -0.175587, -0.134301, 0.954487, 0.510158, -0.0772417, -0.64569, 0.0244349, -0.0487119, 0.144306, 0.302632, 0.399509, 0.0972044, -0.0898299, 0.237006, -0.559944, 0.395894, -0.191529, 0.240055, 0.0530207, -0.39149, -0.582439, 0.354133, 0.241747, 0.954487, 0.481573, 0.0369616, 0.582861, 0.196028, -0.36296, -0.61687, 0.0244349, 0.122719, -0.75972, 0.224457, -0.162915, 0.223135, 0.590649, -0.148416, 0.497294, 0.0530207, 0.351209, 0.170975, 0.119771, 0.401119, 0.494664, -0.123221, -0.0985388, 0.44001, 0.310136, 0.379823, 0.0401, 0.501131, 0.209651, 0.382906, -0.175587, 0.00843173, -0.588228, 0.424479, 0.151165, 0.240055, -0.0326583, -0.334346, -0.75972, 0.367308, -0.105855, -0.845466, 0.167442, 0.0655753, 0.411547, 0.167442, 0.437051, -0.583892, 0.250324, 0.242291, 0.954487, 0.452987, -0.0772417, 0.619864, 0.119054, -0.281445, -0.389241, 0.439065, 0.223081, 0.954487, 0.452987, 0.0369616)
 
 [node name="Grapes" type="StaticBody3D"]
+script = ExtResource("1_vf0o1")
+sounds = Array[AudioStream]([ExtResource("2_v47l5"), ExtResource("3_opcu0"), ExtResource("4_4et8u"), ExtResource("5_yiqvy"), ExtResource("6_sm1yt")])
 
 [node name="Grapes" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
