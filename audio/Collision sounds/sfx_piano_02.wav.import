@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d3xjyds7k4ve"
+path="res://.godot/imported/sfx_piano_02.wav-3f2fad9a015cdf034679f044c462ae16.sample"
+
+[deps]
+
+source_file="res://audio/Collision sounds/sfx_piano_02.wav"
+dest_files=["res://.godot/imported/sfx_piano_02.wav-3f2fad9a015cdf034679f044c462ae16.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

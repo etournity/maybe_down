@@ -1,6 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwbng6fuyvfkc"]
+[gd_scene load_steps=13 format=3 uid="uid://cwbng6fuyvfkc"]
 
+[ext_resource type="Script" path="res://Obstacle.gd" id="1_c6dix"]
 [ext_resource type="Texture2D" uid="uid://uaap7widnjxt" path="res://assets/objects/realistic/textures/WritingDesk_Writing_DeskDiffuseMap.png" id="1_drnoi"]
+[ext_resource type="AudioStream" uid="uid://bc0muyn6np81x" path="res://audio/Collision sounds/sfx_wood_01.wav" id="2_3nj22"]
+[ext_resource type="AudioStream" uid="uid://dd6us7cjad7m0" path="res://audio/Collision sounds/sfx_wood_02.wav" id="3_uu1pg"]
+[ext_resource type="AudioStream" uid="uid://ckgbvxvlsdvc7" path="res://audio/Collision sounds/sfx_wood_03.wav" id="4_8o2mj"]
+[ext_resource type="AudioStream" uid="uid://bu6bv55urqgfl" path="res://audio/Collision sounds/sfx_wood_04.wav" id="5_a3p2l"]
+[ext_resource type="AudioStream" uid="uid://blswjprox0a8d" path="res://audio/Collision sounds/sfx_wood_05.wav" id="6_75qef"]
+[ext_resource type="AudioStream" uid="uid://cxq48h6l3q6qu" path="res://audio/Collision sounds/sfx_wood_06.wav" id="7_aycyn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fdlau"]
 resource_name = "07___Default"
@@ -45,6 +52,8 @@ shadow_mesh = SubResource("ArrayMesh_xlpgs")
 points = PackedVector3Array(36.2428, 17.5744, -0.905916, -38.5008, -19.7972, -58.2031, -37.1932, -20.3304, -45.1672, 38.8781, -19.7972, -58.203, -35.6832, 20.5014, -45.0367, -36.9228, -19.0249, -0.0610695, 37.3081, -20.3071, -2.6201, 38.7793, 19.4641, -45.1672, -36.9228, 18.0886, -0.0610695, -39.4889, 2.72691, -58.9361, 39.8662, 2.72691, -58.9361, 37.3081, -19.0249, -0.0610695, 37.6739, 20.7289, -44.0017, -36.9228, -20.3071, -2.6201, 36.9229, 18.5406, -3.7824, -37.2966, 20.7289, -44.0017, 39.8662, 5.2872, -57.6508, 39.6692, -19.5672, -45.5285, 37.5705, -20.3304, -45.1672, -39.0678, -19.4552, -45.4375, -39.4889, 5.2872, -57.6508, 36.0605, 20.5014, -45.0367, -36.5808, 18.5582, -3.75776, -38.5501, 19.5382, -42.8017, 38.9847, 19.5668, -42.8213, 39.8649, -2.30087, -58.0131, -38.402, 19.4641, -45.1672)
 
 [node name="WritingDesk" type="StaticBody3D" groups=["desk"]]
+script = ExtResource("1_c6dix")
+sounds = Array[AudioStream]([ExtResource("2_3nj22"), ExtResource("3_uu1pg"), ExtResource("4_8o2mj"), ExtResource("5_a3p2l"), ExtResource("6_75qef"), ExtResource("7_aycyn")])
 
 [node name="Writing Desk" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, -2.18557e-09, -0.05, 0, 0.05, -2.18557e-09, 0, 0, 0)

@@ -1,4 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://ubb71efl638b"]
+[gd_scene load_steps=26 format=3 uid="uid://xyipyydxh7a0"]
+
+[ext_resource type="Script" path="res://Obstacle.gd" id="1_8ssjb"]
+[ext_resource type="AudioStream" uid="uid://crf2500l1ynct" path="res://audio/Collision sounds/sfx_metallic_01.wav" id="2_cccr4"]
+[ext_resource type="AudioStream" uid="uid://46p4ck4ij6sv" path="res://audio/Collision sounds/sfx_metallic_02.wav" id="3_p2wgc"]
+[ext_resource type="AudioStream" uid="uid://svlry7hrkcc8" path="res://audio/Collision sounds/sfx_metallic_03.wav" id="4_tuxir"]
+[ext_resource type="AudioStream" uid="uid://c7rluwayt8nfb" path="res://audio/Collision sounds/sfx_metallic_04.wav" id="5_u5w58"]
+[ext_resource type="AudioStream" uid="uid://b5krc0ut5qdnm" path="res://audio/Collision sounds/sfx_metallic_05.wav" id="6_nywqm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qubbs"]
 resource_name = "Body"
@@ -237,6 +244,8 @@ shadow_mesh = SubResource("ArrayMesh_3b5cx")
 radius = 2.07676
 
 [node name="UFO" type="StaticBody3D"]
+script = ExtResource("1_8ssjb")
+sounds = Array[AudioStream]([ExtResource("2_cccr4"), ExtResource("3_p2wgc"), ExtResource("4_tuxir"), ExtResource("5_u5w58"), ExtResource("6_nywqm")])
 
 [node name="ufo" type="Node3D" parent="."]
 transform = Transform3D(2, 0, -1.74846e-07, 0, -0.484459, 0, 1.74846e-07, 0, 2, 0, 0, 0)

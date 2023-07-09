@@ -1,8 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://rgssvep7kd04"]
+[gd_scene load_steps=14 format=3 uid="uid://cyre3vxlwribb"]
 
+[ext_resource type="Script" path="res://Obstacle.gd" id="1_a0aup"]
 [ext_resource type="Texture2D" uid="uid://c5hg5m6gorw50" path="res://assets/objects/realistic/wheel_barrow_0.png" id="1_kya0j"]
 [ext_resource type="Texture2D" uid="uid://s4g5j8o5o7xa" path="res://assets/objects/realistic/wheel_barrow_1.png" id="2_nqr66"]
+[ext_resource type="AudioStream" uid="uid://cu74hou88hw2o" path="res://audio/Collision sounds/sfx_metalbarrel_01.wav" id="2_oti42"]
 [ext_resource type="Texture2D" uid="uid://dj10f5ta67v5i" path="res://assets/objects/realistic/wheel_barrow_2.png" id="3_736vg"]
+[ext_resource type="AudioStream" uid="uid://bvb3otp6dpubj" path="res://audio/Collision sounds/sfx_metalbarrel_02.wav" id="3_dor04"]
+[ext_resource type="AudioStream" uid="uid://kawqsy31simf" path="res://audio/Collision sounds/sfx_metalbarrel_03.wav" id="4_vpuok"]
+[ext_resource type="AudioStream" uid="uid://bcq1hivnan4y0" path="res://audio/Collision sounds/sfx_metalbarrel_04.wav" id="5_nv2fb"]
+[ext_resource type="AudioStream" uid="uid://c0q7nos2ox2g" path="res://audio/Collision sounds/sfx_metalbarrel_05.wav" id="6_7nqoh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k7ws2"]
 resource_name = "initialShadingGroup"
@@ -53,6 +59,8 @@ shadow_mesh = SubResource("ArrayMesh_xrs8u")
 points = PackedVector3Array(-2.74134, -43.6324, 0.794537, 24.6054, 58.3701, 59.0754, -24.6255, 58.3431, 59.062, 2.86945, -59.7829, 53.0339, 14.8055, 8.72093, 1.97904, 26.0167, -52.0623, 49.1736, -26.0482, -46.2749, 47.2465, -14.8389, 8.71914, 1.98476, 27.9493, 59.7829, 53.0339, -27.9808, 59.7829, 53.0339, 4.79657, -61.716, 16.4006, -24.1211, -38.5665, 54.961, 24.0896, 44.3539, 60.7484, 18.3028, 9.64162, 6.75293, -4.83353, -61.716, 16.4006, 26.0167, -34.7122, 54.961, -24.1211, 44.3539, 60.7484, 2.70639, -43.6596, 0.776363, -26.0482, 61.716, 53.0339, 27.9493, -38.5665, 51.0947, -23.0688, -51.6384, 52.0236, 26.0167, 61.716, 53.0339, -27.9808, 55.9286, 58.8152, 16.3702, -57.8497, 53.0339, 27.9493, 53.9955, 58.8152, -0.979301, -59.7829, 53.0339, 4.36597, -43.8945, 3.55369, 27.9493, 61.716, 54.961, -4.39024, -43.7724, 3.62698, -24.9596, -49.8852, 52.0661, 2.73047, -49.5544, 4.1932, -15.6079, -55.0288, 51.9054)
 
 [node name="wheel_barrow" type="StaticBody3D"]
+script = ExtResource("1_a0aup")
+sounds = Array[AudioStream]([ExtResource("2_oti42"), ExtResource("3_dor04"), ExtResource("4_vpuok"), ExtResource("5_nv2fb"), ExtResource("6_7nqoh")])
 
 [node name="Object_2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, -2.18557e-09, 0.05, 0, -0.05, -2.18557e-09, 0, 0, 0)

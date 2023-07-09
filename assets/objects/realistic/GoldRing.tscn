@@ -1,4 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://jqgaqar5h5k0"]
+[gd_scene load_steps=10 format=3 uid="uid://jqgaqar5h5k0"]
+
+[ext_resource type="Script" path="res://Obstacle.gd" id="1_kgmjq"]
+[ext_resource type="AudioStream" uid="uid://csovivxudu3tv" path="res://audio/Collision sounds/sfx_ring_01.wav" id="2_8jc0x"]
+[ext_resource type="AudioStream" uid="uid://dn0m5hic7bp2n" path="res://audio/Collision sounds/sfx_ring_02.wav" id="3_clf7n"]
+[ext_resource type="AudioStream" uid="uid://borxhb2ma08v1" path="res://audio/Collision sounds/sfx_ring_03.wav" id="4_6l6sf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i462q"]
 resource_name = "Gold"
@@ -74,6 +79,8 @@ height = 0.566643
 radius = 0.988716
 
 [node name="GoldRing" type="StaticBody3D" groups=["gold_ring"]]
+script = ExtResource("1_kgmjq")
+sounds = Array[AudioStream]([ExtResource("2_8jc0x"), ExtResource("3_clf7n"), ExtResource("4_6l6sf")])
 
 [node name="RubyRing" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.632941, 0, 0, 0, 0.632941, 0, 0, 0, 0.632941, 0, 1, 0)
