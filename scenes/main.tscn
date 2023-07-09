@@ -1,17 +1,14 @@
-[gd_scene load_steps=25 format=3 uid="uid://7tw7q0wgsivv"]
+[gd_scene load_steps=19 format=3 uid="uid://7tw7q0wgsivv"]
 
 [ext_resource type="Script" path="res://scenes/World.gd" id="1_k8dhs"]
 [ext_resource type="PackedScene" uid="uid://bfs3ewieb5wyj" path="res://assets/objects/realistic/Sink.tscn" id="2_3it8b"]
 [ext_resource type="Script" path="res://scenes/Camera.gd" id="2_342py"]
 [ext_resource type="Script" path="res://scenes/NPC.gd" id="2_lfwca"]
-[ext_resource type="Script" path="res://resources/NoiseResource.gd" id="3_fcy5d"]
 [ext_resource type="PackedScene" uid="uid://6pg8sfpakjl1" path="res://scenes/pause_menu.tscn" id="3_p022i"]
-[ext_resource type="AudioStream" uid="uid://bk6vmrql6pqyp" path="res://audio/Collision sounds/sfx_collision-001.wav" id="4_2b1uj"]
 [ext_resource type="AudioStream" uid="uid://xrnjeomj6vnd" path="res://audio/click.wav" id="4_em1xl"]
-[ext_resource type="AudioStream" uid="uid://c4y2n00rimuq7" path="res://audio/Collision sounds/sfx_collision-006.wav" id="4_y58cu"]
 [ext_resource type="AudioStream" uid="uid://dcvohfpqmms56" path="res://audio/main_theme_loop.ogg" id="5_3n2do"]
 [ext_resource type="PackedScene" uid="uid://byb4hk8l12noc" path="res://assets/objects/realistic/Bed.tscn" id="7_6ga6s"]
-[ext_resource type="PackedScene" path="res://assets/objects/realistic/Hourglass.tscn" id="8_631qw"]
+[ext_resource type="PackedScene" uid="uid://idiva4h35e08" path="res://assets/objects/realistic/Hourglass.tscn" id="8_631qw"]
 [ext_resource type="PackedScene" uid="uid://c650eanb1t60p" path="res://assets/objects/realistic/Gear.tscn" id="9_k5jx7"]
 [ext_resource type="PackedScene" uid="uid://jqgaqar5h5k0" path="res://assets/objects/realistic/GoldRing.tscn" id="10_pjyk1"]
 
@@ -20,16 +17,6 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nyp13"]
 friction = 0.5
 bounce = 0.3
-
-[sub_resource type="Resource" id="Resource_8lfqo"]
-script = ExtResource("3_fcy5d")
-group = "zhonyas"
-sound = ExtResource("4_2b1uj")
-
-[sub_resource type="Resource" id="Resource_p60oe"]
-script = ExtResource("3_fcy5d")
-group = "gear"
-sound = ExtResource("4_y58cu")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_h0xe1"]
 
