@@ -53,7 +53,7 @@ func set_timer_time(time: String):
 	timer.text = time
 
 func set_height():
-	height.text = "Elevation: %.00f" % (npc.position.y + 5.376)
+	height.text = "Elevation: %.01fm" % (npc.position.y + 5.376)
 	
 func _on_pause_menu_resume():
 	pauseMenu.close()
