@@ -89,7 +89,7 @@ update_mode = 1
 max_distance = 53.3
 box_projection = true
 
-[node name="NPC" type="RigidBody3D" parent="."]
+[node name="NPC" type="RigidBody3D" parent="." node_paths=PackedStringArray("main")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.76769, 172.227, 0)
 collision_layer = 2
 collision_mask = 13
@@ -104,6 +104,7 @@ can_sleep = false
 script = ExtResource("2_lfwca")
 sounds = Array[AudioStream]([ExtResource("3_dmchm")])
 default_sounds = Array[AudioStream]([ExtResource("4_huoal")])
+main = NodePath("..")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC"]
 shape = SubResource("SphereShape3D_h0xe1")
