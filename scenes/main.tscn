@@ -85,13 +85,66 @@ transform = Transform3D(0.977995, 0.0591246, 0.200076, -0.208629, 0.27716, 0.937
 
 [node name="World" type="Node3D" parent="."]
 
-[node name="silestoneSink" parent="World" instance=ExtResource("2_3it8b")]
-transform = Transform3D(0.929796, -0.368076, 0, 0.368076, 0.929796, 0, 0, 0, 1, 4.51148, 3.00169, -0.0913229)
-
 [node name="Click" type="AudioStreamPlayer" parent="World"]
 stream = ExtResource("4_em1xl")
 volume_db = -10.651
 bus = &"Effects"
+
+[node name="Interactables" type="Node3D" parent="World"]
+
+[node name="Bed" parent="World/Interactables" instance=ExtResource("7_6ga6s")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3.51933, -4.30926, -0.674926)
+
+[node name="Obstacles" type="Node3D" parent="World"]
+
+[node name="HourGlass" parent="World/Obstacles" instance=ExtResource("8_631qw")]
+transform = Transform3D(0.685874, 0.315597, 0, -0.315597, 0.685874, 0, 0, 0, 0.755, -6.24274, -0.0993426, 0)
+
+[node name="Gear" parent="World/Obstacles" instance=ExtResource("9_k5jx7")]
+transform = Transform3D(14.575, 0, 0, 0, 14.575, 0, 0, 0, 14.575, 0.87293, 0, 0)
+
+[node name="GoldRing" parent="World/Obstacles" instance=ExtResource("10_pjyk1")]
+transform = Transform3D(0.507538, 0, -0.861629, 0, 1, 0, 0.861629, 0, 0.507538, 4.38, -3.736, 0)
+
+[node name="silestoneSink" parent="World/Obstacles" instance=ExtResource("2_3it8b")]
+transform = Transform3D(0.929796, -0.368076, 0, 0.368076, 0.929796, 0, 0, 0, 1, 4.51148, 3.00169, -0.0913229)
+
+[node name="Boundaries" type="Node3D" parent="World"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="World/Boundaries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.37635, 0)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Boundaries/StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_1svup")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World/Boundaries/StaticBody3D"]
+mesh = SubResource("PlaneMesh_pqktr")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="World/Boundaries"]
+transform = Transform3D(-2.18557e-07, -1, 0, 1, -2.18557e-07, 0, 0, 0, 1, 10.4972, 0, 0)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Boundaries/StaticBody3D3"]
+shape = SubResource("WorldBoundaryShape3D_1svup")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="World/Boundaries"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 65.3922, 0)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Boundaries/StaticBody3D2"]
+shape = SubResource("WorldBoundaryShape3D_1svup")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="World/Boundaries"]
+transform = Transform3D(3.0598e-07, 1, 0, -1, 3.0598e-07, 0, 0, 0, 1, -10.0739, 0, 0)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Boundaries/StaticBody3D4"]
+shape = SubResource("WorldBoundaryShape3D_1svup")
 
 [node name="pause_menu" parent="." instance=ExtResource("3_p022i")]
 
@@ -99,53 +152,6 @@ bus = &"Effects"
 stream = ExtResource("5_3n2do")
 volume_db = -8.108
 bus = &"Music"
-
-[node name="Bed" parent="." instance=ExtResource("7_6ga6s")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3.51933, -4.30926, -0.674926)
-
-[node name="HourGlass" parent="." instance=ExtResource("8_631qw")]
-transform = Transform3D(0.685874, 0.315597, 0, -0.315597, 0.685874, 0, 0, 0, 0.755, -6.24274, -0.0993426, 0)
-
-[node name="Gear" parent="." instance=ExtResource("9_k5jx7")]
-transform = Transform3D(14.575, 0, 0, 0, 14.575, 0, 0, 0, 14.575, 0.87293, 0, 0)
-
-[node name="GoldRing" parent="." instance=ExtResource("10_pjyk1")]
-transform = Transform3D(0.507538, 0, -0.861629, 0, 1, 0, 0.861629, 0, 0.507538, 4.38, -3.736, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.37635, 0)
-collision_layer = 8
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("WorldBoundaryShape3D_1svup")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-mesh = SubResource("PlaneMesh_pqktr")
-
-[node name="StaticBody3D3" type="StaticBody3D" parent="."]
-transform = Transform3D(-2.18557e-07, -1, 0, 1, -2.18557e-07, 0, 0, 0, 1, 10.4972, 0, 0)
-collision_layer = 8
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
-shape = SubResource("WorldBoundaryShape3D_1svup")
-
-[node name="StaticBody3D2" type="StaticBody3D" parent="."]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 65.3922, 0)
-collision_layer = 8
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
-shape = SubResource("WorldBoundaryShape3D_1svup")
-
-[node name="StaticBody3D4" type="StaticBody3D" parent="."]
-transform = Transform3D(3.0598e-07, 1, 0, -1, 3.0598e-07, 0, 0, 0, 1, -10.0739, 0, 0)
-collision_layer = 8
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
-shape = SubResource("WorldBoundaryShape3D_1svup")
 
 [node name="UI" type="CanvasLayer" parent="."]
 

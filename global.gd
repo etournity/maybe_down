@@ -19,7 +19,8 @@ func _ready():
 func _process(delta):
 	if(gameState == GameStates.RUNNING):
 		time += delta
-	Main.set_timer_time("Time: %02d:%02d:%03d" % [time/60,fmod(time,60), fmod(time,1)*1000])
+		formattedTime = "Time: %02d:%02d:%03d" % [time/60,fmod(time,60), fmod(time,1)*1000]
+	Main.set_timer_time(formattedTime)
 	
 	if(Input.is_action_just_pressed("quit")):
 		get_tree().quit()
