@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://fxr41nenuept"]
 
-[ext_resource type="PackedScene" path="res://assets/objects/cartoon/ufo.tscn" id="1_wegax"]
+[ext_resource type="PackedScene" uid="uid://xyipyydxh7a0" path="res://assets/objects/cartoon/ufo.tscn" id="1_wegax"]
 
 [sub_resource type="Gradient" id="Gradient_1wp4c"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -30,6 +30,7 @@ rings = 1
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.792626, 0)
 amount = 100
+preprocess = 1.44
 fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_g0wbf")
 draw_pass_1 = SubResource("CylinderMesh_dd8ox")

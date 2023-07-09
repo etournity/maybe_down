@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://7tw7q0wgsivv"]
+[gd_scene load_steps=80 format=3 uid="uid://7tw7q0wgsivv"]
 
 [ext_resource type="Script" path="res://scenes/World.gd" id="1_k8dhs"]
 [ext_resource type="PackedScene" uid="uid://bfs3ewieb5wyj" path="res://assets/objects/realistic/Sink.tscn" id="2_3it8b"]
@@ -14,11 +14,10 @@
 [ext_resource type="PackedScene" uid="uid://7fbbtmdihu33" path="res://assets/objects/realistic/Bed.tscn" id="7_6ga6s"]
 [ext_resource type="AudioStream" uid="uid://dpme1ekigrjux" path="res://audio/Collision sounds/sfx_random_02.wav" id="7_pgumy"]
 [ext_resource type="PackedScene" uid="uid://dyyyf8a84slbg" path="res://assets/objects/cartoon/Grapes.tscn" id="8_6svsk"]
+[ext_resource type="AudioStream" uid="uid://svisq3x2w533" path="res://audio/Collision sounds/sfx_random_03.wav" id="8_46bg5"]
 [ext_resource type="PackedScene" uid="uid://csfr3xr6hu46q" path="res://assets/objects/realistic/Hourglass.tscn" id="8_631qw"]
 [ext_resource type="PackedScene" uid="uid://baf7bx5pb0we6" path="res://assets/objects/cartoon/orange.tscn" id="9_fsrdi"]
-[ext_resource type="AudioStream" uid="uid://svisq3x2w533" path="res://audio/Collision sounds/sfx_random_03.wav" id="8_46bg5"]
 [ext_resource type="PackedScene" uid="uid://c650eanb1t60p" path="res://assets/objects/realistic/Gear.tscn" id="9_k5jx7"]
-[ext_resource type="PackedScene" uid="uid://xyipyydxh7a0" path="res://assets/objects/cartoon/ufo.tscn" id="10_0dy8h"]
 [ext_resource type="AudioStream" uid="uid://bta80sygrnjae" path="res://audio/Collision sounds/sfx_random_04.wav" id="9_sorc7"]
 [ext_resource type="PackedScene" uid="uid://ckspgvw2lh580" path="res://assets/objects/cartoon/Cheese.tscn" id="10_gcnkk"]
 [ext_resource type="PackedScene" uid="uid://jqgaqar5h5k0" path="res://assets/objects/realistic/GoldRing.tscn" id="10_pjyk1"]
@@ -62,13 +61,14 @@
 [ext_resource type="PackedScene" path="res://assets/objects/realistic/WoodenBarrel.tscn" id="34_lknms"]
 [ext_resource type="PackedScene" uid="uid://dwisumk7ft2ss" path="res://assets/objects/realistic/IroningBoard.tscn" id="36_ghra3"]
 [ext_resource type="PackedScene" uid="uid://bngjwsdds4buc" path="res://assets/objects/realistic/pipe_organ.tscn" id="37_co23h"]
-[ext_resource type="PackedScene" path="res://assets/objects/realistic/TooriGate.tscn" id="40_7s35u"]
+[ext_resource type="PackedScene" uid="uid://jm63qd7qs3f" path="res://assets/objects/realistic/TooriGate.tscn" id="40_7s35u"]
 [ext_resource type="PackedScene" uid="uid://b84qar3kdrdeh" path="res://scenes/goal.tscn" id="41_nh3p5"]
 [ext_resource type="PackedScene" uid="uid://cy17o4h6mm7k6" path="res://assets/objects/realistic/SilverRing.tscn" id="43_7vxta"]
 [ext_resource type="PackedScene" uid="uid://1t7kidujc3pg" path="res://assets/objects/fruits/mandarin.tscn" id="44_wfwwb"]
 [ext_resource type="PackedScene" uid="uid://dqjurl2rh3kdw" path="res://assets/objects/fruits/peach.tscn" id="45_6r75k"]
 [ext_resource type="PackedScene" uid="uid://bgf312ujl8gji" path="res://assets/objects/realistic/pacman_arcade.tscn" id="46_jb0f8"]
 [ext_resource type="PackedScene" uid="uid://c7wliquri1em8" path="res://assets/objects/fruits/red_pear.tscn" id="47_a03ni"]
+[ext_resource type="PackedScene" uid="uid://fxr41nenuept" path="res://scenes/ufo_beam.tscn" id="58_bdtko"]
 
 [sub_resource type="Environment" id="Environment_tnlyh"]
 
@@ -125,7 +125,7 @@ max_distance = 53.3
 box_projection = true
 
 [node name="NPC" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0473281, 202.588, 0)
 collision_layer = 2
 collision_mask = 29
 axis_lock_linear_z = true
@@ -188,9 +188,6 @@ transform = Transform3D(-0.857068, 0.212341, -0.46941, 0.201603, 0.976689, 0.073
 transform = Transform3D(0.157925, 0.0209721, -0.783977, -0.0448732, 0.798645, 0.0123251, 0.782973, 0.0415414, 0.158834, 37.6578, 149.378, 0.446615)
 
 [node name="Obstacles" type="Node3D" parent="World"]
-
-[node name="UFO" parent="World/Obstacles" instance=ExtResource("10_0dy8h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 207.97, 0)
 
 [node name="Food" type="Node3D" parent="World/Obstacles"]
 
@@ -442,6 +439,9 @@ transform = Transform3D(0.119999, -0.122254, -0.103219, 0.0607414, 0.154172, -0.
 
 [node name="RedPear" parent="World/Obstacles/Goal" instance=ExtResource("47_a03ni")]
 transform = Transform3D(1.01339, -1.10592, 0, 1.10592, 1.01339, 0, 0, 0, 1.5, -14.9193, 14.5494, 0)
+
+[node name="ufo_beam2" parent="World/Obstacles" instance=ExtResource("58_bdtko")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432682, 207.957, 0.0991111)
 
 [node name="Boundaries" type="Node3D" parent="World"]
 

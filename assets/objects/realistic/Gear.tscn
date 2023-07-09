@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c650eanb1t60p"]
+[gd_scene load_steps=19 format=3 uid="uid://c650eanb1t60p"]
 
 [ext_resource type="Texture2D" uid="uid://ddtgvjt3atbbm" path="res://assets/objects/realistic/textures/metal_scrap_gear_small_0.png" id="1_atr2j"]
 [ext_resource type="Script" path="res://Obstacle.gd" id="1_ewrjm"]
