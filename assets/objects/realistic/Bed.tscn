@@ -145,7 +145,7 @@ size = Vector3(2, 1, 3.825)
 [sub_resource type="BoxShape3D" id="BoxShape3D_6jpf3"]
 size = Vector3(2, 2.74, 0.215)
 
-[node name="Bed" type="StaticBody3D"]
+[node name="Bed" type="StaticBody3D" groups=["bed"]]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
 script = ExtResource("1_8kw5n")
 
