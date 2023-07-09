@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://7tw7q0wgsivv"]
+[gd_scene load_steps=18 format=3 uid="uid://7tw7q0wgsivv"]
 
 [ext_resource type="Script" path="res://scenes/World.gd" id="1_k8dhs"]
 [ext_resource type="PackedScene" uid="uid://bfs3ewieb5wyj" path="res://assets/objects/realistic/Sink.tscn" id="2_3it8b"]
@@ -6,12 +6,10 @@
 [ext_resource type="Script" path="res://scenes/NPC.gd" id="2_lfwca"]
 [ext_resource type="PackedScene" uid="uid://6pg8sfpakjl1" path="res://scenes/pause_menu.tscn" id="3_p022i"]
 [ext_resource type="AudioStream" uid="uid://xrnjeomj6vnd" path="res://audio/click.wav" id="4_em1xl"]
-[ext_resource type="AudioStream" uid="uid://dcvohfpqmms56" path="res://audio/main_theme_loop.ogg" id="5_3n2do"]
 [ext_resource type="PackedScene" uid="uid://byb4hk8l12noc" path="res://assets/objects/realistic/Bed.tscn" id="7_6ga6s"]
-[ext_resource type="PackedScene" uid="uid://idiva4h35e08" path="res://assets/objects/realistic/Hourglass.tscn" id="8_631qw"]
+[ext_resource type="PackedScene" path="res://assets/objects/realistic/Hourglass.tscn" id="8_631qw"]
 [ext_resource type="PackedScene" uid="uid://c650eanb1t60p" path="res://assets/objects/realistic/Gear.tscn" id="9_k5jx7"]
 [ext_resource type="PackedScene" uid="uid://jqgaqar5h5k0" path="res://assets/objects/realistic/GoldRing.tscn" id="10_pjyk1"]
-[ext_resource type="AudioStream" uid="uid://bqw3rlay3o1ii" path="res://audio/menu_music_loop.ogg" id="12_jw8ao"]
 
 [sub_resource type="Environment" id="Environment_tnlyh"]
 
@@ -67,7 +65,7 @@ max_contacts_reported = 2
 contact_monitor = true
 can_sleep = false
 script = ExtResource("2_lfwca")
-sounds = Array[Resource]([null])
+sounds = Array[Resource("res://resources/NoiseResource.gd")]([null])
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC"]
 shape = SubResource("SphereShape3D_h0xe1")
@@ -90,12 +88,9 @@ transform = Transform3D(0.977995, 0.0591246, 0.200076, -0.208629, 0.27716, 0.937
 [node name="Click" type="AudioStreamPlayer" parent="World"]
 stream = ExtResource("4_em1xl")
 volume_db = -10.651
+bus = &"Effects"
 
 [node name="Interactables" type="Node3D" parent="World"]
-
-[node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_3n2do")
-bus = &"Music"
 
 [node name="Bed" parent="World/Interactables" instance=ExtResource("7_6ga6s")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3.51933, -4.30926, -0.674926)
@@ -153,11 +148,6 @@ shape = SubResource("WorldBoundaryShape3D_1svup")
 
 [node name="pause_menu" parent="." instance=ExtResource("3_p022i")]
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_3n2do")
-volume_db = -8.108
-bus = &"Music"
-
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Timer" type="RichTextLabel" parent="UI"]
@@ -169,10 +159,6 @@ text = "0:00:000"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
-
-[node name="Menu Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("12_jw8ao")
-bus = &"Music"
 
 [connection signal="body_entered" from="NPC" to="NPC" method="_on_body_entered"]
 [connection signal="resume" from="pause_menu" to="." method="_on_pause_menu_resume"]

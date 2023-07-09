@@ -13,7 +13,7 @@ var target_rot: float = 0.0
 
 
 func _ready():
-	pass
+	npc.freeze = true
 
 func _process(delta):
 	if(!Global.gameState == Global.GameStates.RUNNING):
@@ -42,11 +42,6 @@ func get_rotated(delta):
 	
 	PhysicsServer3D.area_set_param(get_world_3d().space, PhysicsServer3D.AREA_PARAM_GRAVITY_VECTOR, -camera.basis.y * 1.7)
 
-func start_music():
-	music.play()
-
-func stop_music():
-	music.stop()
 
 func set_timer_time(time: String):
 	timer.text = time
