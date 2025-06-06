@@ -1,0 +1,55 @@
+[gd_scene load_steps=19 format=3 uid="uid://dejc58gkxx3bc"]
+
+[ext_resource type="Script" path="res://scenes/NPC.gd" id="1_86mh5"]
+[ext_resource type="AudioStream" uid="uid://qb7q812pqdg7" path="res://audio/Collision sounds/sfx_collision-003.wav" id="2_gf36s"]
+[ext_resource type="AudioStream" uid="uid://dfcbldifwfqy7" path="res://audio/Collision sounds/sfx_collision-004.wav" id="3_g7kxw"]
+[ext_resource type="AudioStream" uid="uid://cd2t45gu8rptf" path="res://audio/Collision sounds/sfx_collision-005.wav" id="4_wwlqo"]
+[ext_resource type="AudioStream" uid="uid://bbakhdxf5kvg1" path="res://audio/Collision sounds/sfx_random_01.wav" id="5_31l7t"]
+[ext_resource type="AudioStream" uid="uid://dpme1ekigrjux" path="res://audio/Collision sounds/sfx_random_02.wav" id="6_heqtw"]
+[ext_resource type="AudioStream" uid="uid://svisq3x2w533" path="res://audio/Collision sounds/sfx_random_03.wav" id="7_gtjec"]
+[ext_resource type="AudioStream" uid="uid://bta80sygrnjae" path="res://audio/Collision sounds/sfx_random_04.wav" id="8_yqrnx"]
+[ext_resource type="AudioStream" uid="uid://d3japko0vopor" path="res://audio/Collision sounds/sfx_stone_01.wav" id="9_uvojt"]
+[ext_resource type="AudioStream" uid="uid://h88kwvq41fxy" path="res://audio/Collision sounds/sfx_stone_02.wav" id="10_dme5e"]
+[ext_resource type="AudioStream" uid="uid://bd23mkfj4t6k2" path="res://audio/Collision sounds/sfx_stone_03.wav" id="11_bdge4"]
+[ext_resource type="AudioStream" uid="uid://djynoyygwrjhb" path="res://audio/Collision sounds/sfx_stone_04.wav" id="12_8wxxs"]
+[ext_resource type="AudioStream" uid="uid://1pm6pqooqdux" path="res://audio/Collision sounds/sfx_stone_05.wav" id="13_2fae0"]
+[ext_resource type="AudioStream" uid="uid://d2m6p0yhapooi" path="res://audio/Collision sounds/sfx_stone_06.wav" id="14_ampbo"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nyp13"]
+friction = 0.5
+bounce = 0.3
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_h0xe1"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_3fhbj"]
+lightmap_size_hint = Vector2i(17, 9)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w1qxk"]
+albedo_color = Color(1, 1, 1, 0.12549)
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.4
+
+[node name="NPC" type="RigidBody3D"]
+collision_layer = 2
+collision_mask = 29
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+physics_material_override = SubResource("PhysicsMaterial_nyp13")
+continuous_cd = true
+max_contacts_reported = 2
+contact_monitor = true
+can_sleep = false
+script = ExtResource("1_86mh5")
+sounds = Array[AudioStream]([ExtResource("2_gf36s"), ExtResource("3_g7kxw"), ExtResource("4_wwlqo"), ExtResource("5_31l7t"), ExtResource("6_heqtw"), ExtResource("7_gtjec"), ExtResource("8_yqrnx")])
+default_sounds = Array[AudioStream]([ExtResource("9_uvojt"), ExtResource("10_dme5e"), ExtResource("11_bdge4"), ExtResource("12_8wxxs"), ExtResource("13_2fae0"), ExtResource("14_ampbo")])
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_h0xe1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D2"]
+mesh = SubResource("SphereMesh_3fhbj")
+surface_material_override/0 = SubResource("StandardMaterial3D_w1qxk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -41,6 +41,10 @@ theme_override_constants/separation = 16
 layout_mode = 2
 text = "Resume"
 
+[node name="Restart" type="Button" parent="RootMenu/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Restart"
+
 [node name="Options" type="Button" parent="RootMenu/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Options"
@@ -54,6 +58,7 @@ visible = false
 layout_mode = 1
 
 [connection signal="pressed" from="RootMenu/CenterContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="RootMenu/CenterContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="RootMenu/CenterContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="RootMenu/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="back" from="options" to="." method="_on_options_back"]
