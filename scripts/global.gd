@@ -36,8 +36,11 @@ func _process(delta):
 				Main.pauseMenu.open()
 			Main.set_pause(Main.pauseMenu.isOpen)
 			
+		if(Input.is_action_just_pressed("reset")):
+			restart_game()
 	if(Input.is_action_just_pressed("quit")):
 		quit()
+	
 
 func start_game():
 	gameState = GameStates.RUNNING
