@@ -20,7 +20,7 @@ func _on_options_pressed():
 	$options.open()
 
 func _on_exit_pressed():
-	get_tree().quit() 
+	Global.quit()
 
 func _on_options_back():
 	$options.close()

@@ -2,21 +2,23 @@ extends RigidBody3D
 
 @export var sounds: Array[AudioStream] = []
 @export var default_sounds: Array[AudioStream] = []
-@export var main: Node3D
+
 
 var since_last = 0
+var bed_hit_pos: Vector3
 var rng = RandomNumberGenerator.new()
 
-func _process(delta):
+func _process(_delta):
 	since_last += 1
-	if (get_collision_mask_value(1) == false && linear_velocity.y < 0):
-		main.can_rotate = true
+	if (get_collision_mask_value(1) == false && linear_velocity.y < 0 || position.distance_squared_to(bed_hit_pos) >= 10000):
+		Main.can_rotate = true
 		set_collision_mask_value(1, true)
 		set_transparency(1)
 
 func _on_body_entered(body):
 	if body.is_in_group("bed"):
-		main.can_rotate = false
+		Main.can_rotate = false
+		bed_hit_pos = body.position
 		apply_force(Vector3(0, body.velocity, 0))
 		set_collision_mask_value(1, false)
 		set_transparency(0.2)
@@ -43,4 +45,3 @@ func play_sound(sound_list):
 		add_child(player)
 		await player.finished
 		player.queue_free()
-

@@ -32,28 +32,28 @@ jobs:
   
   - name: Download + Authorize Godot
     run: |
-       curl -L -o godot.zip https://downloads.tuxfamily.org/godotengine/4.1/Godot_v4.1-stable_linux.x86_64.zip
+       curl -L -o godot.zip https://downloads.tuxfamily.org/godotengine/4.4/rc1/Godot_v4.4-rc1_linux.x86_64.zip
        unzip godot.zip
-       mv Godot_v4.1-stable_linux.x86_64 godot
+       mv Godot_v4.4-rc1_linux.x86_64 godot
        ls
        chmod +x godot
  
   - name: Download Export Templates
     run: |
-     curl -L -o export_templates.zip https://downloads.tuxfamily.org/godotengine/4.1/Godot_v4.1-stable_export_templates.tpz
+     curl -L -o export_templates.zip https://downloads.tuxfamily.org/godotengine/4.4/rc1/Godot_v4.4-rc1_export_templates.tpz
      unzip export_templates.zip
   
   - name: Install Export Templates
     run: |
-     mkdir -p ~/.local/share/godot/export_templates/4.1.stable
-     mv ./templates/* ~/.local/share/godot/export_templates/4.1.stable
+     mkdir -p ~/.local/share/godot/export_templates/4.4.rc1
+     mv ./templates/* ~/.local/share/godot/export_templates/4.4.rc1
   
   - name: Export Web
     run: |
      mkdir -p ./exports/web
      ./godot --headless --path ./ --export-release "Web" ./exports/web/index.html
     
-  - name: Export Linux/X11
+  - name: Export Linux
     run: |
      mkdir -p ./exports/linux
      ./godot --headless --path ./ --export-release "Linux/X11" ./exports/linux/gmtk_23.x86_64
@@ -142,15 +142,6 @@ jobs:
     
     - name: Login To Butler
       run: ./butler login
-    
-    - name: Push Web to Itch
-      run: ./butler push ./exports/web flowstreetgames/maybe-down:web --userversion-file ./VERSION/VERSION.txt
-    
-    - name: Push Linux/X11 to Itch
-      run: ./butler push ./exports/linux flowstreetgames/maybe-down:linux --userversion-file ./VERSION/VERSION.txt
-    
-    - name: Push Windows Desktop to Itch
-      run: ./butler push ./exports/windows flowstreetgames/maybe-down:win --userversion-file ./VERSION/VERSION.txt
     
 
  Cleanup:

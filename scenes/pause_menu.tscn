@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://6pg8sfpakjl1"]
+[gd_scene load_steps=5 format=3 uid="uid://6pg8sfpakjl1"]
 
 [ext_resource type="Theme" uid="uid://bxhr00agm0ett" path="res://assets/menu_theme.tres" id="1_mw7ct"]
-[ext_resource type="Script" path="res://scenes/pause_menu.gd" id="2_bde2u"]
+[ext_resource type="Script" uid="uid://bvgdn3ywcruvp" path="res://scenes/pause_menu.gd" id="2_bde2u"]
 [ext_resource type="PackedScene" uid="uid://cvmrqbvh3wu0j" path="res://scenes/options.tscn" id="3_0y4mm"]
+[ext_resource type="PackedScene" uid="uid://ctr68jxsax1y1" path="res://scenes/UI/leaderboard.tscn" id="4_5d2l8"]
 
 [node name="pause_menu" type="Control"]
 process_mode = 3
@@ -41,6 +42,10 @@ theme_override_constants/separation = 16
 layout_mode = 2
 text = "Resume"
 
+[node name="Restart" type="Button" parent="RootMenu/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Restart"
+
 [node name="Options" type="Button" parent="RootMenu/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Options"
@@ -53,7 +58,15 @@ text = "Quit"
 visible = false
 layout_mode = 1
 
+[node name="Leaderboard" parent="." instance=ExtResource("4_5d2l8")]
+layout_mode = 1
+offset_left = 96.0
+offset_top = -116.0
+offset_right = 510.0
+offset_bottom = 108.0
+
 [connection signal="pressed" from="RootMenu/CenterContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="RootMenu/CenterContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="RootMenu/CenterContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="RootMenu/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="back" from="options" to="." method="_on_options_back"]

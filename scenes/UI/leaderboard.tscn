@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctr68jxsax1y1"]
+
+[ext_resource type="Script" uid="uid://mq7lylxdaau" path="res://scripts/leaderboard.gd" id="1_hhekx"]
+
+[sub_resource type="Gradient" id="Gradient_tlu43"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.0901961, 0.0901961, 0.0901961, 0.67451)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2pweb"]
+gradient = SubResource("Gradient_tlu43")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pw5hq"]
+texture = SubResource("GradientTexture1D_2pweb")
+
+[node name="Leaderboard" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -207.0
+offset_top = -125.0
+offset_right = 207.0
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pw5hq")
+script = ExtResource("1_hhekx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Local" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Label" type="Label" parent="VBoxContainer/Local"]
+layout_mode = 2
+text = "Leaderboard"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LocalList" type="VBoxContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2

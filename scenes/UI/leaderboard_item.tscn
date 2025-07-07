@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://daxe64hryglg2"]
+
+[ext_resource type="Script" uid="uid://b26ioh4g63pnf" path="res://scenes/UI/leaderboard_item.gd" id="1_76mcu"]
+
+[node name="LeaderboardItem" type="MarginContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 77.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 8
+script = ExtResource("1_76mcu")
+
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Place" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "1."
+vertical_alignment = 1
+
+[node name="Username" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+text = "Test"
+vertical_alignment = 1
+
+[node name="Time" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+text = "00:00:00.000"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -10,10 +10,6 @@ func _ready():
 	isOpen = false
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func open():
 	Global.set_music_filter(true)
 	isOpen = true
@@ -46,4 +42,9 @@ func _on_resume_pressed():
 
 
 func _on_quit_pressed():
-	get_tree().quit()
+	Global.quit()
+
+
+func _on_restart_pressed():
+	Global.restart_game()
+	resume.emit()

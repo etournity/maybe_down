@@ -1,42 +1,29 @@
-[gd_scene load_steps=95 format=3 uid="uid://7tw7q0wgsivv"]
+[gd_scene load_steps=80 format=3 uid="uid://7tw7q0wgsivv"]
 
-[ext_resource type="Script" path="res://scenes/World.gd" id="1_k8dhs"]
+[ext_resource type="Script" uid="uid://cag2gsh4fdats" path="res://scenes/World.gd" id="1_k8dhs"]
+[ext_resource type="PackedScene" uid="uid://dejc58gkxx3bc" path="res://assets/player/npc.tscn" id="2_2e525"]
 [ext_resource type="PackedScene" uid="uid://bfs3ewieb5wyj" path="res://assets/objects/realistic/Sink.tscn" id="2_3it8b"]
-[ext_resource type="Script" path="res://scenes/Camera.gd" id="2_342py"]
-[ext_resource type="Script" path="res://scenes/NPC.gd" id="2_lfwca"]
-[ext_resource type="AudioStream" uid="uid://cd2t45gu8rptf" path="res://audio/Collision sounds/sfx_collision-005.wav" id="3_dmchm"]
-[ext_resource type="AudioStream" uid="uid://qb7q812pqdg7" path="res://audio/Collision sounds/sfx_collision-003.wav" id="3_e3438"]
+[ext_resource type="Script" uid="uid://bmallvblr0qar" path="res://scenes/Camera.gd" id="2_342py"]
 [ext_resource type="PackedScene" uid="uid://6pg8sfpakjl1" path="res://scenes/pause_menu.tscn" id="3_p022i"]
 [ext_resource type="AudioStream" uid="uid://xrnjeomj6vnd" path="res://audio/click.wav" id="4_em1xl"]
-[ext_resource type="AudioStream" uid="uid://dfcbldifwfqy7" path="res://audio/Collision sounds/sfx_collision-004.wav" id="4_j8wot"]
 [ext_resource type="AudioStream" uid="uid://dcvohfpqmms56" path="res://audio/main_theme_loop.ogg" id="5_3n2do"]
-[ext_resource type="AudioStream" uid="uid://bbakhdxf5kvg1" path="res://audio/Collision sounds/sfx_random_01.wav" id="6_exftb"]
-[ext_resource type="PackedScene" uid="uid://byb4hk8l12noc" path="res://assets/objects/realistic/Bed.tscn" id="7_6ga6s"]
-[ext_resource type="AudioStream" uid="uid://dpme1ekigrjux" path="res://audio/Collision sounds/sfx_random_02.wav" id="7_pgumy"]
+[ext_resource type="PackedScene" uid="uid://7fbbtmdihu33" path="res://assets/objects/realistic/Bed.tscn" id="7_6ga6s"]
 [ext_resource type="PackedScene" uid="uid://dyyyf8a84slbg" path="res://assets/objects/cartoon/Grapes.tscn" id="8_6svsk"]
-[ext_resource type="AudioStream" uid="uid://svisq3x2w533" path="res://audio/Collision sounds/sfx_random_03.wav" id="8_46bg5"]
 [ext_resource type="PackedScene" uid="uid://csfr3xr6hu46q" path="res://assets/objects/realistic/Hourglass.tscn" id="8_631qw"]
 [ext_resource type="PackedScene" uid="uid://baf7bx5pb0we6" path="res://assets/objects/cartoon/orange.tscn" id="9_fsrdi"]
 [ext_resource type="PackedScene" uid="uid://c650eanb1t60p" path="res://assets/objects/realistic/Gear.tscn" id="9_k5jx7"]
-[ext_resource type="AudioStream" uid="uid://bta80sygrnjae" path="res://audio/Collision sounds/sfx_random_04.wav" id="9_sorc7"]
 [ext_resource type="PackedScene" uid="uid://ckspgvw2lh580" path="res://assets/objects/cartoon/Cheese.tscn" id="10_gcnkk"]
 [ext_resource type="PackedScene" uid="uid://jqgaqar5h5k0" path="res://assets/objects/realistic/GoldRing.tscn" id="10_pjyk1"]
-[ext_resource type="AudioStream" uid="uid://d3japko0vopor" path="res://audio/Collision sounds/sfx_stone_01.wav" id="10_sxmil"]
-[ext_resource type="PackedScene" uid="uid://ck6aqce5f0fej" path="res://assets/objects/realistic/spoon.tscn" id="11_1vr5n"]
-[ext_resource type="AudioStream" uid="uid://h88kwvq41fxy" path="res://audio/Collision sounds/sfx_stone_02.wav" id="11_56hmm"]
-[ext_resource type="AudioStream" uid="uid://bd23mkfj4t6k2" path="res://audio/Collision sounds/sfx_stone_03.wav" id="12_7kejf"]
-[ext_resource type="AudioStream" uid="uid://djynoyygwrjhb" path="res://audio/Collision sounds/sfx_stone_04.wav" id="13_ow4dn"]
-[ext_resource type="AudioStream" uid="uid://1pm6pqooqdux" path="res://audio/Collision sounds/sfx_stone_05.wav" id="14_abywy"]
+[ext_resource type="PackedScene" uid="uid://7h8lo6udj060" path="res://assets/objects/realistic/spoon.tscn" id="11_1vr5n"]
 [ext_resource type="PackedScene" uid="uid://d34wrxyiiuiwf" path="res://assets/objects/fruits/melon.tscn" id="14_bbsai"]
 [ext_resource type="PackedScene" uid="uid://ciht70n2pgqxw" path="res://assets/objects/cartoon/fork.tscn" id="15_0u4tu"]
 [ext_resource type="PackedScene" uid="uid://ctpw2v1yhn3c5" path="res://assets/objects/fruits/pomegranate.tscn" id="15_08ohu"]
-[ext_resource type="AudioStream" uid="uid://d2m6p0yhapooi" path="res://audio/Collision sounds/sfx_stone_06.wav" id="15_187hb"]
 [ext_resource type="Texture2D" uid="uid://cqvvwf6juvqu" path="res://assets/backgrounds/grass_field.png" id="16_7tqon"]
 [ext_resource type="PackedScene" uid="uid://bo8hchfxmyqpm" path="res://assets/objects/fruits/apple.tscn" id="16_41d65"]
 [ext_resource type="Texture2D" uid="uid://dp81jea15x7np" path="res://assets/backgrounds/fresh-cover-background-beautiful-stadium-grass.jpg" id="16_e70jd"]
 [ext_resource type="PackedScene" uid="uid://cxvj3c620xqem" path="res://assets/objects/realistic/rock_1.tscn" id="16_vm52l"]
 [ext_resource type="PackedScene" uid="uid://b1yjkxqve5kq7" path="res://assets/objects/realistic/rock_2.tscn" id="17_1ubhh"]
-[ext_resource type="Script" path="res://Obstacle.gd" id="17_5wx3i"]
+[ext_resource type="Script" uid="uid://domjb8ggy7nw0" path="res://scripts/Obstacle.gd" id="17_5wx3i"]
 [ext_resource type="PackedScene" uid="uid://br6iqrxhn4nwg" path="res://assets/objects/realistic/Blender.tscn" id="17_vgc72"]
 [ext_resource type="AudioStream" uid="uid://cshawmtau8p2" path="res://audio/Collision sounds/sfx_grass_01.wav" id="18_6lipt"]
 [ext_resource type="PackedScene" uid="uid://2hll8qviwrr8" path="res://assets/objects/realistic/rock_3.tscn" id="18_hdxul"]
@@ -63,10 +50,10 @@
 [ext_resource type="PackedScene" uid="uid://cyre3vxlwribb" path="res://assets/objects/realistic/wheel_barrow.tscn" id="30_n88tt"]
 [ext_resource type="PackedScene" uid="uid://5l8yckek6yr0" path="res://assets/objects/realistic/grand_piano.tscn" id="31_brw8f"]
 [ext_resource type="PackedScene" uid="uid://cwbng6fuyvfkc" path="res://assets/objects/realistic/writing_desk.tscn" id="32_r2yj0"]
-[ext_resource type="PackedScene" path="res://assets/objects/realistic/WoodenBarrel.tscn" id="34_lknms"]
+[ext_resource type="PackedScene" uid="uid://cawbtekghhqmb" path="res://assets/objects/realistic/WoodenBarrel.tscn" id="34_lknms"]
 [ext_resource type="PackedScene" uid="uid://dwisumk7ft2ss" path="res://assets/objects/realistic/IroningBoard.tscn" id="36_ghra3"]
 [ext_resource type="PackedScene" uid="uid://bngjwsdds4buc" path="res://assets/objects/realistic/pipe_organ.tscn" id="37_co23h"]
-[ext_resource type="PackedScene" path="res://assets/objects/realistic/TooriGate.tscn" id="40_7s35u"]
+[ext_resource type="PackedScene" uid="uid://jm63qd7qs3f" path="res://assets/objects/realistic/TooriGate.tscn" id="40_7s35u"]
 [ext_resource type="PackedScene" uid="uid://b84qar3kdrdeh" path="res://scenes/goal.tscn" id="41_nh3p5"]
 [ext_resource type="PackedScene" uid="uid://cy17o4h6mm7k6" path="res://assets/objects/realistic/SilverRing.tscn" id="43_7vxta"]
 [ext_resource type="PackedScene" uid="uid://1t7kidujc3pg" path="res://assets/objects/fruits/mandarin.tscn" id="44_wfwwb"]
@@ -84,23 +71,10 @@
 [ext_resource type="AudioStream" uid="uid://d3xjyds7k4ve" path="res://audio/Collision sounds/sfx_piano_02.wav" id="62_w205i"]
 [ext_resource type="AudioStream" uid="uid://t2eobx8poi4v" path="res://audio/Collision sounds/sfx_piano_01.wav" id="63_85hnr"]
 [ext_resource type="AudioStream" uid="uid://cnfisk8xs2muo" path="res://audio/Collision sounds/sfx_piano_04.wav" id="64_cd0ai"]
+[ext_resource type="PackedScene" uid="uid://bs6by0ssa8n06" path="res://scenes/boundary.tscn" id="69_gdvew"]
+[ext_resource type="PackedScene" uid="uid://ctr68jxsax1y1" path="res://scenes/UI/leaderboard.tscn" id="73_kjtvk"]
 
 [sub_resource type="Environment" id="Environment_tnlyh"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nyp13"]
-friction = 0.5
-bounce = 0.3
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_h0xe1"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_3fhbj"]
-lightmap_size_hint = Vector2i(17, 9)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w1qxk"]
-albedo_color = Color(1, 1, 1, 0.12549)
-metallic = 1.0
-metallic_specular = 1.0
-roughness = 0.4
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_1svup"]
 
@@ -111,14 +85,16 @@ albedo_texture = ExtResource("16_e70jd")
 size = Vector2(200, 60)
 
 [sub_resource type="Gradient" id="Gradient_vp8v7"]
-colors = PackedColorArray(0.5428, 0.850847, 0.92, 1, 0.1054, 0.23405, 0.62, 1)
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.691983, 1)
+colors = PackedColorArray(0.5428, 0.850847, 0.92, 1, 0.1054, 0.23405, 0.62, 1, 0.0270728, 0.0912074, 0.288674, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_rwc2s"]
 gradient = SubResource("Gradient_vp8v7")
 width = 2400
 height = 3000
 fill_from = Vector2(0.491453, 1)
-fill_to = Vector2(0.461538, 0)
+fill_to = Vector2(0.475427, 0.00854701)
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_k8dhs")
@@ -139,29 +115,9 @@ update_mode = 1
 max_distance = 53.3
 box_projection = true
 
-[node name="NPC" type="RigidBody3D" parent="." node_paths=PackedStringArray("main")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0473281, 202.588, 0)
-collision_layer = 2
-collision_mask = 29
-axis_lock_linear_z = true
-axis_lock_angular_x = true
-axis_lock_angular_y = true
-physics_material_override = SubResource("PhysicsMaterial_nyp13")
-continuous_cd = true
-max_contacts_reported = 2
-contact_monitor = true
-can_sleep = false
-script = ExtResource("2_lfwca")
-sounds = Array[AudioStream]([ExtResource("3_e3438"), ExtResource("4_j8wot"), ExtResource("3_dmchm"), ExtResource("6_exftb"), ExtResource("7_pgumy"), ExtResource("8_46bg5"), ExtResource("9_sorc7")])
-default_sounds = Array[AudioStream]([ExtResource("10_sxmil"), ExtResource("11_56hmm"), ExtResource("12_7kejf"), ExtResource("13_ow4dn"), ExtResource("14_abywy"), ExtResource("15_187hb")])
-main = NodePath("..")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC"]
-shape = SubResource("SphereShape3D_h0xe1")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="NPC/CollisionShape3D2"]
-mesh = SubResource("SphereMesh_3fhbj")
-surface_material_override/0 = SubResource("StandardMaterial3D_w1qxk")
+[node name="NPC" parent="." instance=ExtResource("2_2e525")]
+process_mode = 3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.322062, 202.926, -0.058496)
 
 [node name="Camera" type="Camera3D" parent="." node_paths=PackedStringArray("npc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 220, 14.321)
@@ -183,11 +139,11 @@ bus = &"Effects"
 
 [node name="Bed" parent="World/Interactables" instance=ExtResource("7_6ga6s")]
 transform = Transform3D(-3, 0, 4.52987e-07, 0, 3, 0, -4.52987e-07, 0, -3, -26.5, -1.534, -0.675)
-velocity = 5000.0
+velocity = 4000.0
 
 [node name="Bed2" parent="World/Interactables" instance=ExtResource("7_6ga6s")]
 transform = Transform3D(-3, 0, 4.52987e-07, 0, 3, 0, -4.52987e-07, 0, -3, 26.5, -1.8565, 0)
-velocity = 5000.0
+velocity = 4000.0
 
 [node name="Bed3" parent="World/Interactables" instance=ExtResource("7_6ga6s")]
 transform = Transform3D(-2, 0, 3.01992e-07, 0, 2, 0, -3.01992e-07, 0, -2, 67.4671, 147.486, 0)
@@ -200,12 +156,14 @@ transform = Transform3D(-0.62071, -0.0570413, 0.781963, -0.0354638, 0.998372, 0.
 
 [node name="Bed6" parent="World/Interactables" instance=ExtResource("7_6ga6s")]
 transform = Transform3D(-0.857068, 0.212341, -0.46941, 0.201603, 0.976689, 0.073717, 0.474121, -0.0314542, -0.879898, 44.3657, 102.744, 0)
-velocity = 5000.0
 
 [node name="Bed7" parent="World/Interactables" instance=ExtResource("7_6ga6s")]
 transform = Transform3D(0.157925, 0.0209721, -0.783977, -0.0448732, 0.798645, 0.0123251, 0.782973, 0.0415414, 0.158834, 37.6578, 149.378, 0.446615)
 
 [node name="Obstacles" type="Node3D" parent="World"]
+
+[node name="ufo_beam2" parent="World/Obstacles" instance=ExtResource("58_bdtko")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.317296, 207.957, 0.0991111)
 
 [node name="Food" type="Node3D" parent="World/Obstacles"]
 
@@ -434,7 +392,7 @@ transform = Transform3D(0.326283, -0.67881, 1.85277, 1.96272, 0.304969, -0.23391
 
 [node name="Bed" parent="World/Obstacles/Goal" instance=ExtResource("7_6ga6s")]
 transform = Transform3D(-0.222781, -0.286547, 3.9835, -0.0160004, 3.98972, 0.2861, -3.99376, -4.02181e-09, -0.223355, 20.0422, 12.7198, 0)
-velocity = 5000.0
+velocity = 3500.0
 
 [node name="Mandarin" parent="World/Obstacles/Goal" instance=ExtResource("44_wfwwb")]
 transform = Transform3D(1.5, 0, 0, 0, 1.1843, -0.92056, 0, 0.92056, 1.1843, -16, 34, 0)
@@ -485,9 +443,6 @@ transform = Transform3D(1.01339, -1.10592, 0, 1.10592, 1.01339, 0, 0, 0, 1.5, -1
 script = ExtResource("17_5wx3i")
 sounds = Array[AudioStream]([ExtResource("29_hn6uh"), ExtResource("26_41r3v"), ExtResource("28_4w4g6")])
 
-[node name="ufo_beam2" parent="World/Obstacles" instance=ExtResource("58_bdtko")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432682, 207.957, 0.0991111)
-
 [node name="Boundaries" type="Node3D" parent="World"]
 
 [node name="BoundaryBottom" type="StaticBody3D" parent="World/Boundaries"]
@@ -504,29 +459,14 @@ shape = SubResource("WorldBoundaryShape3D_1svup")
 material_override = SubResource("StandardMaterial3D_qmjbr")
 mesh = SubResource("PlaneMesh_pqktr")
 
-[node name="BoundaryRight" type="StaticBody3D" parent="World/Boundaries"]
-transform = Transform3D(0.34202, -0.939693, 0, 0.939693, 0.34202, 0, 0, 0, 1, 30, 0, 0)
-collision_layer = 8
-collision_mask = 2
+[node name="BoundaryRight" parent="World/Boundaries" instance=ExtResource("69_gdvew")]
+transform = Transform3D(10.2606, -0.939693, 0, 28.1908, 0.34202, 0, 0, 0, 1, 100.02, 194.503, 1.45376)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Boundaries/BoundaryRight"]
-shape = SubResource("WorldBoundaryShape3D_1svup")
+[node name="BoundaryLeft" parent="World/Boundaries" instance=ExtResource("69_gdvew")]
+transform = Transform3D(10.2606, 0.939693, 0, -28.1908, 0.34202, 0, 0, 0, 1, -99.6959, 194.503, 1.45376)
 
-[node name="BoundaryTop" type="StaticBody3D" parent="World/Boundaries"]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 212.97, 0)
-collision_layer = 8
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Boundaries/BoundaryTop"]
-shape = SubResource("WorldBoundaryShape3D_1svup")
-
-[node name="BoundaryLeft" type="StaticBody3D" parent="World/Boundaries"]
-transform = Transform3D(0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 0, 0, 1, -30, 0, 0)
-collision_layer = 8
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Boundaries/BoundaryLeft"]
-shape = SubResource("WorldBoundaryShape3D_1svup")
+[node name="BoundaryTop2" parent="World/Boundaries" instance=ExtResource("69_gdvew")]
+transform = Transform3D(-30, 8.74228e-08, 0, -2.62268e-06, -1, 0, 0, 0, 1, 0, 448.415, 0.735714)
 
 [node name="Backgrounds" type="Node3D" parent="World"]
 
@@ -536,7 +476,7 @@ pixel_size = 0.05
 texture = ExtResource("16_7tqon")
 
 [node name="Sprite3D2" type="Sprite3D" parent="World/Backgrounds"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1, 0, 121.594, -61.6492)
+transform = Transform3D(2, 0, 0, 0, 3, 0, 0, 0, 1, 0, 359.155, -61.6492)
 pixel_size = 0.1
 texture = SubResource("GradientTexture2D_rwc2s")
 
@@ -589,5 +529,17 @@ layout_mode = 2
 text = "Time 00:00:000"
 horizontal_alignment = 1
 
-[connection signal="body_entered" from="NPC" to="NPC" method="_on_body_entered"]
+[node name="Leaderboard" parent="UI/Game Over/VBoxContainer" instance=ExtResource("73_kjtvk")]
+layout_mode = 2
+
+[node name="Restart" type="Button" parent="UI/Game Over/VBoxContainer"]
+layout_mode = 2
+text = "Restart"
+
+[node name="Quit" type="Button" parent="UI/Game Over/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
 [connection signal="resume" from="pause_menu" to="." method="_on_pause_menu_resume"]
+[connection signal="pressed" from="UI/Game Over/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="UI/Game Over/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c2mxwc6kxe5m2"]
 
-[ext_resource type="Script" path="res://addons/github_to_itch/ui/config.gd" id="1_06q30"]
+[ext_resource type="Script" uid="uid://dhwd1hjj5vkb4" path="res://addons/github_to_itch/ui/config.gd" id="1_06q30"]
 [ext_resource type="PackedScene" uid="uid://bk128k0tftsey" path="res://addons/github_to_itch/ui/info_bubble.tscn" id="2_kphco"]
 
 [node name="ScrollContainer" type="ScrollContainer"]
