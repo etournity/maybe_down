@@ -33,6 +33,8 @@ func set_pause(isPaused: bool):
 		get_tree().paused = true
 	else:
 		get_tree().paused = false
+func spawn_npc():
+	pass
 
 func get_rotated(delta):
 	if(Input.is_action_just_pressed("left")):
